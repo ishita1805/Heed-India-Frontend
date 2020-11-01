@@ -1,0 +1,8 @@
+.bottom-nav{
+    width:96vw;
+    height:12vh;
+    display:flex;
+    align-items:center;
+    z-index:1000;
+    justify-content:flex-start;
+}
