@@ -17,40 +17,6 @@
     position:absolute;
     overflow-x: hidden;
 }
-/* temp max */
-.button{
-    width:150px;
-    height:5vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgb(41, 151, 255);
-    border-radius:5px;
-    color:white;
-    font-weight:600;
-    padding:1vh 2vh;
-    cursor:pointer;
-}
-.amount-donate{
-    display:flex;
-    flex-direction:row;
-    margin-bottom:5vh;
-    height:8vh;
-    flex-grow:1;
-    align-items:center;
-    justify-content:flex-start;
-}
-.amt-donate{
-    background:rgb(211, 211, 211);
-    padding:1vh 2vh;
-    margin-right:2vh;
-    border:none;
-    border-radius:4px;
-    font-weight:600;
-}
-/* .amt-donate:focus{
-    outline:none;
-} */
 .col{
     display:flex;
     flex-direction:column;

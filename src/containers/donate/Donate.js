@@ -1,9 +1,11 @@
+import './donate.css'
 import React, {useState,useEffect} from 'react'
 import logo from "../../assets/logo.png"
 const axios = require('axios');
 
+
 const Donate = () => {
-    const [amt,setAmt] = useState(100)
+    const [amt,setAmt] = useState(10000)
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -29,7 +31,6 @@ const Donate = () => {
             alert('An error occured!')
             return
         }
-
         const data = axios.post('http://localhost:3001/payments/make-payment',{
             amount:amt
         })
@@ -49,11 +50,8 @@ const Donate = () => {
                 alert(response.razorpay_order_id);
                 alert(response.razorpay_signature)
             },
-            "notes": {
-                "address": "Heed India NGO, Mumbai"
-            },
             "theme": {
-                "color": "#F37254"
+                "color": "#80ffaa"
             }
         };
 
@@ -65,13 +63,15 @@ const Donate = () => {
     return (
         <div className="in-body">
             <h1>Donate Now</h1>
-            <h3>Select amount to donate</h3>
+            <h3>Select an amount to donate</h3>
             <div className="amount-donate">
                 <button value="10000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 100</button>
                 <button value="40000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 400</button>
                 <button value="60000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 600</button>
                 <button value="100000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 1000</button>
             </div>
+            <h3>Or, Enter a custom amount</h3>
+            <label>₹: <input type="number" className="amt-donate-custom" onChange={e=>setAmt((e.target.value)*100)}/></label>
             <a 
             onClick={displayRazorpay}
             target="_blank"
