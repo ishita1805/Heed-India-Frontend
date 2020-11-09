@@ -46,7 +46,7 @@ function App() {
     label="Hello, Welcome To Heed India"
     children={
     <div>
-      <p className="sub-head-popup">Please select the center closest to you</p>
+      <p className="sub-head-popup">Please select the centre closest to you</p>
       <div className="cities-row">
       <CenterIcon
       src={mumbai}
