@@ -1,14 +1,23 @@
 import React, {useEffect} from 'react'
+import Profle from './Profile'
+import Post from './Posts'
+
 
 const Work = () => {
     useEffect(() => {
-        window.scrollTo(0, 0)
+       // window.scrollTo(0, 0)
       }, [])
-    return (
-        <div className="in-body">
-            <h1>Our Work</h1>
+
+      return(
+        <div class="container">
+
+              <Profle/>
+              <Post/>
+    
         </div>
-    )
+      
+      )
 }
 
 export default Work
+
