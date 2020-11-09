@@ -32,7 +32,7 @@
     width:100vw;
 }
 ::-webkit-scrollbar {
-    width: 7px;
+    width:0;
 }
 ::-webkit-scrollbar-track {
     background: #d1ffd1;
