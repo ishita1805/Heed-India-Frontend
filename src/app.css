@@ -18,7 +18,7 @@
     overflow-x: hidden;
 }
 .in-body-2{
-    height:85vh;
+    height:88vh;
     width:96vw; 
     padding:0 2vw;
     position:absolute;
@@ -39,12 +39,17 @@
     width:100vw;
 }
 ::-webkit-scrollbar {
-    width:0;
+    width:0px;
 }
 ::-webkit-scrollbar-track {
-    background: #d1ffd1;
+    background: #c5c5c5;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(119, 255, 125);
+    background: rgb(61, 61, 61);
     border-radius: 4px;
+}
+@media screen and (max-width:499px){
+    .in-body-2{
+        height:84vh;
+    }
 }
