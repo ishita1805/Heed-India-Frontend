@@ -18,11 +18,11 @@
     overflow-x: hidden;
 }
 .in-body-2{
-    height:88vh;
+    height:85vh;
     width:96vw; 
     padding:0 2vw;
     position:absolute;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .col{
     display:flex;

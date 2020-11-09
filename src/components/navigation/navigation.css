@@ -141,5 +141,18 @@ a{
         transition:0.7s;
     }
 
+}
 
+@media screen and (max-width:500px){
+    .Navigation2{
+        width:96vw;
+        transform: translateX(-100vw);
+    }
+    .Navigation{
+        width:96vw;
+        transform: translateX(-100vw);
+    }
+    .Nav2{
+        width:96vw;
+    }
 }
