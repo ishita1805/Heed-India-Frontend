@@ -17,6 +17,13 @@
     position:absolute;
     overflow-x: hidden;
 }
+.in-body-2{
+    height:88vh;
+    width:96vw; 
+    padding:0 2vw;
+    position:absolute;
+    overflow-x: hidden;
+}
 .col{
     display:flex;
     flex-direction:column;
