@@ -39,3 +39,20 @@
     box-shadow:0 0 10px rgba(0,0,0,0.2);
     cursor:pointer;
 }
+@media screen and (max-width:500px){
+    .pop-up-container{
+        width:auto;
+        padding:5vh 1vw;
+        padding-top:0;
+        min-width:100px;
+        background:white;
+        border-radius:5px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        color:rgb(87, 87, 87);
+        justify-content:flex-start;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+}
