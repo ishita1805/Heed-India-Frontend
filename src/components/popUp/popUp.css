@@ -41,7 +41,7 @@
 }
 @media screen and (max-width:500px){
     .pop-up-container{
-        width:auto;
+        width:85vw;
         padding:5vh 1vw;
         padding-top:0;
         min-width:100px;
