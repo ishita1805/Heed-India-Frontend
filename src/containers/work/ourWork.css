@@ -1,6 +1,4 @@
-:root{
-    font-size: 10px;
-}
+
 
 *::before,
 *::after {
@@ -20,7 +18,7 @@ img {
 }
 
 .container {
-    max-width: 93.5rem;
+    max-width: 70rem;
     margin: 0 auto;
     padding: 0 2rem;
     font-size: 1px;
@@ -28,12 +26,13 @@ img {
 
 .btn {
     display: inline-block;
-    font: inherit;
-    background: none;
+    font: 8vh;
+    background: rgb(42, 174, 240);
     border: none;
-    color: inherit;
-    padding: 0;
+    color: rgb(255, 255, 255);
+    padding: 0px 60px;
     cursor: pointer;
+    text-align: center;
 }
 
 .btn:focus {
@@ -133,9 +132,7 @@ img {
         justify-content: center;
     }
 
-    .profile-stat-count {
-        display: block;
-    }
+    
 }
 
 
