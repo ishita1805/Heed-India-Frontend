@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 
-const About = () => {
+const About = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -8,6 +8,7 @@ const About = () => {
     return (
         <div className="in-body">
             <h1>About Us</h1>
+            {props.state}
         </div>
     )
 }

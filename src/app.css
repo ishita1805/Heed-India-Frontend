@@ -17,6 +17,17 @@
     position:absolute;
     overflow-x: hidden;
 }
+.in-body-2{
+    height:88vh;
+    width:96vw; 
+    padding:0 2vw;
+    position:absolute;
+    background:url("./assets/homeBg.png");
+    background-size:120vh;
+    background-repeat:no-repeat;
+    background-position:90% 100%;
+    overflow: hidden;
+}
 .col{
     display:flex;
     flex-direction:column;
@@ -25,19 +36,33 @@
     display:flex;
     flex-direction:row;
 }
-.grow{
-    display:flex;
-    flex-direction:column;
-    flex-grow:1;
-    width:100vw;
-}
 ::-webkit-scrollbar {
-    width: 7px;
+    width:0px;
 }
 ::-webkit-scrollbar-track {
-    background: #d1ffd1;
+    background: #c5c5c5;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(119, 255, 125);
+    background: rgb(61, 61, 61);
     border-radius: 4px;
+}
+@media screen and (max-width:1300px){
+    .in-body-2{
+        background-size:65vw;
+    }
+}
+@media screen and (max-width:1000px){
+    .in-body-2{
+        background-size:70vw;
+    }
+}
+@media screen and (max-width:700px){
+    .in-body-2{
+        background-size:100vw;
+    }
+}
+@media screen and (max-width:499px){
+    .in-body-2{
+        height:87vh;
+    }
 }

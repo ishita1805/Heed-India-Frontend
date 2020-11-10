@@ -38,6 +38,9 @@ a{
     color:rgb(184, 184, 184);
     font-weight:700;
 }
+.nav-item:hover{
+    color:#8CC634;
+}
 .nav-item-active{
     color:rgb(41, 41, 41);
     font-weight:700;
@@ -142,5 +145,20 @@ a{
         transition:0.7s;
     }
 
+}
 
+@media screen and (max-width:500px){
+    .Navigation2{
+        width:96vw;
+        transform: translateX(-100vw);
+    }
+    .Navigation{
+        width:96vw;
+        transform: translateX(-100vw);
+    }
+    .Nav2{
+        width:96vw;
+        background:rgba(255, 255, 255, 0.93);
+        padding-top:8vh;
+    }
 }

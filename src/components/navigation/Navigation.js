@@ -27,6 +27,9 @@ const Navigation = () => {
           <NavLink exact to="/our-work" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Work</NavLink>
           <NavLink exact to="/get-involved" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Get Involved</NavLink>
           <NavLink exact to="/our-branches" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Branches</NavLink>
+          <NavLink exact to="/donate" className="nav-item" activeClassName="nav-item-active">Donate Now</NavLink>
+          <NavLink exact to="/raise-money" className="nav-item" activeClassName="nav-item-active">Raise Money</NavLink>
+          <NavLink exact to="/our-mission" className="nav-item" activeClassName="nav-item-active">Our Mission</NavLink>
           <div className="logo-nav">
             <img src={img} className="logo" />
           </div>
