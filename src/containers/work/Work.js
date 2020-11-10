@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import Profle from './Profile'
 import Post from './Posts'
+import './ourWork.css'
 
 
 const Work = () => {
@@ -9,10 +10,11 @@ const Work = () => {
       }, [])
 
       return(
-        <div class="container">
-
-              <Profle/>
-              <Post/>
+        <div className="container">
+            <div className="size">
+                  <Profle/>
+                  <Post/>
+            </div>
     
         </div>
       
