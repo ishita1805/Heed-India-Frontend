@@ -7,40 +7,35 @@ var img = "https://static.wixstatic.com/media/1f2275_1ec26c62602b4ef09365c9dc356
 
 export default function Profile() {
     return (
-        <div>
-            <div class="profile">
-    
-          <div class="profile-image">
-    
-            <img src={img} alt=""/>
-    
-          </div>
-    
-          <div class="profile-user-settings">
-    
-            <h1 class="profile-user-name">heedindia.ngo</h1>
-    
-           <button className="btn profile-edit-btn"><a  href= "https://www.instagram.com/heedindia.ngo/">Follow</a></button>
- 
-          </div>
-    
-          <div class="profile-stats">
-    
-            <ul>
-              <li><span class="profile-stat-count">164</span> posts</li>
-              <li><span class="profile-stat-count">188</span> followers</li>
-              <li><span class="profile-stat-count">206</span> following</li>
-            </ul>
-    
-          </div>
-    
-          <div class="profile-bio">
-    
-            <p><span class="profile-real-name">Heed India</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-    
-          </div>
-    
-        </div>
+        <div className="profile">
+         <div className="profile-sec1">
+{/* image */}
+              <div class="profile-image">
+                <img src={img} alt=""/>
+              </div>
+{/* name button and stats  */}
+              <div class="profile-user-settings">
+                <div className="row flex-start">
+                  <h1 class="profile-user-name">heedindia.ngo</h1>
+                  <button className = "profile-follow">Follow</button>
+                </div>
+                <div className="row">
+                  <p className="stat-p">703 <b>Posts</b></p>
+                  <p className="stat-p">2318 <b>Followers</b></p>
+                  <p className="stat-p">696 <b>Following</b></p>
+                </div>
+                <p className="bio-profile-2">
+                 A small description of the NGO and a link to blogs or other work can come here<br/>
+                 Heed India (Health and Education)
+                </p>
+              </div>
+         </div>
+{/* stats for smaller screens */}
+         <p className="bio-profile" >
+            A small description of the NGO and a link to blogs or other work can come here<br/>
+            Heed India (Health and Education)
+          </p>
         </div>
     )
 }
+
