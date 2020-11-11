@@ -22,6 +22,7 @@ import mumbai from './assets/mumbai.png'
 import delhi from './assets/delhi.png'
 import agra from './assets/agra.png'
 import Button from './components/button/Button.js'
+import InputBox from './components/inputBox/InputBox.js'
 
 function App() {
   const [center,setCenter]=useState(false);

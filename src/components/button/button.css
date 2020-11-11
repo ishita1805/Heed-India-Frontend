@@ -5,4 +5,6 @@
 .MyButton{
     border-radius: 5px;
     border: none;
+    box-shadow: 0 0 0.3;
+    font-style: Sans-serif;
 }
