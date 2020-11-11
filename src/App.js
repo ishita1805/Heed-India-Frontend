@@ -21,6 +21,7 @@ import CenterIcon from './components/centerIcon/CenterIcon'
 import mumbai from './assets/mumbai.png'
 import delhi from './assets/delhi.png'
 import agra from './assets/agra.png'
+import Button from './components/button/Button.js'
 
 function App() {
   const [center,setCenter]=useState(false);

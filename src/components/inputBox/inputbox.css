@@ -1,0 +1,10 @@
+.body{
+    color: blanchedalmond;
+    background-color: transparent;
+}
+.MyInputBox{
+    border-radius: 5px;
+    box-shadow: 0 0 0.2;
+    font-style: Sans-Serif;
+    font-weight: 100;
+}
