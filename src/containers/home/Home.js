@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import BottomNav from '../../components/bottomNav/BottomNav'
 import './home.css'
 
-const Home = (props) => {
+const Home = ({state,...props}) => {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])

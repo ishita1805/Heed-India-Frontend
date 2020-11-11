@@ -21,7 +21,7 @@ import CenterIcon from './components/centerIcon/CenterIcon'
 import mumbai from './assets/mumbai.png'
 import delhi from './assets/delhi.png'
 import agra from './assets/agra.png'
-
+import Blog from './containers/blog/Blog'
 function App() {
   const [center,setCenter]=useState(false);
   const [state,setState]=useState('Mumbai')
@@ -109,6 +109,10 @@ function App() {
 
                 <Route path="/our-mission" exact >
                   <Mission state={state}/>
+                </Route>
+
+                <Route path="/blog" exact >
+                  <Blog state={state}/>
                 </Route>
               
             </Switch>
