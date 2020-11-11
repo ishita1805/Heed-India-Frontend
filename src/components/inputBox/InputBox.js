@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
-function InputBox() {
+function InputBox(props) {
     return (
-        <div>
-            <input className="MyInputBox">Enter here</input>
-        </div>
+        <Fragment>
+        <label>
+            <input onChange={props.onChange}
+            className={props.className}>{props.label}</input>
+        </label>
+        </Fragment>
     )
     }
 export default InputBox

@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {Fragement} from 'react'
 
-function Button() {
+function Button(props) {
     return (
-        <div>
-            <button className="MyButton">Click Me</button>
-        </div>
+        <Fragement>
+        <label>
+            <button 
+            className={props.className}
+            onClick={props.onClick}>{props.label}</button>
+        </label>
+        </Fragement>
     )
 }
 

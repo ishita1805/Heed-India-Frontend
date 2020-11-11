@@ -1,10 +1,18 @@
-.body{
-    color: blanchedalmond;
-    background-color: transparent;
-}
-.MyInputBox{
+input{
     border-radius: 5px;
     box-shadow: 0 0 0.2;
     font-style: Sans-Serif;
     font-weight: 100;
+}
+.success{
+    color: #fff;
+    width: 300px;
+}
+.primary{
+    color: #fff;
+    width: 50%;
+}
+.dark{
+    color: #fff;
+    width: 100%;
 }
