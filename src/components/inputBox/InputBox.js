@@ -3,7 +3,7 @@ import React from 'react'
 function InputBox() {
     return (
         <div>
-            <input className="MyInputBox">Enter hereg</input>
+            <input className="MyInputBox">Enter here</input>
         </div>
     )
     }
