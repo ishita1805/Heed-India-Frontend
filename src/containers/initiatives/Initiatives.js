@@ -6,7 +6,7 @@ const Initiatives = () => {
       }, [])
     return (
         <div className="in-body">
-            <h1>Initiatives</h1>
+            <h1 className = "initiatives-heading">Initiatives</h1>
         </div>
     )
 }

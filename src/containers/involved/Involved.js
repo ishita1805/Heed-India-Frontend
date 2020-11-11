@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import './involved.css'
 
 const Involved = () => {
     useEffect(() => {
@@ -6,7 +7,7 @@ const Involved = () => {
       }, [])
     return (
         <div className="in-body">
-            <h1>Get Involved</h1>
+            <h1 className = "involved-heading">Get Involved</h1>
         </div>
     )
 }
