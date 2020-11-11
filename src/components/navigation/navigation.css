@@ -33,6 +33,7 @@ a{
     text-decoration: none;
 }
 .nav-item{
+    font-size:16px;
     margin-right:5vw;
     color:rgb(184, 184, 184);
     font-weight:700;
