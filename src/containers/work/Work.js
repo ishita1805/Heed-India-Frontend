@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
-import Profle from './Profile'
-import Post from './Posts'
+import Profile from '../../components/profile/Profile'
+import Post from '../../components/post/Posts'
+import './ourWork.css'
 
 
 const Work = () => {
@@ -9,10 +10,11 @@ const Work = () => {
       }, [])
 
       return(
-        <div class="container">
-
-              <Profle/>
-              <Post/>
+        <div className="container">
+            <div className="size">
+                  <Profile/>
+                  <Post/>
+            </div>
     
         </div>
       
