@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import Navigation from './components/navigation/Navigation'
-import Header from './components/header/Header'
 import Home from "./containers/home/Home"
 import About from "./containers/about/About"
 import Initiatives from "./containers/initiatives/Initiatives"
