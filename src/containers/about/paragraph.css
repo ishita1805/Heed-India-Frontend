@@ -1,0 +1,17 @@
+.about-text {
+    width: 740px;
+    font-weight: 500;
+    color: rgb(77, 77,77);
+}
+
+@media screen and (max-width: 850px){
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width:70%;
+    }
+
+}

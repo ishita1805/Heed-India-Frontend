@@ -7,7 +7,7 @@ const Involved = () => {
       }, [])
     return (
         <div className="in-body">
-            <h1 className = "involved-heading">Get Involved</h1>
+            
         </div>
     )
 }

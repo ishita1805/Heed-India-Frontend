@@ -7,7 +7,7 @@ const Branches = () => {
       
     return (
         <div className="in-body">
-            <h1>Our Branches</h1>
+            
         </div>
     )
 }

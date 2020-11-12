@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import Navigation from './components/navigation/Navigation'
+import Header from './components/header/Header'
 import Home from "./containers/home/Home"
 import About from "./containers/about/About"
 import Initiatives from "./containers/initiatives/Initiatives"
@@ -80,22 +81,27 @@ function App() {
                 </Route>
 
                 <Route path="/about-us" exact >
+                  <Header title = "About Us"/>
                   <About state={state}/>
                 </Route>
 
                 <Route path="/initiatives" exact >
+                  <Header title = "Initiatives"/>
                   <Initiatives state={state}/>
                 </Route>
 
                 <Route  path="/our-work" exact >
+                  <Header title = "Our Work"/>
                   <Work state={state}/>
                 </Route>
 
                 <Route path="/get-involved" exact >
+                  <Header title = "Get Involved"/>
                   <Involved state={state}/>
                 </Route>
 
                 <Route path="/our-branches" exact >
+                  <Header title = "Our Branches"/>
                   <Branches state={state}/>
                 </Route>
 
