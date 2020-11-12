@@ -1,8 +1,24 @@
-Buttons and ImputBox Components are created by Keshav.
+### Buttons and ImputBox Components are created by Keshav.
 
-Buttons.js will have props like className,onClick and label.
-buttons.css will have the styling of the Button component along with 4 classes of Buttons.
+> Buttons.js props  
+1. className
+2. onClick 
+3. label.
 
-InputBox.js will have props like className,onChange and label.
-inputbox.css will have the styling of the inputbox component along with 3 classes of inputbox.
+> buttons.css styling 
+1. primary
+2. success
+3. dark
+4. white
+
+> InputBox.js props 
+1. className
+2. onChange 
+3. label
+4. value
+
+> inputbox.css styling
+1. fixedwidth
+2. halfWidth
+3. fullWidth
 

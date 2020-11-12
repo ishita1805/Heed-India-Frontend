@@ -4,15 +4,15 @@ input{
     font-style: Sans-Serif;
     font-weight: 100;
 }
-.success{
+.fixedwidth{
     color: #fff;
     width: 300px;
 }
-.primary{
+.halfWidth{
     color: #fff;
     width: 50%;
 }
-.dark{
+.fullWidth{
     color: #fff;
     width: 100%;
 }

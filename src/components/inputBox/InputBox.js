@@ -3,10 +3,13 @@ import React, { Fragment } from 'react'
 function InputBox(props) {
     return (
         <Fragment>
-        <label>
-            <input onChange={props.onChange}
-            className={props.className} value={props.value}>{props.label}</input>
-        </label>
+            <label> {props.label}</label>
+            <input
+             onChange={props.onChange}
+            className={props.className} 
+            value={props.value}
+            />
+        
         </Fragment>
     )
     }
