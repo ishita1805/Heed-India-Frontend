@@ -2,13 +2,13 @@ import React, {Fragement} from 'react'
 
 function Button(props) {
     return (
-        <Fragement>
+        <Fragment>
         <label>
             <button 
             className={props.className}
             onClick={props.onClick}>{props.label}</button>
         </label>
-        </Fragement>
+        </Fragment>
     )
 }
 
