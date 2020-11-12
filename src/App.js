@@ -21,7 +21,7 @@ import CenterIcon from './components/centerIcon/CenterIcon'
 import mumbai from './assets/mumbai.png'
 import delhi from './assets/delhi.png'
 import agra from './assets/agra.png'
-
+import Blog from './containers/blog/Blog'
 function App() {
   const [center,setCenter]=useState(false);
   const [state,setState]=useState('Mumbai')
@@ -46,7 +46,7 @@ function App() {
     label="Hello, Welcome To Heed India"
     children={
     <div>
-      <p className="sub-head-popup">Please select the center closest to you</p>
+      <p className="sub-head-popup">Please select the centre closest to you</p>
       <div className="cities-row">
       <CenterIcon
       src={mumbai}
@@ -109,6 +109,10 @@ function App() {
 
                 <Route path="/our-mission" exact >
                   <Mission state={state}/>
+                </Route>
+
+                <Route path="/blog" exact >
+                  <Blog state={state}/>
                 </Route>
               
             </Switch>
