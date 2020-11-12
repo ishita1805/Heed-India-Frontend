@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import './involved.css'
+import Header from '../../components/header/Header'
 
 const Involved = () => {
     useEffect(() => {
@@ -7,7 +8,7 @@ const Involved = () => {
       }, [])
     return (
         <div className="in-body">
-            
+            <Header title = "Get Involved"/>
         </div>
     )
 }

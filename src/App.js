@@ -81,27 +81,22 @@ function App() {
                 </Route>
 
                 <Route path="/about-us" exact >
-                  <Header title = "About Us"/>
                   <About state={state}/>
                 </Route>
 
-                <Route path="/initiatives" exact >
-                  <Header title = "Initiatives"/>
+                <Route path="/initiatives" exact >                  
                   <Initiatives state={state}/>
                 </Route>
 
                 <Route  path="/our-work" exact >
-                  <Header title = "Our Work"/>
                   <Work state={state}/>
                 </Route>
 
-                <Route path="/get-involved" exact >
-                  <Header title = "Get Involved"/>
+                <Route path="/get-involved" exact >                  
                   <Involved state={state}/>
                 </Route>
 
-                <Route path="/our-branches" exact >
-                  <Header title = "Our Branches"/>
+                <Route path="/our-branches" exact >                  
                   <Branches state={state}/>
                 </Route>
 

@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import Header from '../../components/header/Header'
 
 const Initiatives = () => {
     useEffect(() => {
@@ -6,7 +7,7 @@ const Initiatives = () => {
       }, [])
     return (
         <div className="in-body">
-            
+            <Header title = "Initiatives"/>
         </div>
     )
 }

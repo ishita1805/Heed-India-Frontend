@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import Header from '../../components/header/Header'
 
 const Branches = () => {
     useEffect(() => {
@@ -7,7 +8,7 @@ const Branches = () => {
       
     return (
         <div className="in-body">
-            
+            <Header title = "Our Branches"/>
         </div>
     )
 }
