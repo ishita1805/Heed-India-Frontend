@@ -83,7 +83,7 @@ function App() {
                   <About state={state}/>
                 </Route>
 
-                <Route path="/initiatives" exact >
+                <Route path="/initiatives" exact >                  
                   <Initiatives state={state}/>
                 </Route>
 
@@ -91,11 +91,11 @@ function App() {
                   <Work state={state}/>
                 </Route>
 
-                <Route path="/get-involved" exact >
+                <Route path="/get-involved" exact >                  
                   <Involved state={state}/>
                 </Route>
 
-                <Route path="/our-branches" exact >
+                <Route path="/our-branches" exact >                  
                   <Branches state={state}/>
                 </Route>
 
