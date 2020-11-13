@@ -18,7 +18,7 @@
 4. value
 
 > inputbox.css styling
-1. fixedwidth > width: 300px
+1. fixedWidth > width: 200px
 2. halfWidth > width: 50%
 3. fullWidth > width: 100%
 

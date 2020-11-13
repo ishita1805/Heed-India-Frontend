@@ -30,8 +30,8 @@
     width:auto;
     height:13vh;
 }
-.flex-start{
-    align-items:flex-end;
+.center{
+    align-items:center;
 }
 .profile-user-settings{
     display:flex;
