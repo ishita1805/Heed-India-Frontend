@@ -8,9 +8,9 @@ function InputBox(props) {
             <br/>
             <input
              onChange={props.onChange}
-            className={props.className} 
-            value={props.value}
-            placeholder={props.placeholder}
+             className={`${props.className} input`} 
+            //  value={props.value}
+             placeholder={props.placeholder}
             />
         
         </Fragment>

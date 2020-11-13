@@ -7,10 +7,7 @@ const About = (props) => {
       
     return (
         <div className="in-body">
-            <h1>About Us</h1>
-            {props.state}
-            <br/>
-            <Input label="Test Input Box"/>
+            {/* {props.state} */}
         </div>
     )
 }

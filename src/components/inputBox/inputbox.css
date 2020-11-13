@@ -1,21 +1,21 @@
-input,select{
-    height: 6vh;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.input,.select{
+    height: 4vh;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(49, 49, 49, 0.1);
     font-style: Sans-Serif;
     font-weight: 100;
     font-size: 12px;
     padding: 0 1vh;
-    margin: 0.5vh 0;
-    border: solid 1px grey;
+    margin: 1vh 0;
+    border: solid 1px rgb(173, 173, 173);
 }
 input:focus, select:focus, textarea:focus{
     outline: none;
-    box-shadow: 0px 0px 3px inset rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 3px inset rgba(0,0,0,0.1);
 }
-.fixedwidth {
+.fixedWidth {
     color: #fff;
-    width: 300px;
+    width: 200px;
 }
 .halfWidth{
     color: #fff;
