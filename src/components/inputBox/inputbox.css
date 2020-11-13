@@ -1,18 +1,42 @@
-input{
+input,select{
+    height: 6vh;
     border-radius: 5px;
-    box-shadow: 0 0 0.2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-style: Sans-Serif;
     font-weight: 100;
+    font-size: 12px;
+    padding: 0 1vh;
+    margin: 0.5vh 0;
+    border: solid 1px grey;
 }
-.success{
+input:focus, select:focus, textarea:focus{
+    outline: none;
+    box-shadow: 0px 0px 3px inset rgba(0,0,0,0.3);
+}
+.fixedwidth {
     color: #fff;
     width: 300px;
 }
-.primary{
+.halfWidth{
     color: #fff;
     width: 50%;
 }
-.dark{
+.fullWidth{
     color: #fff;
     width: 100%;
+}
+.form-container{
+    margin-top: 2vh;
+}
+textarea{
+    min-height: 15vh;
+    width: 98%;
+    outline: none;
+    resize: none;
+    border: 1px solid grey;
+    height: 40px;
+    border: solid 1px rgb(180,180,180);
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 1vh;
 }

@@ -1,13 +1,12 @@
-import React, {Fragement} from 'react'
+import React, {Fragment} from 'react'
+import './button.css'
 
-function Button(props) {
+function Button({label,className,onClick, ...props}) {
     return (
         <Fragment>
-        <label>
-            <button 
-            className={props.className}
-            onClick={props.onClick}>{props.label}</button>
-        </label>
+            <button className={`${className} button-style`} onClick={onClick} >
+                {label}
+            </button>
         </Fragment>
     )
 }
