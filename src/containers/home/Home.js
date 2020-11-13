@@ -3,7 +3,7 @@ import BottomNav from '../../components/bottomNav/BottomNav'
 import './home.css'
 import Button from '../../components/button/Button'
 
-const Home = (props) => {
+const Home = ({state,...props}) => {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])

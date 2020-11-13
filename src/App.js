@@ -21,6 +21,8 @@ import CenterIcon from './components/centerIcon/CenterIcon'
 import mumbai from './assets/mumbai.png'
 import delhi from './assets/delhi.png'
 import agra from './assets/agra.png'
+import Blog from './containers/blog/Blog'
+import Footer from './components/footer/Footer'
 
 function App() {
   const [center,setCenter]=useState(false);
@@ -83,7 +85,7 @@ function App() {
                   <About state={state}/>
                 </Route>
 
-                <Route path="/initiatives" exact >
+                <Route path="/initiatives" exact >                  
                   <Initiatives state={state}/>
                 </Route>
 
@@ -91,11 +93,11 @@ function App() {
                   <Work state={state}/>
                 </Route>
 
-                <Route path="/get-involved" exact >
+                <Route path="/get-involved" exact >                  
                   <Involved state={state}/>
                 </Route>
 
-                <Route path="/our-branches" exact >
+                <Route path="/our-branches" exact >                  
                   <Branches state={state}/>
                 </Route>
 
@@ -110,11 +112,16 @@ function App() {
                 <Route path="/our-mission" exact >
                   <Mission state={state}/>
                 </Route>
+
+                <Route path="/blog" exact >
+                  <Blog state={state}/>
+                </Route>
               
             </Switch>
           </animated.div>
         ))}
         </div>
+        <Footer/>
 
     </div>
 

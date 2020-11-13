@@ -1,0 +1,14 @@
+.in-header h1 {
+    margin: 2vh 0;
+    font-size: 7vh;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+}
+@media screen and (max-width:900px){
+    .in-header h1 {
+        margin: 2vh 0;
+        font-size: 6vh;
+        color: rgb(51, 51, 51);
+        font-weight: bold;
+    }
+}

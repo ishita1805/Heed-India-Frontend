@@ -37,7 +37,7 @@
     flex-direction:row;
 }
 ::-webkit-scrollbar {
-    width:0px;
+    width:5px;
 }
 ::-webkit-scrollbar-track {
     background: #c5c5c5;
@@ -66,3 +66,4 @@
         height:87vh;
     }
 }
+
