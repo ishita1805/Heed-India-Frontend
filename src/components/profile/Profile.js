@@ -1,5 +1,6 @@
 import React from 'react'
 import './profileMedia.css'
+import Button from '../button/Button'
 
 
 var img = "https://static.wixstatic.com/media/1f2275_1ec26c62602b4ef09365c9dc35636047~mv2.jpg/v1/fill/w_204,h_222,al_c,q_80,usm_0.66_1.00_0.01/1f2275_1ec26c62602b4ef09365c9dc35636047~mv2.webp"
@@ -15,9 +16,12 @@ export default function Profile() {
               </div>
 {/* name button and stats  */}
               <div class="profile-user-settings">
-                <div className="row flex-start">
+                <div className="row center">
                   <h1 class="profile-user-name">heedindia.ngo</h1>
-                  <button>Follow</button>
+                  <Button
+                  label="Follow"
+                  className="primary"
+                  />
                 </div>
                 <div className="row">
                   <p className="stat-p">703 <b>Posts</b></p>
