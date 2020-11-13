@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import BottomNav from '../../components/bottomNav/BottomNav'
 import './home.css'
+import Button from '../../components/button/Button'
 
 const Home = ({state,...props}) => {
     useEffect(() => {
@@ -13,7 +14,10 @@ const Home = ({state,...props}) => {
             <h1><span className="green-home">HEED</span> INDIA</h1>
             <p>Do we have a moral obligation to help people we do not know? If so, why?</p>
             <h2><span className="green-home">#be</span><span className="green-home-1">the</span><span className="green-home-2">change</span></h2>
-            <button className="button-green">Contact Us</button>
+            {/* <button className="button-green">Contact Us</button> */}
+            <Button
+            className="success"
+            label="Contact Us"/>
         </div>
         <div className="small-screen-bot-nav">
             <BottomNav/>

@@ -41,7 +41,7 @@ function App() {
 
   return (
   <>
-
+    
     {!center?
     <PopUp
     onClick={closePopUp}

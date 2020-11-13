@@ -1,0 +1,42 @@
+.button-style{
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 0 0.3;
+    padding:1.5vh 3vh;
+    margin:3vh 0;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+button:focus{
+    outline:none;
+}
+.primary{
+    color:#fff;
+    background-color: #3ba7ff ;
+}
+.primary:hover{
+    background-color: #2ea1ff ;
+}
+.success{
+    color: #fff;
+    background-color: #8cc634;
+}
+.success:hover{
+    background-color: #7fbb26;
+}
+.dark{
+    color: #fff;
+    background-color: #242424 ;
+}
+.dark:hover{
+    background-color: #202020 ;
+}
+.white{
+    color: #000000;
+    background-color: #e9e9e9;
+}
+.white:hover{
+    background-color: #dadada;
+}
+
