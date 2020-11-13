@@ -22,6 +22,8 @@ import mumbai from './assets/mumbai.png'
 import delhi from './assets/delhi.png'
 import agra from './assets/agra.png'
 import Blog from './containers/blog/Blog'
+import Footer from './components/footer/Footer'
+
 function App() {
   const [center,setCenter]=useState(false);
   const [state,setState]=useState('Mumbai')
@@ -119,6 +121,7 @@ function App() {
           </animated.div>
         ))}
         </div>
+        <Footer/>
 
     </div>
 

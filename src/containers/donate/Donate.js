@@ -1,7 +1,10 @@
+import Header from '../../components/header/Header'
+import P from '../../components/paragraph/Paragraph'
 import './donate.css'
 import React, {useState,useEffect} from 'react'
 import logo from "../../assets/logo.png"
 const axios = require('axios');
+
 
 
 const Donate = () => {
@@ -61,26 +64,38 @@ const Donate = () => {
     
 
     return (
-        <div className="in-body">
-            <h1>Donate Now</h1>
-            <h3>Select an amount to donate</h3>
+        <div className="in-body donate-container">
+            <div className="donate-content">
+            <Header title="Give Little of You" />
+            <div className="donate-text">
+                <P text="Find out how your contribution to an individual and/or 
+                a project in India can help transform the future. No amount is small. 
+                Let us show you how we can make every rupee count and help you be a part of this revolution." />
+            </div>
+            <h3>Donate for a cause</h3>
             <div className="amount-donate">
-                <button value="10000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 100</button>
-                <button value="40000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 400</button>
-                <button value="60000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 600</button>
-                <button value="100000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 1000</button>
+                <button value="10000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 100 <br/><span className="donate-button-text">feed a child</span> </button>
+                <button value="40000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 400 <br/><span className="donate-button-text">feed a child</span> </button>
+                <button value="60000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 600 <br/><span className="donate-button-text">feed a child</span> </button>
+                <button value="100000" onClick={e=>setAmt(e.target.value)} className="amt-donate">₹ 1000 <br/><span className="donate-button-text">feed a child</span> </button>
             </div>
             <h3>Or, Enter a custom amount</h3>
-            <label>₹: <input type="number" className="amt-donate-custom" onChange={e=>setAmt((e.target.value)*100)}/></label>
-            <a 
-            onClick={displayRazorpay}
-            target="_blank"
-            className="button"
-            rel="noopener noreferrer">
-                Donate 
-            </a>
+            <div className="col-bottom">
+                <input type="number" placeholder="Enter amount in ₹" className="amt-donate-custom" onChange={e=>setAmt((e.target.value)*100)}/>
+                <a 
+                onClick={displayRazorpay}
+                target="_blank"
+                className="button-donate"
+                rel="noopener noreferrer">
+                    Donate 
+                </a>
+            </div>
+            </div>
+
+
         </div>
     )
 }
 
 export default Donate
+
