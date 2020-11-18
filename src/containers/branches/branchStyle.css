@@ -1,0 +1,17 @@
+.card 
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 20px;
+    width:90%;
+    height:50%;
+}
+.text
+{
+    font-family: 'system-ui';
+    font-weight: bold;
+    font-size: 10px;
+    fill: #FF5533;
+    
+}
