@@ -23,6 +23,7 @@ import delhi from './assets/delhi.png'
 import agra from './assets/agra.png'
 import Blog from './containers/blog/Blog'
 import Footer from './components/footer/Footer'
+import Admin from './containers/admin/Admin'
 
 function App() {
   const [center,setCenter]=useState(false);
@@ -36,7 +37,7 @@ function App() {
       duration: 600 
     }
   });
-
+  
   const closePopUp = ()=>setCenter(true);
 
   return (
@@ -71,7 +72,8 @@ function App() {
     />:null}
 
     <div className="body">
-        <Navigation/>
+     
+        <Navigation loc={location.pathname}/>
         <div className="inner-body">
         {transitions.map(({ item, props, key }) => (
           <animated.div key={key} style={props}>
@@ -115,6 +117,10 @@ function App() {
 
                 <Route path="/blog" exact >
                   <Blog state={state}/>
+                </Route>
+
+                <Route path="/admin" exact >
+                  <Admin state={state}/>
                 </Route>
               
             </Switch>

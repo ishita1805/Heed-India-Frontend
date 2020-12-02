@@ -10,7 +10,7 @@ const Footer = () => {
                 <img src={footer} className="logo-footer"/>
                 <h4>Find Us</h4>
                 <p>
-                19, Unique Ind Estate,VS Marg,<br/>
+                19, Unique Ind Estate, VS Marg,<br/>
                 Prabhadevi,Mumbai - 400025, India<br/>
                 </p>
             </div>
@@ -21,7 +21,7 @@ const Footer = () => {
                 <a>Raise Money</a>
                 <a>Get Involved</a>
                 <h4>Contact Us</h4>
-                <p>+91(22)-4971 6399 / +91 - 97697 96370</p>
+                <p>+91(22)-4971 6399 <br/>+91 - 97697 96370</p>
             </div>
 
             <div className="footer-sec">
@@ -29,7 +29,7 @@ const Footer = () => {
                 <a target="__blank" href="https://github.com/ishita1805">Ishita Kabra</a>
                 <a>Milan Mandal</a>
                 <a>Ritwik Ohja</a>
-                <a>Keshav Mandal</a>
+                <a>Keshav Kapoor</a>
                 <button className="footer-button"><i class="fa fa-envelope"></i>&ensp; Join Our News Letter</button>
             </div>
 

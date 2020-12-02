@@ -38,6 +38,7 @@
     color:rgb(29, 29, 29);
     font-weight:600;
     font-size:14px;
+    cursor:pointer;
 }
 .donate-button-text{
     font-weight:600;
@@ -45,10 +46,7 @@
     color:rgb(84, 194, 51);
 }
 .amt-donate:focus{
-    outline:none;
-}
-.amt-donate:hover{
-    background:rgb(233, 255, 210);
+    background:rgb(214, 255, 170);
 }
 .amt-donate-custom{
     margin-bottom:2vh;
@@ -74,7 +72,8 @@
     font-weight:600;
     border-radius:4px;
     cursor:pointer;
-    background:rgb(255, 78, 78);
+    font-size:18px;
+    background:rgb(255, 87, 87);
 }
 .button-donate:hover{
     background:rgb(219, 56, 56);

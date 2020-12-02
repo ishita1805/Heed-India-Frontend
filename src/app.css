@@ -36,6 +36,9 @@
     display:flex;
     flex-direction:row;
 }
+.start{
+    margin:0 2vw;
+}
 ::-webkit-scrollbar {
     width:5px;
 }
@@ -45,6 +48,17 @@
 ::-webkit-scrollbar-thumb {
     background: rgb(61, 61, 61);
     border-radius: 4px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 @media screen and (max-width:1300px){
     .in-body-2{

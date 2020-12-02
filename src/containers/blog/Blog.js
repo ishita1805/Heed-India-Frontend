@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import './blog.css'
-import ReactMarkdown from 'react-markdown'
-
 
 const Blog = () => {
     const [liked,setLiked]=useState(true);
@@ -28,7 +26,7 @@ const Blog = () => {
             <div className="thumbnail-blog"></div>
 
             <div className="blog-content">
-            <ReactMarkdown/>
+            
             </div>
 
             <div className="blog-footer">
