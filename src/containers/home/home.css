@@ -7,7 +7,7 @@
     width:100vw;
 }
 .grow h1{
-    font-size:50px;
+    font-size:80px;
     margin:0;
     color:rgb(51, 51, 51);
 }
@@ -19,9 +19,9 @@
 .grow p{
     font-size:20px;
     font-weight:600;
-    margin:2vh 0;
+    margin:1vh 0;
     width:40%;
-    color:grey;
+    color:rgb(180, 179, 179);
 }
 .button-green{
     padding:2vh 3vh;
@@ -45,10 +45,10 @@
 }
 @media screen and (max-width:1000px){
     .grow p{
-        width:70%;
+        width:60%;
     }
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:1000px){
     .small-screen-bot-nav{
         display:none;
     }
@@ -60,7 +60,7 @@
         align-items:flex-start;
         justify-content:center;
         width:100vw;
-        margin-bottom:10vh;
+        margin-bottom:15vh;
     }
 }
 @media screen and (max-width:700px){
@@ -74,7 +74,7 @@
         width:100vw;
     }
     .grow h1{
-        font-size:40px;
+        font-size:60px;
     }
     .grow h2{
         font-size:25px;

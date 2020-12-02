@@ -35,14 +35,14 @@ a{
 .nav-item{
     font-size:16px;
     margin-right:5vw;
-    color:rgb(184, 184, 184);
-    font-weight:700;
+    color:rgb(197, 197, 197);
+    font-weight:500;
 }
 .nav-item:hover{
     color:#8CC634;
 }
 .nav-item-active{
-    color:rgb(41, 41, 41);
+    color:rgb(20, 20, 20);
     font-weight:700;
 }
 .logo-nav{

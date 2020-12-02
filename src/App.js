@@ -24,6 +24,7 @@ import agra from './assets/agra.png'
 import Blog from './containers/blog/Blog'
 import Footer from './components/footer/Footer'
 import Admin from './containers/admin/Admin'
+import Contact from './components/contactUs/Contact'
 
 function App() {
   const [center,setCenter]=useState(false);
@@ -74,6 +75,7 @@ function App() {
     <div className="body">
      
         <Navigation loc={location.pathname}/>
+        <Contact/>
         <div className="inner-body">
         {transitions.map(({ item, props, key }) => (
           <animated.div key={key} style={props}>
@@ -87,15 +89,15 @@ function App() {
                   <About state={state}/>
                 </Route>
 
-                <Route path="/initiatives" exact >                  
+                <Route path="/events" exact >                  
                   <Initiatives state={state}/>
                 </Route>
 
-                <Route  path="/our-work" exact >
+                <Route  path="/affiliations" exact >
                   <Work state={state}/>
                 </Route>
 
-                <Route path="/get-involved" exact >                  
+                <Route path="/sports" exact >                  
                   <Involved state={state}/>
                 </Route>
 
