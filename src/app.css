@@ -14,8 +14,7 @@
 }
 .in-body{
     min-height:100vh;
-    width:96vw; 
-    padding:0 2vw;
+    width:100vw; 
     overflow-x: hidden;
 }
 .in-body-2{

@@ -17,12 +17,13 @@
     height:12vh;
     width:96vw;
     display:flex;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(3px);
+    /* -webkit-backdrop-filter: blur(3px); */
     padding:0 2vw;
     flex-direction:row;
     padding-top:0.5vh;
     align-items:center;
-    background:rgba(255, 255, 255, 0.103);
+    background:rgba(226, 226, 226, 0.103);
     justify-content:flex-start;
     font-weight:700;
     z-index:1000;

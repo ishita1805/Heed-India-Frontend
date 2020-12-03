@@ -112,7 +112,7 @@
         margin:2vh 0.5vw;
     }
 }
-@media screen and (max-width:755px){
+@media screen and (max-width:770px){
     .footer-buttons{
         display:flex;
         flex-direction:column;

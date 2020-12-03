@@ -31,11 +31,11 @@ function App() {
   const [state,setState]=useState('Mumbai')
   const { location } = useContext(__RouterContext);
   const transitions = useTransition(location, location => location.pathname, {
-    from: { opacity: 0, transform: "translate(0, 0)" },
-    enter: { opacity: 1, transform: "translate(0, 0)" },
-    leave: { opacity: 0, transform: "translate(0, 0)" },
+    from: { opacity: 0.3, transform: "translate(0, 0)", transition:"ease-in-out" },
+    enter: { opacity: 1, transform: "translate(0, 0)", transition:"ease-in-out" },
+    leave: { opacity: 0.3, transform: "translate(0, 0)", transition:"ease-in-out" },
     config: {
-      duration: 600 
+      duration: 350 
     }
   });
   
