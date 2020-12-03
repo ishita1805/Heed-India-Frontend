@@ -8,7 +8,7 @@ const Home = ({state,...props}) => {
         window.scrollTo(0, 0)
       }, [])
     return (
-    <div className="in-body-2 col">
+    <div className="col in-body-2">
         <div className="grow">
             {/* content comes here remove H1 tag */}
             <h1><span className="green-home">Heed</span> India</h1>
@@ -18,11 +18,11 @@ const Home = ({state,...props}) => {
             <Button
             className="success"
             label="Contact Us"/>
+            <div className="bottom-nav-home">
+                <BottomNav/>
+            </div> 
         </div>
-        <div className="small-screen-bot-nav">
-            <BottomNav/>
-        </div>
-        
+           
     </div>
     )
 }

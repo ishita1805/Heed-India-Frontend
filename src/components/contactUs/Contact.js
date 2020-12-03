@@ -5,7 +5,7 @@ import man from '../../assets/contact-us.png'
 const Contact = () => {
     const [form,setForm]=useState(false);
     return (
-        <div className="contact-us">
+        <div className={form?"contact-us black-bg-contact":"contact-us"}>
             {form?
             <div className="contact-form">
                     <h4>Name</h4>

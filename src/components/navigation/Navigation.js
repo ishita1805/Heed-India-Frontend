@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import './navigation.css'
 import { NavLink } from "react-router-dom";
-import img from '../../assets/logo.png'
+import img from '../../assets/logo_footer.png'
 
 const Navigation = ({loc,...props}) => {
   const [nav,setNav] =useState(false);
