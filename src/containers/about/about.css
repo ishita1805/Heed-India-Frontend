@@ -1,12 +1,12 @@
 
 .background-about{
-    background:url('../../assets/about-bg.jpg');
+    background:url('../../assets/about-bg-1.jpeg');
     background-size:cover;
     background-position: top center;
     background-attachment: fixed;
 }
 .about-section{
-    background:url("../../assets/about-sec-1.jpg");
+    background:url("../../assets/about-sec-1-1.jpeg");
     background-size:100vw;
     background-position:top;
     width:100vw;
