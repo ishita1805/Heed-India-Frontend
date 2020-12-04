@@ -10,18 +10,22 @@
     align-items:center !important;;
     justify-content:center !important;;
 }
+/* .pop-up h3{
+    font-family: 'Playfair-display';
+} */
 .pop-up-container{
     width:40vw;
     padding:5vh 1vw;
     padding-top:0;
     min-width:400px;
-    background:white;
+    color:rgb(224, 224, 224);
     border-radius:5px;
     display:flex;
     flex-direction:column;
     align-items:center;
-    color:rgb(87, 87, 87);
+    background:rgba(0, 0, 0, 0.712);
     justify-content:flex-start;
+    backdrop-filter: blur(6px);
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 .popup-cross{
@@ -34,6 +38,7 @@
     font-weight:500;
     width:6vh;
     border-radius:3vh;
+    color:black;
     align-self:flex-end;
     background:rgb(255, 255, 255);
     box-shadow:0 0 10px rgba(0,0,0,0.2);

@@ -8,7 +8,7 @@ const Blog = () => {
     }
 
     return (
-        <div className="blog"> 
+        <div className="blog padding-t-5"> 
             <h1>Importance of Health and Education for Children</h1>
             <h3>Importance of Health and Education for Children</h3>
             

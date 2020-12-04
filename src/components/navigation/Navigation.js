@@ -20,7 +20,7 @@ const Navigation = ({loc,...props}) => {
             <div className={nav?"new-2":"cross"}></div>
             <div className={nav?"new-3 cross":"cross"}></div>
           </div>
-          <img src={img} className="logo" />
+          <img  src={dark.includes(loc)?imgdark:img} className="logo" />
         </div>
 
         {loc==="/admin"?
@@ -31,7 +31,7 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/admin/view" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">My Blogs</NavLink>
           <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Home</NavLink>
           <div className="logo-nav">
-            <img src={img} className="logo" />
+            <img src={dark.includes(loc)?imgdark:img} className="logo" />
           </div>
         </div> 
 
@@ -40,7 +40,7 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/admin/view" className="nav-item" activeClassName="nav-item-active">My Blogs</NavLink>
           <NavLink exact to="/" className="nav-item" activeClassName="nav-item-active">Home</NavLink>
           <div className="logo-nav">
-            <img src={img} className="logo" />
+            <img  src={dark.includes(loc)?imgdark:img} className="logo" />
           </div>
         </div> 
         </>:

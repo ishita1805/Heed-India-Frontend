@@ -16,6 +16,15 @@
     width:100vw; 
     overflow-x: hidden;
 }
+.padding-t-12{
+    padding-top:12vh;
+}
+.padding-t-5{
+    padding-top:5vh;
+}
+.padding-l-2{
+    padding-left:2vw;
+}
 .in-body-2{
     height:100vh;
     width:100vw; 

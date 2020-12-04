@@ -1,16 +1,16 @@
 import React, {useEffect} from 'react'
-import './involved.css'
+import './sports.css'
 import Header from '../../components/header/Header'
 
-const Involved = () => {
+const Sports = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
     return (
-        <div className="in-body">
-            <Header title = "Get Involved"/>
+        <div className="in-body padding-t-12 padding-l-2">
+            <Header title = "Sports"/>
         </div>
     )
 }
 
-export default Involved
+export default Sports

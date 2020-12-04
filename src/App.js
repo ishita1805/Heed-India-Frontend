@@ -9,9 +9,9 @@ import { useTransition, animated } from "react-spring";
 import Navigation from './components/navigation/Navigation'
 import Home from "./containers/home/Home"
 import About from "./containers/about/About"
-import Initiatives from "./containers/initiatives/Initiatives"
+import Affiliations from "./containers/affiliations/Affiliations"
 import Work from "./containers/work/Work"
-import Involved from './containers/involved/Involved'
+import Sports from './containers/sports/Sports'
 import Branches from './containers/branches/Branches'
 import Donate from './containers/donate/Donate'
 import Money from './containers/money/Money'
@@ -90,7 +90,7 @@ function App() {
                 </Route>
 
                 <Route path="/affiliations" exact >                  
-                  <Initiatives state={state}/>
+                  <Affiliations state={state}/>
                 </Route>
 
                 <Route  path="/events" exact >
@@ -98,7 +98,7 @@ function App() {
                 </Route>
 
                 <Route path="/sports" exact >                  
-                  <Involved state={state}/>
+                  <Sports state={state}/>
                 </Route>
 
                 <Route path="/our-branches" exact >                  
