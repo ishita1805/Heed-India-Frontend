@@ -2,9 +2,11 @@ import React, { useState, useEffect} from 'react'
 import './navigation.css'
 import { NavLink } from "react-router-dom";
 import img from '../../assets/logo_footer.png'
+import imgdark from '../../assets/logo.png'
 
 const Navigation = ({loc,...props}) => {
   const [nav,setNav] =useState(false);
+  const dark = ["/blog","/events"]
   const navHandler = ()=>{
       setNav(!nav);
   }
@@ -47,27 +49,27 @@ const Navigation = ({loc,...props}) => {
         <div className={nav?"Nav2":"Navigation"}>
           <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Home</NavLink>
           <NavLink exact to="/about-us" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Who Are We</NavLink>
+          <NavLink exact to="/sports" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Sports</NavLink>
           <NavLink exact to="/events" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Events</NavLink>
           <NavLink exact to="/affiliations" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Affiliations</NavLink>
-          <NavLink exact to="/sports" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Sports</NavLink>
           <NavLink exact to="/our-branches" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Branches</NavLink>
           <NavLink exact to="/donate" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Donate Now</NavLink>
           <NavLink exact to="/raise-money" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Raise Money</NavLink>
           <NavLink exact to="/our-mission" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Mission</NavLink>
           <div className="logo-nav">
-            <img src={img} className="logo" />
+            <img src={dark.includes(loc)?imgdark:img} className="logo" />
           </div>
         </div> 
 
         <div className="Navigation2">
           <NavLink exact to="/" className="nav-item" activeClassName="nav-item-active">Home</NavLink>
           <NavLink exact to="/about-us" className="nav-item" activeClassName="nav-item-active">Who Are We</NavLink>
+          <NavLink exact to="/sports" className="nav-item" activeClassName="nav-item-active">Sports</NavLink>
           <NavLink exact to="/events" className="nav-item" activeClassName="nav-item-active">Events</NavLink>
           <NavLink exact to="/affiliations" className="nav-item" activeClassName="nav-item-active">Affiliations</NavLink>
-          <NavLink exact to="/sports" className="nav-item" activeClassName="nav-item-active">Sports</NavLink>
           <NavLink exact to="/our-branches" className="nav-item" activeClassName="nav-item-active">Our Branches</NavLink>
           <div className="logo-nav">
-            <img src={img} className="logo" />
+            <img src={dark.includes(loc)?imgdark:img} className="logo" />
           </div>
         </div> 
         </>

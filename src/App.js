@@ -128,8 +128,8 @@ function App() {
             </Switch>
           </animated.div>
         ))}
-        </div>
         <Footer/>
+        </div>
 
     </div>
 

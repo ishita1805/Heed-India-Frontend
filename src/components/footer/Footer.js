@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="footer-inner">
                 <h4>Helpful Links</h4>
                 <span>
-                    <a>Privacy Policy & Cancellations</a><br/>
+                    <a>Privacy Policy</a><br/>
                     <a>Terms and Conditions</a><br/>
                 </span>
                 <h4>Developers</h4>

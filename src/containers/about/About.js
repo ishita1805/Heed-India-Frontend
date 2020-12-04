@@ -65,17 +65,41 @@ const About = (props) => {
 
 
            <div className="dark-abt">
+
                <div className="dark-abt-cover">
-                  <h3>Donate<br/>For<br/>A Cause</h3>
+                   <div className="dac-1">
+                        <h2>Donate<br/>For<br/>A Cause</h2>
+                   </div>
+                   <div className="dac-2">
+                        Find out how your contribution to an individual and/or a project in India can help transform the future.
+                   </div>
                </div>
+
                <div className="dark-abt-cover">
-               <h3>Raise<br/>Money</h3>
+                    <div className="dac-1">
+                        <h2>Raise<br/>Money</h2>
+                   </div>
+                   <div className="dac-2">
+                   Find out how you can support our work through fundraising activities and events. Be a part of the movement.
+                   </div>
                </div>
+
                <div className="dark-abt-cover">
-               <h3>Give<br/> little of<br/> YOU!</h3>
+                    <div className="dac-1">
+                        <h2>Give<br/> little of<br/> YOU!</h2>
+                   </div>
+                   <div className="dac-2">
+                   If you would like to join the movement and support us on any of our projects, we can show you how to partner with us to make a significant difference. 
+                   </div>
                </div>
+
                <div className="dark-abt-cover">
-               <h3>Our<br/>Mission</h3>
+                    <div className="dac-1">
+                        <h2>Our<br/>Mission</h2>
+                    </div>
+                   <div className="dac-2">
+                    We endeavour to serve and support valuable lives. We aim to build a community that is vested in its own future and the society's well-being.
+                   </div>
                </div>
 
            </div>
