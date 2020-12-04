@@ -86,3 +86,8 @@
     }
   
 }
+@media screen and (max-width:500px){
+    .grow button{
+       margin-bottom:10vh;
+    }
+}

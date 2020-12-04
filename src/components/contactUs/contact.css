@@ -109,3 +109,20 @@
     cursor:pointer;
     font-size:16px;
 }
+@media screen and (max-width:500px){
+    .contact-icon{
+        height:6vh;
+        width:6vh;
+    }
+    .contact-icon:hover{
+        width:23vh;
+    }
+    .contact-icon img{
+        height:4.5vh;
+        width:4.5vh;
+    }
+    .black-bg-contact{
+        height:98vh;
+        padding-bottom:2vh;
+    }
+}
