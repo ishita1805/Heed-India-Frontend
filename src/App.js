@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import './app.css'
 import {
   Switch,
@@ -9,7 +9,7 @@ import { useTransition, animated } from "react-spring";
 import Navigation from './components/navigation/Navigation'
 import Home from "./containers/home/Home"
 import About from "./containers/about/About"
-import Affiliations from "./containers/affiliations/Affiliations"
+import Initiatives from "./containers/initiatives/Initiatives"
 import Work from "./containers/work/Work"
 import Sports from './containers/sports/Sports'
 import Branches from './containers/branches/Branches'
@@ -27,7 +27,7 @@ import Admin from './containers/admin/Admin'
 import Contact from './components/contactUs/Contact'
 
 function App() {
-  const [center,setCenter]=useState(false);
+  const [center,setCenter]=useState(true);
   const [state,setState]=useState('Mumbai')
   const { location } = useContext(__RouterContext);
   const transitions = useTransition(location, location => location.pathname, {
@@ -38,6 +38,10 @@ function App() {
       duration: 350 
     }
   });
+  useEffect(() => {
+    //  pop up won't show for any page but the home page
+   if(location.pathname === "/") setCenter(false);
+  }, [])
   
   const closePopUp = ()=>setCenter(true);
 
@@ -89,8 +93,8 @@ function App() {
                   <About state={state}/>
                 </Route>
 
-                <Route path="/affiliations" exact >                  
-                  <Affiliations state={state}/>
+                <Route path="/initiatives" exact >                  
+                  <Initiatives state={state}/>
                 </Route>
 
                 <Route  path="/events" exact >

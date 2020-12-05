@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react'
 import Header from '../../components/header/Header'
-import './affiliations.css'
+import './initiatives.css'
 
-const Affiliations = () => {
+const Initiatives = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -13,4 +13,4 @@ const Affiliations = () => {
     )
 }
 
-export default Affiliations
+export default Initiatives
