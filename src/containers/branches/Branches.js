@@ -7,7 +7,7 @@ const Branches = () => {
       }, [])
       
     return (
-        <div className="in-body">
+        <div className="in-body padding-t-12 padding-l-2">
             <Header title = "Our Branches"/>
         </div>
     )

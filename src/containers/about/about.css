@@ -1,79 +1,218 @@
-.about-align{
+
+.background-about{
+    background:url('../../assets/about-bg-1.jpeg');
+    background-size:cover;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+.about-section{
+    background:url("../../assets/about-sec-1-1.jpeg");
+    background-size:100vw;
+    background-position:top;
+    width:100vw;
+    height:52vh;
+}
+.abt-sec{
+    width:96vw;
+    padding:0 2vw;
+}
+.abt-sec p{
+    margin:1vh 0;
+    padding:0;
+}
+.abt-sec h3{
+    margin:2vh 0;
+    padding:0;
+}
+.abt-sec h1{
+    font-size:50px;
+    font-weight:600;
+    margin:0;
+    font-family: 'Playfair Display', serif;
+    color:rgb(212, 212, 212);
+}
+.abt-white{
+    background:white;
+    min-height:40vh;
     display:flex;
     flex-direction:row;
-    background:url('../../assets/people.png');
-    background-size:900px;
-    background-repeat:no-repeat;
-    background-position:bottom right;
-}
-.inner-about-col{
-    display:flex;
-    padding-top:5vh;
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content:flex-start;
-    min-width:40vw;
-    max-width:50vw;
-}
-.inner-about-col-2{
-    margin:0 2vw;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    height:60vh;
+    align-items: flex-start;
     justify-content:center;
-    min-width:40vw;
-    max-width:50vw;
 }
-.hide-about-p{
+.abt-dark-ov{
+    background:rgba(0, 0, 0, 0.605);
+    height:47vh;
     display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content:flex-end;
+    padding-bottom:5vh;
 }
-.inner-about-cards{
-    margin-top:7vh;
+.about-row-in{
+    width:100%;
     display:flex;
-    align-items:flex-start;
+    flex-direction: column;
+    justify-content:center;
+    padding:5vh 0;
+    color:rgb(20, 20, 20);
+}
+.iframe-abt{
+    width:450px;
+    height:275px;
+    margin-right:4vw;
+    align-self: flex-end;   
+}
+.abt-semi{
+    background:rgba(0,0,0,0.5);
+    width:100vw;
+    min-height:30vh;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+.abt-semi-in{
+    display:flex;
+    flex-direction:column;
+    color:white;
+    margin:0 5vw;
+    text-align:center;
+}
+.dark-abt{
+    min-height:60vh;
+    display:flex;
+    flex-direction:row;
+    width:100vw;
+    background:rgb(20, 20, 20);
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+/* cards incase i want to make a new component */
+.dark-abt-cover{
+    width:200px;
+    height:200px;
+    border-radius:3px;
+    cursor:pointer;
+    margin:2vh 2vw;
+    padding:0;
+    transition:0.5s ease-in-out;
+}
+.dark-abt-cover:nth-child(1) {
+    background:url("../../assets/about-sec-4.jpeg");
+    background-size:cover;
+}
+.dark-abt-cover:nth-child(2) {
+    background:url("../../assets/about-sec-3.jpeg");
+    background-size:cover;
+}
+.dark-abt-cover:nth-child(3) {
+    background:url("../../assets/about-sec-5.jpeg");
+    background-size:cover;
+}
+.dark-abt-cover:nth-child(4) {
+    background:url("../../assets/about-sec-2.jpeg");
+    background-size:cover;
+}
+.dark-abt-cover:hover{
+    height:260px;
+}
+.dark-abt-cover::before{
+    content:"";
+    position:absolute;
+    display:block;
+    width:200px;
+    height:260px;
+    border-radius:3px;
+    background:linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
+    z-index:2;
+    transition: 0.5s all;
+    opacity:0;
+}
+.dark-abt-cover:hover  .dac-1{ 
+    display:none;
+}
+.dark-abt-cover:hover::before{
+    opacity:1;
+    border-radius:3px;
+    transition: 0.5s all;
+}
+.dac-1{
+    position:absolute;
+    background:rgba(0,0,0,0.4);
+    padding-left:10px;
+    height:200px;
+    width:190px;
+    display:flex;
+    align-items:center;
     justify-content:flex-start;
+    color:white;
+    z-index:3;
+    transition: 0.5s all;
 }
-
+.dac-2{
+    position:absolute;
+    padding:0 10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+    font-size:14px;
+    font-weight:500;
+    height:260px;
+    width:180px;
+    opacity:0;
+    transform: translateY(30px);
+    color:white;
+    z-index:3;
+    transition: 0.5s all;
+}
+.dark-abt-cover:hover  .dac-2{ 
+    opacity:1;
+    transform: translateY(0px);
+    transition: 0.5s all;
+}
+@media screen and (max-width:1200px){
+    .iframe-abt{
+        margin-right:2vw;
+        margin-left:2vw;
+    }
+}
 @media screen and (max-width:1000px){
-    .inner-about-col{
-        min-width:auto;
-        max-width:100vw;
+    .about-section{
+        height:50vh;
+        background-size:cover;
     }
-    .inner-about-col-2{
-        min-width:auto;
-        max-width:100vw;
+    .abt-dark-ov{
+        height:45vh;
     }
-    .hide-about-p{
-        display:none;
-    }
-}
-@media screen and (max-width:900px){
-    .about-align{
-        background-size:100vw;
-    }
-    .inner-about-col{
-        min-width:auto;
-        max-width:100vw;
-        padding-top:2vh;
-    }
-}
-@media screen and (max-width:800px){
-    .inner-about-cards{
-        display:flex;
+    .abt-white{
         flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        margin:3vh;
-        margin-top:13vh;
+    }
+    .iframe-abt{
+        margin-right:0;
+        margin-left:0;
+        align-self: center;   
+    }
+    .abt-semi{
+        min-height:25vh;
     }
 }
-
-@media screen and (max-width:600px){
-    .inner-about-cards{
-        display:none;
+@media screen and (max-width:500px){
+    .iframe-abt{
+        width:90%;
+        height:240px;
+        align-self: center;   
     }
-    .hide-about-p{
-        display:flex;
+    .abt-semi-in{
+        margin:0 3vw;
+    }
+    .abt-sec h1{
+        font-size:40px;
+    }
+    /*  cards incase i want to make a new component  */
+    .dark-abt-cover{
+        margin:2vh 2vw;
     }
 }

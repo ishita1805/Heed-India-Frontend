@@ -8,21 +8,21 @@ const Home = ({state,...props}) => {
         window.scrollTo(0, 0)
       }, [])
     return (
-    <div className="in-body-2 col">
+    <div className="col in-body-2">
         <div className="grow">
             {/* content comes here remove H1 tag */}
-            <h1><span className="green-home">HEED</span> INDIA</h1>
-            <p>Do we have a moral obligation to help people we do not know? If so, why?</p>
+            <h1><span className="green-home">Heed</span> India</h1>
+            <p>Facilitating health and education for children across the globe.</p>
             <h2><span className="green-home">#be</span><span className="green-home-1">the</span><span className="green-home-2">change</span></h2>
             {/* <button className="button-green">Contact Us</button> */}
             <Button
             className="success"
             label="Contact Us"/>
+            <div className="bottom-nav-home">
+                <BottomNav/>
+            </div> 
         </div>
-        <div className="small-screen-bot-nav">
-            <BottomNav/>
-        </div>
-        
+           
     </div>
     )
 }

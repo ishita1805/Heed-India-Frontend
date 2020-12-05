@@ -2,7 +2,8 @@
     display:flex;
     width:80vw;
     flex-direction:column;
-    margin:5vh 0;
+    margin:3vh 0;
+    margin-top:15vh;
 }
 .profile-sec1{
     display:flex;
@@ -57,6 +58,7 @@
         width:100vw;
         flex-direction:column;
         margin:3vh 0;
+        margin-top:15vh;
     }
     .bio-profile-2{
         display:none;
