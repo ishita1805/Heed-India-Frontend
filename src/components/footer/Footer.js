@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="footer-container">
         <div className="footer">
             <div className="footer-inner">
-                <img src={footer} className="logo-footer"/>
+                <img src={footer} alt="" className="logo-footer"/>
                 <h4>Find Us</h4>
                 <span>
                 19, Unique Ind Estate, VS Marg,<br/>
@@ -18,9 +18,9 @@ const Footer = () => {
             <div className="footer-inner">
                 <h4>Make a change</h4>
                 <span>
-                    <a>Donate Now</a><br/>
-                    <a>Raise Money</a><br/>
-                    <a>Get Involved</a><br/>
+                    <a href="/">Donate Now</a><br/>
+                    <a href="/">Raise Money</a><br/>
+                    <a href="/">Get Involved</a><br/>
                 </span>
                 <h4>Contact Us</h4>
                 <span>
@@ -31,15 +31,15 @@ const Footer = () => {
             <div className="footer-inner">
                 <h4>Helpful Links</h4>
                 <span>
-                    <a>Privacy Policy</a><br/>
-                    <a>Terms and Conditions</a><br/>
+                    <a href="/">Privacy Policy</a><br/>
+                    <a href="/">Terms and Conditions</a><br/>
                 </span>
                 <h4>Developers</h4>
                 <span>
-                    <a>Ishita Kabra</a><br/>
-                    <a>Milan Mandal</a><br/>
-                    <a>Ritwik Ojha</a><br/>
-                    <a>Keshav Kapoor</a><br/>
+                    <a href="/">Ishita Kabra</a><br/>
+                    <a href="/">Milan Mandal</a><br/>
+                    <a href="/">Ritwik Ojha</a><br/>
+                    <a href="/">Keshav Kapoor</a><br/>
                 </span>
             </div>
 
@@ -63,18 +63,3 @@ const Footer = () => {
 }
 
 export default Footer
-
-
-
-{/* 
-
-<div className="footer-sec">
-<h4>Designed & Developed By</h4>
-<a target="__blank" href="https://github.com/ishita1805">Ishita Kabra</a>
-<a>Milan Mandal</a>
-<a>Ritwik Ohja</a>
-<a>Keshav Kapoor</a>
-<button className="footer-button"><i class="fa fa-envelope"></i>&ensp; Join Our News Letter</button>
-</div>
-
-*/}

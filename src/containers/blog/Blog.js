@@ -40,7 +40,7 @@ const Blog = () => {
                 Copyright © 2020 Heed India<br></br>
                 All Rights Reserved<br></br><br></br>
                 <div className="row">
-                    <a>Privacy Policy</a> &emsp; <a>Refund & Cancellations</a> &emsp; <a>Terms & Conditions</a>
+                    <a href="/">Privacy Policy</a> &emsp; <a href="/">Refund & Cancellations</a> &emsp; <a href="/">Terms & Conditions</a>
                 </div>
             </div>
 

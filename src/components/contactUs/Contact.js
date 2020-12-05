@@ -20,7 +20,7 @@ const Contact = () => {
             </div>:
             null}
         <div onClick={()=>setForm(!form)} className="contact-icon">
-            <img src={man}/>
+            <img src={man} alt=""/>
         </div>
         </div>
     )

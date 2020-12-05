@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     //  pop up won't show for any page but the home page
    if(location.pathname === "/") setCenter(false);
-  }, [])
+  }, [location.pathname])
   
   const closePopUp = ()=>setCenter(true);
 

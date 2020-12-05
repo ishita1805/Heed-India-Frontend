@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import './navigation.css'
 import { NavLink } from "react-router-dom";
 import img from '../../assets/logo_footer.png'
@@ -20,7 +20,7 @@ const Navigation = ({loc,...props}) => {
             <div className={nav?"new-2":"cross"}></div>
             <div className={nav?"new-3 cross":"cross"}></div>
           </div>
-          <img  src={dark.includes(loc)?imgdark:img} className="logo" />
+          <img  alt="" src={dark.includes(loc)?imgdark:img} className="logo" />
         </div>
 
         {loc==="/admin"?
@@ -31,7 +31,7 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/admin/view" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">My Blogs</NavLink>
           <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Home</NavLink>
           <div className="logo-nav">
-            <img src={dark.includes(loc)?imgdark:img} className="logo" />
+            <img alt="" src={dark.includes(loc)?imgdark:img} className="logo" />
           </div>
         </div> 
 
@@ -40,7 +40,7 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/admin/view" className="nav-item" activeClassName="nav-item-active">My Blogs</NavLink>
           <NavLink exact to="/" className="nav-item" activeClassName="nav-item-active">Home</NavLink>
           <div className="logo-nav">
-            <img  src={dark.includes(loc)?imgdark:img} className="logo" />
+            <img  alt="" src={dark.includes(loc)?imgdark:img} className="logo" />
           </div>
         </div> 
         </>:
@@ -57,7 +57,7 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/raise-money" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Raise Money</NavLink>
           <NavLink exact to="/our-mission" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Mission</NavLink>
           <div className="logo-nav">
-            <img src={dark.includes(loc)?imgdark:img} className="logo" />
+            <img alt="" src={dark.includes(loc)?imgdark:img} className="logo" />
           </div>
         </div> 
 
@@ -69,7 +69,7 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/initiatives" className="nav-item" activeClassName="nav-item-active">Initiatives</NavLink>
           <NavLink exact to="/our-branches" className="nav-item" activeClassName="nav-item-active">Our Branches</NavLink>
           <div className="logo-nav">
-            <img src={dark.includes(loc)?imgdark:img} className="logo" />
+            <img alt="" src={dark.includes(loc)?imgdark:img} className="logo" />
           </div>
         </div> 
         </>

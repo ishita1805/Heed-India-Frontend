@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import Header from '../../components/header/Header'
+// import Header from '../../components/header/Header'
 import './initiatives.css'
 import vid from '../../assets/1.5mb.mp4'
 const Initiatives = () => {

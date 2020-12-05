@@ -6,7 +6,7 @@ const CenterIcon = ({src, label, value, onClick,...props}) => {
         <button
         className="icon-city"
         onClick={onClick}>
-            <img src={src} className="center-image"/>
+            <img src={src} alt="" className="center-image"/>
             <h4>{label}</h4>
         </button>
     )

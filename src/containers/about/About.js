@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react'
-import Paragraph from '../../components/paragraph/Paragraph.js'
-import Header from '../../components/header/Header'
+// import Paragraph from '../../components/paragraph/Paragraph.js'
+// import Header from '../../components/header/Header'
 import './about.css'
-import Card from '../../components/card/Card'
+// import Card from '../../components/card/Card'
 
 const About = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
-          {/* {props.state} */}
-      }, [])
+        console.log(props.state)
+      }, [props.state])
       
     return (
         <div className="in-body col background-about">
@@ -41,6 +41,7 @@ const About = (props) => {
                </div>
                <div className="about-row-in">
                     <iframe
+                    title="Heed India Video"
                     className="iframe-abt"
                     src="https://www.youtube.com/embed/UclKT_bQMFo" 
                     frameborder="0" 

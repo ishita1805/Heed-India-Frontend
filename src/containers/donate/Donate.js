@@ -72,6 +72,7 @@ const Donate = () => {
             </div>
             <h3>Donate for a cause</h3>
             <div className="amount-donate">
+                {/* amount in paisa */}
                 <button  onClick={()=>{displayRazorpay(10000)}}  className="amt-donate">₹ 100 <br/><span className="donate-button-text">feed a child</span> </button>
                 <button  onClick={()=>{displayRazorpay(40000)}}  className="amt-donate">₹ 400 <br/><span className="donate-button-text">feed a child</span> </button>
                 <button  onClick={()=>{displayRazorpay(60000)}}  className="amt-donate">₹ 600 <br/><span className="donate-button-text">feed a child</span> </button>
@@ -80,14 +81,12 @@ const Donate = () => {
             <h3>Or, Enter a custom amount</h3>
             <div className="col-bottom">
                 <input type="number" placeholder="Enter amount in ₹" className="amt-donate-custom" onChange={e=>setAmt((e.target.value)*100)}/>
-                <a 
+                <button 
                 onClick={()=>{displayRazorpay(amt)}}
-                onSelect={()=>{displayRazorpay(amt)}}
-                target="_blank"
                 className="button-donate"
-                rel="noopener noreferrer">
+                >
                     Donate 
-                </a>
+                </button>
             </div>
             </div>
 
