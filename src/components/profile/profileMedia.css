@@ -1,100 +1,248 @@
-.profile {
-    display:flex;
-    width:80vw;
-    flex-direction:column;
-    margin:5vh 0;
-}
-.profile-sec1{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
+img {
+    display: block;
 }
 
-.profile-follow{
-    padding: 0.6vh 4vw;
-    font-size:16px;
-    color:white;
-    border-color: rgb(55, 119, 247);
-    background-color: rgb(55, 119, 247);
-    border-radius:5px;
-    border:none;
-    font-weight: 400;
+.container {
+    max-width: 58rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    font-family: "Open Sans", Arial, sans-serif;
 }
-.profile-follow:hover{
+
+.btn {
+    display: inline-block;
+    font: inherit;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
     cursor: pointer;
-    border-color:rgb(55, 119, 247);;  
 }
 
+.btn:focus {
+    outline:none;
+    background-color: #2962bf;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+}
+
+
+
+/* Profile Section */
+
+.profile {
+    padding: 5rem 0;
+}
+
+.profile::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
 .profile-image {
-    height:16vh;
-    width:16vh;
+    float: left;
+    width: calc(33.333% - 2rem);
     display: flex;
-    justify-content: right;
-    background:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    margin:2vh 5vh;
-    border-radius:8vh;
-    box-shadow:0 0  6px rgba(0,0,0,0.15);
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
 }
 
 .profile-image img {
-    width:auto;
-    height:13vh;
+    border-radius: 50%;
+    box-shadow:0 0  6px rgba(0,0,0,0.15);
 }
-.flex-start{
-    align-items:flex-end;
+
+.profile-user-settings,
+.profile-stats,
+.profile-bio {
+    float: left;
+    width: calc(66.666% - 2rem);
 }
-.profile-user-settings{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content:center;
+
+.profile-user-settings {
+    margin-top: 1.1rem;
 }
-.profile-user-settings h1{
-    font-weight:500;
-    margin:0;
-    margin-right:3vh;
-    font-size:25px;
+
+.profile-user-name {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 300;
 }
-.stat-p{
-    margin-right:7vh;
+
+.profile-edit-btn {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+    padding: 0 2.4rem;
+    margin-left: 2rem;
+	background-color:rgb(23, 115, 206);
+	color:white;
 }
-.bio-profile{
-    display:none;
+
+.profile-stats {
+    margin-top: 2.3rem;
 }
-@media screen and (max-width:1000px){
+
+.profile-stats li {
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-right: 4rem;
+    cursor: pointer;
+}
+
+.profile-stats li:last-of-type {
+    margin-right: 0;
+}
+
+.profile-bio {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 2.3rem;
+}
+
+.profile-real-name,
+.profile-stat-count
+{
+    font-weight: 600;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 40rem) {
     .profile {
-        display:flex;
-        width:100vw;
-        flex-direction:column;
-        margin:3vh 0;
-    }
-    .bio-profile-2{
-        display:none;
-    }
-    .bio-profile{
-        display:flex;
-        margin:0 5vh;
-        align-self:center;
-    }
-    .profile-image {
-        min-height:16vh;
-        min-width:16vh;
         display: flex;
-        justify-content: right;
-        background:white;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        overflow:hidden;
-        margin:2vh 5vh;
-        border-radius:8vh;
-        box-shadow:0 0  6px rgba(0,0,0,0.15);
+        flex-wrap: wrap;
+        padding: 4rem 0;
     }
-    
+
+    .profile::after {
+        display: none;
+    }
+
+    .profile-image,
+    .profile-user-settings,
+    .profile-bio,
+    .profile-stats {
+        float: none;
+        width: auto;
+    }
+
+    .profile-image img {
+        width: 6rem;
+    }
+
+    .profile-user-settings {
+        flex-basis: calc(100% - 10.7rem);
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    .profile-user-name {
+        font-size: 1.7rem;
+    }
+
+    .profile-edit-btn {
+        font-size: 1rem;
+        order: 1;
+        padding: 0;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .profile-edit-btn {
+        margin-left: 0;
+    }
+
+    .profile-bio {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
+
+    .profile-edit-btn,
+    .profile-bio,
+    .profile-stats {
+        flex-basis: 100%;
+    }
+
+    .profile-stats {
+        order: 1;
+        margin-top: 1.5rem;
+    }
+
+    .profile-stats ul {
+        display: flex;
+        text-align: center;
+        padding: 1.2rem 0;
+        border-top: 0.1rem solid #dadada;
+        border-bottom: 0.1rem solid #dadada;
+    }
+
+    .profile-stats li {
+        font-size: 1.4rem;
+        flex: 1;
+        margin: 0;
+    }
+
+    .profile-stat-count {
+        display: block;
+    }
+}
+
+@supports (display: grid) {
+    .profile {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(3, auto);
+        grid-column-gap: 3rem;
+        align-items: center;
+    }
+
+    .profile-image {
+        grid-row: 1 / -1;
+    }
+
+
+    .profile-image,
+    .profile-user-settings,
+    .profile-stats,
+    .profile-bio {
+        width: auto;
+        margin: 0;
+    }
+
+    @media (max-width: 40rem) {
+        .profile {
+            grid-template-columns: auto 1fr;
+            grid-row-gap: 1.5rem;
+        }
+
+        .profile-image {
+            grid-row: 1 / 2;
+        }
+
+        .profile-user-settings {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 1rem;
+        }
+
+        .profile-edit-btn,
+        .profile-stats,
+        .profile-bio {
+            grid-column: 1 / -1;
+        }
+
+        .profile-user-settings,
+        .profile-edit-btn,
+        .profile-bio,
+        .profile-stats {
+            margin: 0;
+        }
+    }
 }
