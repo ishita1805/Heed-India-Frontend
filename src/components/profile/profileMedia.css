@@ -72,6 +72,7 @@ img {
 }
 
 .profile-edit-btn {
+    
     font-size: 1.4rem;
     line-height: 1.8;
     border: 0.1rem solid #dbdbdb;
@@ -113,11 +114,11 @@ img {
 
 /* Media Query */
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 30rem) {
     .profile {
         display: flex;
         flex-wrap: wrap;
-        padding: 4rem 0;
+        padding: 2rem 0rem;
     }
 
     .profile::after {
@@ -140,28 +141,27 @@ img {
         flex-basis: calc(100% - 10.7rem);
         display: flex;
         flex-wrap: wrap;
-        margin-top: 1rem;
     }
 
     .profile-user-name {
         font-size: 1.7rem;
+        margin-right: 0.5rem;
     }
 
     .profile-edit-btn {
         font-size: 1rem;
         order: 1;
-        padding: 0;
+        padding: 0 2.6rem;
         text-align: center;
         margin-top: 1rem;
     }
 
     .profile-edit-btn {
-        margin-left: 0;
+        margin-left: 10rem;
     }
 
     .profile-bio {
         font-size: 1.4rem;
-        margin-top: 1.5rem;
     }
 
     .profile-edit-btn,
@@ -172,13 +172,12 @@ img {
 
     .profile-stats {
         order: 1;
-        margin-top: 1.5rem;
     }
 
     .profile-stats ul {
         display: flex;
         text-align: center;
-        padding: 1.2rem 0;
+        padding: 1rem 0;
         border-top: 0.1rem solid #dadada;
         border-bottom: 0.1rem solid #dadada;
     }
