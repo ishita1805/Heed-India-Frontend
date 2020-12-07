@@ -22,7 +22,7 @@ export default function Profile() {
     
             <h1 className="profile-user-name">heedindia.org</h1>
     
-           <a href="https://www.instagram.com/heedindia.ngo/"><button className="btn profile-edit-btn" >Follow</button></a>
+           <button className="btn profile-edit-btn" >Follow</button>
           </div>
     
           <div className="profile-stats">
