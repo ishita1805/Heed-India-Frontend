@@ -7,7 +7,7 @@ const Initiatives = () => {
         window.scrollTo(0, 0)
       }, [])
     return (
-        <div className="in-body">
+        <div className="ini-main">
             {/* <Header title = "Initiatives"/> */}
             <div className="ini-main">
                 <video autoPlay muted loop id="myVideo">
