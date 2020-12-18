@@ -3,6 +3,11 @@ import Background from '../../components/bgVid/BackgroundVideo'
 import './mission.css'
 import imgone from '../../assets/about-bg-1.jpeg'
 import Card from '../../components/cardMission/cardsMission'
+import sponsorAChild from '../../assets/sponsorAChild.png'
+import donate from '../../assets/donateIcon.png'
+import give from '../../assets/give.png'
+import volunteer from '../../assets/volunteer.png'
+import prog from '../../assets/sponsorAProg.png'
 
 const Mission = () => {
     useEffect(() => {
@@ -11,24 +16,34 @@ const Mission = () => {
 
       const data = [
         {
-          heading: 'Sponsor a child',
+          heading: 'Sponsor a Child',
           para: 'We urgently need your support to help needy children receive good education, health and nutrition. Sponsor a child for one of more of his/her needs. Sponsor a child NOW!​',
+          url: sponsorAChild,
+          color:'blue-icon'
         },
         {
           heading: 'Make A Donation',
           para: 'Your donation will help provide critical support to all beneficiaries of the programmes we undertake. Donate for a cause NOW! spread smiles and joy',
+          url: donate,
+          color:'green-icon'
         },
         {
-          heading: 'Sponsor a Programme',
+          heading: 'Give Little of You',
           para:' Your donation will ensure that our projects create the most impact. Your money will be utilised in areas that you will feel most strongly about.',
+          url: give,
+          color:'purple-icon'
         },
         {
           heading: 'Volunteer',
           para: 'Volunteer your time for a cause of your liking. If you would like to bring a group of friends, family or colleagues, reach out to us and we will work with you and your ideas to make a social impact.',
+          url: volunteer,
+          color:'red-icon'
         },
         {
-          heading: 'Sponsor a child',
+          heading: 'Sponsor a Programme',
           para: 'We invite corporations and foundations to join our efforts as partners by donating direct gifts, promoting employee giving or supporting a worthy cause - there can be a role for everyone.',
+          url: prog,
+          color:'orange-icon'
         }
       ]
     return (
@@ -62,6 +77,8 @@ const Mission = () => {
                  <Card
                  heading={item.heading}
                  para={item.para}
+                 img={item.url}
+                 color={item.color}
                  />
                ))}
             </div>
