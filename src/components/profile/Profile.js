@@ -1,6 +1,5 @@
 import React from 'react'
 import './profileMedia.css'
-import Button from '../button/Button'
 
 
 var img = "https://static.wixstatic.com/media/1f2275_1ec26c62602b4ef09365c9dc35636047~mv2.jpg/v1/fill/w_204,h_222,al_c,q_80,usm_0.66_1.00_0.01/1f2275_1ec26c62602b4ef09365c9dc35636047~mv2.webp"

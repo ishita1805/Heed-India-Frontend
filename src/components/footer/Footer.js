@@ -1,8 +1,38 @@
 import React from 'react'
 import './footer.css'
+import { NavLink } from "react-router-dom";
 import footer from '../../assets/logo_footer.png'
+import {useState} from 'react'
+import axios from 'axios'
+import uri from './../../uri'
 
 const Footer = () => {
+
+    const [email,setEmail]= useState('');
+
+    const Email=e=>{
+        setEmail(e.target.value)
+    }
+
+    const onSubmit=()=>{
+        
+        const letter = {
+            newemail:email
+        }
+        console.log(letter);
+
+        axios.post(uri+'/newsletter/email',letter)
+        .then(res=>{
+            if(res.data==="error")
+            {
+                window.alert("error in email")
+            }
+            else{
+                window.alert("submitted")
+            }
+        })
+        setEmail('');
+    }
     return (
         <div className="footer-container">
         <div className="footer">
@@ -18,9 +48,9 @@ const Footer = () => {
             <div className="footer-inner">
                 <h4>Make a change</h4>
                 <span>
-                    <a href="/">Donate Now</a><br/>
-                    <a href="/">Raise Money</a><br/>
-                    <a href="/">Get Involved</a><br/>
+                    <NavLink exact to="/donate">Donate</NavLink><br/>
+                    <NavLink exact to="/raise-money">Raise Money</NavLink><br/>
+                    <NavLink exact to="/our-mission">Our Mission</NavLink><br/>
                 </span>
                 <h4>Contact Us</h4>
                 <span>
@@ -36,23 +66,23 @@ const Footer = () => {
                 </span>
                 <h4>Developers</h4>
                 <span>
-                    <a href="/">Ishita Kabra</a><br/>
-                    <a href="/">Milan Mandal</a><br/>
-                    <a href="/">Ritwik Ojha</a><br/>
-                    <a href="/">Keshav Kapoor</a><br/>
+                    <a href="https://github.com/ishita1805">Ishita Kabra</a><br/>
+                    <a href="https://github.com/milanmandal">Milan Mandal</a><br/>
+                    <a href="https://github.com/daredevil2020">Ritwik Ojha</a><br/>
+                    <a href="https://github.com/KKapoor0801">Keshav Kapoor</a><br/>
                 </span>
             </div>
 
             <div className="footer-buttons">
-                <div className="footer-button"><i class="fa fa-envelope"></i><input type="text" placeholder="jon@example.com"/></div>
-                <button className="button-footer">Join our Newsletter</button>
+                <div className="footer-button"><i class="fa fa-envelope"></i><input value={email} onChange={Email} type="text" placeholder="jon@example.com"/></div>
+                <button onClick={onSubmit} className="button-footer">Join our Newsletter</button>
             </div>
         </div>
             <div className="footer-sec-2">
-                <i class="fa fa-facebook footer-icon" aria-hidden="true"></i>
-                <i class="fa fa-instagram footer-icon" aria-hidden="true"></i>
-                <i class="fa fa-twitter footer-icon" aria-hidden="true"></i>
-                <i class="fa fa-linkedin footer-icon" aria-hidden="true"></i>
+            <a href="https://www.facebook.com/heedindia1/"> <i class="fa fa-facebook footer-icon" aria-hidden="true" ></i></a>
+            <a href="https://www.instagram.com/heedindia.ngo/"> <i class="fa fa-instagram footer-icon" aria-hidden="true" ></i></a>
+            <a href="https://twitter.com/heed_india?lang=en"> <i class="fa fa-twitter footer-icon" aria-hidden="true" ></i></a>
+            <a href="https://www.linkedin.com/company/heed-india/about/"> <i class="fa fa-linkedin footer-icon" aria-hidden="true" ></i></a>
             </div> 
             <div className="footer-sec-1">
                 Copyright © 2020 Heed India<br/>
