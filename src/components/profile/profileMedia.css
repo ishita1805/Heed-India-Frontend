@@ -31,7 +31,11 @@ img {
 /* Profile Section */
 
 .profile {
-    padding: 5rem 0;
+    display:flex;
+    width:80vw;
+    flex-direction:column;
+    margin:3vh 0;
+    margin-top:15vh;
 }
 
 .profile::after {
@@ -53,12 +57,8 @@ img {
     border-radius: 50%;
     box-shadow:0 0  6px rgba(0,0,0,0.15);
 }
-
-.profile-user-settings,
-.profile-stats,
-.profile-bio {
-    float: left;
-    width: calc(66.666% - 2rem);
+.center{
+    align-items:center;
 }
 
 .profile-user-settings {
@@ -116,9 +116,11 @@ img {
 
 @media screen and (max-width: 30rem) {
     .profile {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 2rem 0rem;
+        display:flex;
+        width:100vw;
+        flex-direction:column;
+        margin:3vh 0;
+        margin-top:15vh;
     }
 
     .profile::after {

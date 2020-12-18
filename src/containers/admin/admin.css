@@ -1,0 +1,41 @@
+.ckeditor{
+    width:50vw;
+    margin:auto;
+    min-width:700px;
+}
+.auto{
+    margin:auto;
+}
+.width-blog{
+    width:50vw;
+    min-width:700px;
+    margin:3vh 2vw;
+    padding:3vh 2vh;
+    border-top:solid 2px rgb(204, 204, 204);
+    margin:auto;
+    overflow-x: hidden;
+}
+.ql-syntax{
+    background:rgb(65, 65, 65);
+    color:white;
+    padding:2vh !important;
+    border-radius:2px;
+}
+/* .ql-container img{
+    max-width:auto !important;
+    height:300px !important;;
+}
+.ql-editor img{
+    max-width:auto !important;
+    height:300px !important;;
+} */
+@media screen and (max-width:750px){
+    .ckeditor{
+        width:90vw;
+        min-width:100px;
+    }
+    .width-blog{
+        width:90vw;
+        min-width:100px;
+    }
+}

@@ -1,11 +1,15 @@
 .icon-city{
     border:none;
-    background:white;
+    background:transparent;
+    color:rgb(219, 219, 219);
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content: center;
     cursor:pointer;
+}
+.icon-city h4{
+    font-weight:400;
 }
 .sub-head-popup{
     text-align:center;
@@ -14,7 +18,7 @@
     outline:none;
 }
 .center-image{
-   height:50px;
+   width:45px;
    margin:0 2vh;
 }
 .cities-row{

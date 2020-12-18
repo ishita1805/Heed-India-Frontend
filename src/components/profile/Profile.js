@@ -1,5 +1,6 @@
 import React from 'react'
 import './profileMedia.css'
+import Button from '../button/Button'
 
 
 var img = "https://static.wixstatic.com/media/1f2275_1ec26c62602b4ef09365c9dc35636047~mv2.jpg/v1/fill/w_204,h_222,al_c,q_80,usm_0.66_1.00_0.01/1f2275_1ec26c62602b4ef09365c9dc35636047~mv2.webp"
@@ -7,41 +8,38 @@ var img = "https://static.wixstatic.com/media/1f2275_1ec26c62602b4ef09365c9dc356
 
 export default function Profile() {
     return (
-      <div className="container">
-
         <div className="profile">
-    
-          <div className="profile-image">
-    
-            <img src={img} alt=""></img>
-    
-          </div>
-    
-          <div className="profile-user-settings">
-          <form  action="https://www.instagram.com/heedindia.ngo/">
-            <h1 className="profile-user-name">heedindia.org</h1>
-              <input  className="profile-edit-btn" type="submit" value="Follow" />
-            </form>
-          </div>
-    
-          <div className="profile-stats">
-    
-            <ul>
-              <li><span className="profile-stat-count">164</span> posts</li>
-              <li><span className="profile-stat-count">188</span> followers</li>
-              <li><span className="profile-stat-count">206</span> following</li>
-            </ul>
-    
-          </div>
-    
-          <div className="profile-bio">
-    
-            <p><span className="profile-real-name">Heed India Foundation.</span><br/>  A small description of the NGO and a link to blogs or other work can come here</p>
-    
-          </div>
-    
-        </div>  
-    </div>
+         <div className="profile-sec1">
+{/* image */}
+              <div class="profile-image">
+                <img src={img} alt=""/>
+              </div>
+{/* name button and stats  */}
+              <div class="profile-user-settings">
+                <div className="row center">
+                  <h1 class="profile-user-name">heedindia.ngo</h1>
+                  <Button
+                  label="Follow"
+                  className="primary"
+                  />
+                </div>
+                <div className="row">
+                  <p className="stat-p">703 <b>Posts</b></p>
+                  <p className="stat-p">2318 <b>Followers</b></p>
+                  <p className="stat-p">696 <b>Following</b></p>
+                </div>
+                <p className="bio-profile-2">
+                 A small description of the NGO and a link to blogs or other work can come here<br/>
+                 Heed India (Health and Education)
+                </p>
+              </div>
+         </div>
+{/* stats for smaller screens */}
+         <p className="bio-profile" >
+            A small description of the NGO and a link to blogs or other work can come here<br/>
+            Heed India (Health and Education)
+          </p>
+        </div>
     )
 }
 
