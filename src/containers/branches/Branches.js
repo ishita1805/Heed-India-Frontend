@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react'
 import './branchStyle.css'
-import { ComposableMap, Geographies, Geography, Marker} from "react-simple-maps";
+// import { ComposableMap, Geographies, Geography, Marker} from "react-simple-maps";
 
-const geoUrl ="https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+// const geoUrl ="https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-  const markers = [
-    {markerOffset: 10,name: "Mumbai",coordinates: [72.8777,19.0760]},//longitude,latitude
-    {markerOffset: 10,name: "Agra",coordinates: [78.0081,27.1767]},
-    {markerOffset:-5,name: "Delhi",coordinates: [77.1025,28.7041]},
-  ];
+//   const markers = [
+//     {markerOffset: 10,name: "Mumbai",coordinates: [72.8777,19.0760]},//longitude,latitude
+//     {markerOffset: 10,name: "Agra",coordinates: [78.0081,27.1767]},
+//     {markerOffset:-5,name: "Delhi",coordinates: [77.1025,28.7041]},
+//   ];
 
 
 const Branches = () => {
@@ -19,7 +19,7 @@ const Branches = () => {
     return (
     
             <div className="card">
-                <ComposableMap
+                {/* <ComposableMap
                  projectionConfig={{
                    scale: 170
                  }}>
@@ -49,7 +49,7 @@ const Branches = () => {
                     </text>
                     </Marker>
                 ))}
-                </ComposableMap>
+                </ComposableMap> */}
             </div>            
         
     )

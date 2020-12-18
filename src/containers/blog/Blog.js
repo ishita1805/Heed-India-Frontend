@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './blog.css'
-import ReactMarkdown from 'react-markdown'
+// import ReactMarkdown from 'react-markdown'
 
 
 const Blog = () => {
@@ -28,7 +28,7 @@ const Blog = () => {
             <div className="thumbnail-blog"></div>
 
             <div className="blog-content">
-            <ReactMarkdown/>
+            {/* <ReactMarkdown/> */}
             </div>
 
             <div className="blog-footer">
