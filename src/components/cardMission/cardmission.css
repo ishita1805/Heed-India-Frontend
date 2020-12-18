@@ -1,0 +1,85 @@
+#circleIcons{
+    width:8vh;
+    height: 8vh;
+    align-items:center;
+    justify-content: center;
+    opacity: 1;
+    margin:0.5vh;
+    border-radius: 50%;
+    display: flex;
+    transition:0.3s;
+}
+.blue-icon{
+    background: rgb(80,196,255);
+    background: linear-gradient(145deg, rgb(80, 135, 255) 0%, rgb(28, 228, 255) 100%);
+}
+.green-icon{
+    background: rgb(0,220,195);
+    background: linear-gradient(145deg, rgba(0,220,195,1) 0%, rgba(134,255,172,1) 100%);
+}
+.purple-icon{
+    background: rgb(63,94,251);
+    background: linear-gradient(145deg, rgba(63,94,251,1) 0%, rgba(255,35,162,1) 100%);
+}
+.red-icon{
+    background: rgb(255,36,36);
+    background: linear-gradient(145deg, rgba(255,36,36,1) 0%, rgba(255,145,145,1) 100%);
+}
+.orange-icon{
+    background: rgb(255,149,36);
+    background: linear-gradient(145deg, rgba(255,149,36,1) 0%, rgba(255,218,145,1) 100%);
+}
+.iconimage{
+    height:4.5vh;
+    width:auto;
+    margin:auto;
+    transition:0.3s;
+}
+.mission-card{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    margin:5vh 5vh;
+}
+.mission-card h3{
+    margin:0.5vh;
+    color:linear-gradient(145deg, rgba(255,149,36,1) 0%, rgba(255,218,145,1) 100%);
+}
+.mission-card p{
+    text-align:center;
+    margin:1vh;
+    max-width:300px;
+}
+.icon-mission-line{
+    width:5vh;
+    height:2px;
+    margin:1vh 0;
+    border-radius:2px;
+    transition:0.5s;
+}
+.mission-card:hover .icon-mission-line{
+    width:15vh;
+    transition:0.5s;
+}
+.mission-card:hover #circleIcons{
+    width:9vh;
+    height: 9vh;
+    transition:0.3s;
+}
+.mission-card:hover .iconimage{
+    height:5.5vh;
+    transition:0.3s;
+}
+@media screen and (max-width:1200px){
+    .mission-card{
+        margin:5vh 3vh;
+    }
+}
+@media screen and (max-width:500px){
+    .mission-card p{
+        text-align:center;
+        margin:1vh;
+        max-width:90vh;
+    }
+}

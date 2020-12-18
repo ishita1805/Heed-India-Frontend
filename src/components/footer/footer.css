@@ -8,6 +8,9 @@
     align-items:center;
     justify-content:center;
 }
+.footer-container a{
+    color:rgb(131, 131, 131);
+}
 .footer{
     display:flex;
     flex-direction:row;
