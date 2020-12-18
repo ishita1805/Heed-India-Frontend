@@ -1,0 +1,30 @@
+#circleIcons{
+    width:8vh;
+    height: 8vh;
+    background: #414141 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    margin:0.5vh;
+    border-radius: 50%;
+    display: flex;
+}
+.mission-card{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    margin:5vh 5vh;
+}
+.mission-card h3{
+    margin:0.5vh;
+}
+.mission-card p{
+    text-align:center;
+    margin:1vh;
+    max-width:300px;
+}
+@media screen and (max-width:1200px){
+    .mission-card{
+        margin:5vh 3vh;
+    }
+}
