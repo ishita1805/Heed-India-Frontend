@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import './app.css'
 import {
   Switch,
@@ -11,7 +11,7 @@ import Home from "./containers/home/Home"
 import About from "./containers/about/About"
 import Initiatives from "./containers/initiatives/Initiatives"
 import Work from "./containers/work/Work"
-import Involved from './containers/involved/Involved'
+import Sports from './containers/sports/Sports'
 import Branches from './containers/branches/Branches'
 import Donate from './containers/donate/Donate'
 import Money from './containers/money/Money'
@@ -22,24 +22,32 @@ import mumbai from './assets/mumbai.png'
 import delhi from './assets/delhi.png'
 import agra from './assets/agra.png'
 import Blog from './containers/blog/Blog'
+import Footer from './components/footer/Footer'
+import Admin from './containers/admin/Admin'
+import Contact from './components/contactUs/Contact'
+
 function App() {
-  const [center,setCenter]=useState(false);
+  const [center,setCenter]=useState(true);
   const [state,setState]=useState('Mumbai')
   const { location } = useContext(__RouterContext);
   const transitions = useTransition(location, location => location.pathname, {
-    from: { opacity: 0, transform: "translate(0, 0)" },
-    enter: { opacity: 1, transform: "translate(0, 0)" },
-    leave: { opacity: 0, transform: "translate(0, 0)" },
+    from: { opacity: 0.3, transform: "translate(0, 0)", transition:"ease-in-out" },
+    enter: { opacity: 1, transform: "translate(0, 0)", transition:"ease-in-out" },
+    leave: { opacity: 0.3, transform: "translate(0, 0)", transition:"ease-in-out" },
     config: {
-      duration: 600 
+      duration: 350 
     }
   });
-
+  useEffect(() => {
+    //  pop up won't show for any page but the home page
+   if(location.pathname === "/") setCenter(false);
+  }, [location.pathname])
+  
   const closePopUp = ()=>setCenter(true);
 
   return (
   <>
-
+    
     {!center?
     <PopUp
     onClick={closePopUp}
@@ -69,7 +77,9 @@ function App() {
     />:null}
 
     <div className="body">
-        <Navigation/>
+     
+        <Navigation loc={location.pathname}/>
+        <Contact/>
         <div className="inner-body">
         {transitions.map(({ item, props, key }) => (
           <animated.div key={key} style={props}>
@@ -83,19 +93,19 @@ function App() {
                   <About state={state}/>
                 </Route>
 
-                <Route path="/initiatives" exact >
+                <Route path="/initiatives" exact >                  
                   <Initiatives state={state}/>
                 </Route>
 
-                <Route  path="/our-work" exact >
+                <Route  path="/events" exact >
                   <Work state={state}/>
                 </Route>
 
-                <Route path="/get-involved" exact >
-                  <Involved state={state}/>
+                <Route path="/sports" exact >                  
+                  <Sports state={state}/>
                 </Route>
 
-                <Route path="/our-branches" exact >
+                <Route path="/our-branches" exact >                  
                   <Branches state={state}/>
                 </Route>
 
@@ -114,10 +124,15 @@ function App() {
                 <Route path="/blog" exact >
                   <Blog state={state}/>
                 </Route>
+
+                <Route path="/admin" exact >
+                  <Admin state={state}/>
+                </Route>
               
             </Switch>
           </animated.div>
         ))}
+        <Footer/>
         </div>
 
     </div>

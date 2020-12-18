@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import './blog.css'
-import ReactMarkdown from 'react-markdown'
-
 
 const Blog = () => {
     const [liked,setLiked]=useState(true);
@@ -10,7 +8,7 @@ const Blog = () => {
     }
 
     return (
-        <div className="blog"> 
+        <div className="blog padding-t-5"> 
             <h1>Importance of Health and Education for Children</h1>
             <h3>Importance of Health and Education for Children</h3>
             
@@ -28,7 +26,7 @@ const Blog = () => {
             <div className="thumbnail-blog"></div>
 
             <div className="blog-content">
-            <ReactMarkdown/>
+            
             </div>
 
             <div className="blog-footer">
@@ -42,7 +40,7 @@ const Blog = () => {
                 Copyright © 2020 Heed India<br></br>
                 All Rights Reserved<br></br><br></br>
                 <div className="row">
-                    <a>Privacy Policy</a> &emsp; <a>Refund & Cancellations</a> &emsp; <a>Terms & Conditions</a>
+                    <a href="/">Privacy Policy</a> &emsp; <a href="/">Refund & Cancellations</a> &emsp; <a href="/">Terms & Conditions</a>
                 </div>
             </div>
 

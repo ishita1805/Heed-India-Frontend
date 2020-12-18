@@ -1,0 +1,17 @@
+.card-container{
+    margin:1vh;
+    width:30vh;
+    height:30vh;
+    background:white;
+    border-radius:3px;
+}
+.primary-card{
+    border:solid 2px rgb(210, 233, 255);
+    box-shadow:0 0 16px rgba(41, 152, 255, 0.219);
+}
+@media screen and (max-width:1000px){
+    .card-container{
+        width:25vh;
+        height:25vh;
+    }
+}

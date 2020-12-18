@@ -15,12 +15,15 @@
     position:fixed;
     top:0;
     height:12vh;
-    width:96vw;
+    width:96%;
     display:flex;
+    backdrop-filter: blur(3px);
+    /* -webkit-backdrop-filter: blur(3px); */
     padding:0 2vw;
     flex-direction:row;
+    padding-top:0.5vh;
     align-items:center;
-    background:white;
+    background:rgba(226, 226, 226, 0.103);
     justify-content:flex-start;
     font-weight:700;
     z-index:1000;
@@ -35,14 +38,14 @@ a{
 .nav-item{
     font-size:16px;
     margin-right:5vw;
-    color:rgb(184, 184, 184);
-    font-weight:700;
+    color:rgb(197, 197, 197);
+    font-weight:500;
 }
 .nav-item:hover{
-    color:#8CC634;
+    color:rgb(224, 224, 224);
 }
 .nav-item-active{
-    color:rgb(41, 41, 41);
+    color:#8CC634;
     font-weight:700;
 }
 .logo-nav{
@@ -97,6 +100,8 @@ a{
         padding-top:8vh;
         transition: 0.8s;
         box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        background:rgba(0, 0, 0, 0.788);
+        backdrop-filter: blur(12px);
     }
     .small-nav{
         position:fixed;
@@ -126,7 +131,7 @@ a{
     .cross{
         min-height:4px;
         width:5vh;
-        background:rgb(54, 54, 54);
+        background:rgb(31, 30, 30);
         border-radius:2px;
         transition:0.7s;
     }
@@ -159,7 +164,8 @@ a{
     }
     .Nav2{
         width:96vw;
-        background:rgba(255, 255, 255, 0.93);
+        background:rgba(0, 0, 0, 0.788);
+        backdrop-filter: blur(12px);
         padding-top:8vh;
     }
 }
