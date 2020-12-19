@@ -39,4 +39,10 @@ button:focus{
 .white:hover{
     background-color: #dadada;
 }
-
+.danger{
+    color: #fff;
+    background:rgb(255, 87, 87);
+}
+.danger:hover{
+    background:rgb(219, 56, 56);
+}

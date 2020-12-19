@@ -34,15 +34,6 @@
     background-position:top right;
     overflow: hidden;
 }
-
-.donate-main {
-    background:url("./assets/about-sec-4.jpeg");
-    background-size: contain;
-    background-repeat:no-repeat;
-    background-position-y: -5vh;
-}
-
-
 .col{
     display:flex;
     flex-direction:column;
