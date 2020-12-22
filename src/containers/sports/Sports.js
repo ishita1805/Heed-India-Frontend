@@ -2,6 +2,8 @@ import React, {useEffect} from 'react'
 import './sports.css'
 import Header from '../../components/header/Header'
 
+
+
 const Sports = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
