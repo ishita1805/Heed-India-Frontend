@@ -37,8 +37,8 @@ function App() {
     }
   });
   useEffect(() => {
-    //  pop up won't show for any page but the home page
-    //  --- uncomment the next line for getting pop up again ---- //
+  //  pop up won't show for any page but the home page
+  //  --- uncomment the next line for getting pop up again ---- 
   //  if(location.pathname === "/") setCenter(false);
   }, [location.pathname])
   
