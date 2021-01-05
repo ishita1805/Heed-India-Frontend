@@ -54,7 +54,7 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/initiatives" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Initiatives</NavLink>
           <NavLink exact to="/our-branches" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Branches</NavLink>
           <NavLink exact to="/donate" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Donate Now</NavLink>
-          <NavLink exact to="/raise-money" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Raise Money</NavLink>
+          {/* <NavLink exact to="/raise-money" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Raise Money</NavLink> */}
           <NavLink exact to="/our-mission" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Mission</NavLink>
           <div className="logo-nav">
             <img alt="" src={dark.includes(loc)?imgdark:img} className="logo" />
