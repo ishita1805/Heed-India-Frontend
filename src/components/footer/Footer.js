@@ -70,8 +70,8 @@ const Footer = () => {
             <div className="footer-inner">
                 <h4>Helpful Links</h4>
                 <span>
-                    <a href="/">Privacy Policy</a><br/>
-                    <a href="/">Terms and Conditions</a><br/>
+                    <a target='__blank' href="/">Privacy Policy</a><br/>
+                    <a target='__blank' href="/">Terms and Conditions</a><br/>
                 </span>
                 <h4>Developers</h4>
                 <span>
@@ -89,10 +89,10 @@ const Footer = () => {
         </div>
 
         <div className="footer-sec-2">
-            <a href="https://www.facebook.com/heedindia1/"> <i class="fa fa-facebook footer-icon" aria-hidden="true" ></i></a>
-            <a href="https://www.instagram.com/heedindia.ngo/"> <i class="fa fa-instagram footer-icon" aria-hidden="true" ></i></a>
-            <a href="https://twitter.com/heed_india?lang=en"> <i class="fa fa-twitter footer-icon" aria-hidden="true" ></i></a>
-            <a href="https://www.linkedin.com/company/heed-india/about/"> <i class="fa fa-linkedin footer-icon" aria-hidden="true" ></i></a>
+            <a target='__blank' href="https://www.facebook.com/heedindia1/"> <i class="fa fa-facebook footer-icon" aria-hidden="true" ></i></a>
+            <a target='__blank' href="https://www.instagram.com/heedindia.ngo/"> <i class="fa fa-instagram footer-icon" aria-hidden="true" ></i></a>
+            <a target='__blank' href="https://twitter.com/heed_india?lang=en"> <i class="fa fa-twitter footer-icon" aria-hidden="true" ></i></a>
+            <a target='__blank' href="https://www.linkedin.com/company/heed-india/about/"> <i class="fa fa-linkedin footer-icon" aria-hidden="true" ></i></a>
         </div> 
 
         <div className="footer-sec-1">

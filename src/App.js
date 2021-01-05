@@ -18,13 +18,11 @@ import Money from './containers/money/Money'
 import Mission from './containers/mission/Mission'
 import PopUp from './components/popUp/PopUp'
 import CenterIcon from './components/centerIcon/CenterIcon'
-import mumbai from './assets/mumbai.png'
-import delhi from './assets/delhi.png'
-import agra from './assets/agra.png'
 import Blog from './containers/blog/Blog'
 import Footer from './components/footer/Footer'
 import Admin from './containers/admin/Admin'
 import Contact from './components/contactUs/Contact'
+import list from './data/centerList'
 
 function App() {
   const [center,setCenter]=useState(true);
@@ -40,7 +38,8 @@ function App() {
   });
   useEffect(() => {
     //  pop up won't show for any page but the home page
-   if(location.pathname === "/") setCenter(false);
+    //  --- uncomment the next line for getting pop up again ---- //
+  //  if(location.pathname === "/") setCenter(false);
   }, [location.pathname])
   
   const closePopUp = ()=>setCenter(true);
@@ -56,21 +55,13 @@ function App() {
     <div>
       <p className="sub-head-popup">Please select the centre closest to you</p>
       <div className="cities-row">
-      <CenterIcon
-      src={mumbai}
-      label="Mumbai"
-      onClick={()=>{setState("Mumbai");closePopUp()}}
-      />
-       <CenterIcon
-      src={delhi}
-      label="Delhi"
-      onClick={()=>{setState("Delhi");closePopUp()}}
-      />
-      <CenterIcon
-      src={agra}
-      label="Agra"
-      onClick={()=>{setState("Agra");closePopUp()}}
-      />
+      {list.map((item) => (
+        <CenterIcon
+        src={item.imgPath}
+        label={item.label}
+        onClick={()=>{setState(item.label);closePopUp()}}
+        />
+      ))}
       </div>
     </div>
     }

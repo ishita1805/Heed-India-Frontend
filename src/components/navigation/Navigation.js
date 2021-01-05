@@ -52,7 +52,7 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/sports" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Sports</NavLink>
           <NavLink exact to="/events" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Events</NavLink>
           <NavLink exact to="/initiatives" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Initiatives</NavLink>
-          <NavLink exact to="/our-branches" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Branches</NavLink>
+          {/* <NavLink exact to="/our-branches" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Branches</NavLink> */}
           <NavLink exact to="/donate" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Donate Now</NavLink>
           {/* <NavLink exact to="/raise-money" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Raise Money</NavLink> */}
           <NavLink exact to="/our-mission" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Mission</NavLink>
@@ -67,7 +67,7 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/sports" className="nav-item" activeClassName="nav-item-active">Sports</NavLink>
           <NavLink exact to="/events" className="nav-item" activeClassName="nav-item-active">Events</NavLink>
           <NavLink exact to="/initiatives" className="nav-item" activeClassName="nav-item-active">Initiatives</NavLink>
-          <NavLink exact to="/our-branches" className="nav-item" activeClassName="nav-item-active">Our Branches</NavLink>
+          {/* <NavLink exact to="/our-branches" className="nav-item" activeClassName="nav-item-active">Our Branches</NavLink> */}
           <div className="logo-nav">
             <img alt="" src={dark.includes(loc)?imgdark:img} className="logo" />
           </div>
