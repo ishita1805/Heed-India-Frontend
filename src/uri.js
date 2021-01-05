@@ -1,2 +1,2 @@
-const uri = "http://localhost:3001"
+const uri = "https://heed-india-backend.herokuapp.com"
 export default uri;
