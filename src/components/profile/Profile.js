@@ -1,45 +1,62 @@
 import React from 'react'
 import './profileMedia.css'
-import Button from '../button/Button'
+import img from '../../assets/logo.png';
+import Button from '../../components/button/Button';
 
-
-var img = "https://static.wixstatic.com/media/1f2275_1ec26c62602b4ef09365c9dc35636047~mv2.jpg/v1/fill/w_204,h_222,al_c,q_80,usm_0.66_1.00_0.01/1f2275_1ec26c62602b4ef09365c9dc35636047~mv2.webp"
-
+const data = [
+  {
+    label:'Posts',
+    value:'164'
+  },
+  {
+    label:'Followers',
+    value:'2318 '
+  },
+  {
+    label:'Following',
+    value:'696 '
+  },
+]
 
 export default function Profile() {
     return (
+      <>
         <div className="profile">
-         <div className="profile-sec1">
-{/* image */}
-              <div class="profile-image">
-                <img src={img} alt=""/>
-              </div>
-{/* name button and stats  */}
-              <div class="profile-user-settings">
-                <div className="row center">
-                  <h1 class="profile-user-name">heedindia.ngo</h1>
-                  <Button
-                  label="Follow"
-                  className="primary"
-                  />
+
+          <div className="profile-image">
+            <img src={img} alt=''></img>
+          </div>    
+
+          <div className='content-profile'>
+
+            <div className='row-profile'>
+                <h3>heedindia.ngo</h3>
+                <Button label='Follow' className='primary'/>
+            </div>
+
+            <div className='profile-stats'>
+              {
+               data.map((item)=> (
+                <div className='stat-specific'>
+                  <b>{item.label}</b>
+                  {item.value}
                 </div>
-                <div className="row">
-                  <p className="stat-p">703 <b>Posts</b></p>
-                  <p className="stat-p">2318 <b>Followers</b></p>
-                  <p className="stat-p">696 <b>Following</b></p>
-                </div>
-                <p className="bio-profile-2">
-                 A small description of the NGO and a link to blogs or other work can come here<br/>
-                 Heed India (Health and Education)
-                </p>
-              </div>
-         </div>
-{/* stats for smaller screens */}
-         <p className="bio-profile" >
-            A small description of the NGO and a link to blogs or other work can come here<br/>
+               )) 
+              }
+            </div>
+
+            <div className='profile-bio'>
+              A small description of the NGO and a link to blogs or other work can come here
+              Heed India (Health and Education)
+            </div>
+
+          </div>
+
+        </div>  
+        <div className='profile-bio-2'>
+            A small description of the NGO and a link to blogs or other work can come here
             Heed India (Health and Education)
-          </p>
         </div>
+      </>
     )
 }
-

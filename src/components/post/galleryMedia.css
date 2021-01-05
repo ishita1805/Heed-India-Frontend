@@ -15,20 +15,22 @@
     cursor: pointer;
  }
 
- @media screen and (max-width:1000px){
+ @media screen and (max-width:40rem){
     .gallery {
         width:100vw;
+        margin-top:-2vh;
      }
      
      .gallery-image {
-        width:30vw;
+        width:35vw;
      }
     
  }
 
- @media screen and (max-width:650px){
+ @media screen and (max-width:40rem){
+    
      .gallery-image {
-        width:45vw;
+        width:35vw;
      }
     
  }

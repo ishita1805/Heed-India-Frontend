@@ -9,7 +9,6 @@ Quill.register('modules/imageResize', ImageResize);
 
 
 
-
 const Admin = () => {
     const [addData,setAddData] = useState(null);
     const [showData,setShowData] = useState(false);

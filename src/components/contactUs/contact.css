@@ -61,11 +61,23 @@
     flex-direction:column;
     justify-content:center;
     width:300px;
-    height:60vh;
+    min-height:60vh;
     color:rgb(58, 58, 58);
     box-shadow:0 0 20px rgba(0,0,0,0.3);
     padding:2vh;
     border-radius:5px;
+}
+.contact-form p{
+    color:red;
+    margin:0;
+    font-size:10px;
+}
+.contact-form span{
+    text-align:center;
+    color:red;
+    margin:0;
+    margin-top:1vh;
+    font-size:14px;
 }
 .contact-form h4{
     margin:1vh 0;
@@ -91,7 +103,7 @@
     padding:1vh;
     resize: none;
     font-family: 'Quicksand', sans-serif;
-    height:120px;
+    height:80px;
     border-radius:3px;
     color:rgb(102, 102, 102);
     font-weight: 500;
@@ -99,11 +111,12 @@
 .contact-form textarea::placeholder {
     color:rgb(206, 206, 206);
 }
-.contact-form button{
+.contact-form-button{
     margin:2vh 0;
     padding:1vh 0;
     color:white;
     outline:none;
+    text-align:center;
     background:rgb(255, 163, 43);
     border:solid 2px rgb(255, 163, 43);
     border-radius:3px;
