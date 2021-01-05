@@ -7,7 +7,7 @@ import './about.css'
 const About = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
-        console.log(props.state)
+        // console.log(props.state)
       }, [props.state])
       
     return (

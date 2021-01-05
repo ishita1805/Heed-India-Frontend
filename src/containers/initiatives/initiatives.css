@@ -1,0 +1,95 @@
+.background-initiate{
+    background:url('../../assets/about-sec-5.jpeg');
+    background-size:cover;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+.init-land{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    height:80vh;
+    padding:0 2vw;
+    width:96vw;
+    background:rgba(0,0,0,0.5);
+}
+.init-land h1{
+    font-size:60px;
+    font-weight:600;
+    margin:0;
+    font-family: 'Playfair Display', serif;
+    margin-top:10vh;
+    color:rgb(212, 212, 212);
+}
+.init-land h2{
+    font-size:30px;
+    color:rgb(51, 51, 51);
+    margin:0;
+    font-family: 'Playfair Display', serif;
+}
+.init-land p{
+    font-size:20px;
+    font-weight:600;
+    margin:1vh 0;
+    width:40%;
+    color:rgb(212, 212, 212);
+}
+.init-secs{
+    display:flex;
+    flex-direction:row;
+    height:20vh;
+    width:100vw;
+}
+.init-secs div:nth-child(1){
+    height:20vh;
+    background:rgb(255, 230, 4);
+    flex-grow:1;
+    opacity:0.5;
+    cursor:pointer;
+    transition:1s;
+}
+.init-secs div:nth-child(2){
+    height:20vh;
+    background:rgb(255, 4, 79);
+    opacity:0.5;
+    flex-grow:1;
+    cursor:pointer;
+    transition:1s;
+}
+.init-secs div:nth-child(3){
+    height:20vh;
+    background:rgb(4, 184, 255);
+    flex-grow:1;
+    opacity:0.5;
+    cursor:pointer;
+    transition:1s;
+}
+.init-secs div:nth-child(1):hover{
+    transition:1s;
+    flex-grow:2;
+}
+.init-secs div:nth-child(2):hover{
+    transition:1s;
+    flex-grow:2;
+}
+.init-secs div:nth-child(3):hover{
+    transition:1s;
+    flex-grow:2;
+}
+.init-whitesec{
+    width:100vw;
+    height:70vh;
+    background:white;
+}
+@media screen and (max-width:1000px){
+    .init-land p{
+        width:60%;
+    }
+}
+@media screen and (max-width:700px){
+    .init-land h1{
+        font-size:40px;
+    }
+}

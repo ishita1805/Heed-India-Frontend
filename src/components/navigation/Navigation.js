@@ -6,11 +6,11 @@ import imgdark from '../../assets/logo.png'
 
 const Navigation = ({loc,...props}) => {
   const [nav,setNav] =useState(false);
-  const dark = ["/blog","/events"]
+  const dark = ["/blog","/events","/initiatives"]
   const navHandler = ()=>{
       setNav(!nav);
   }
-  console.log(props.loc);
+  // console.log(props.loc);
     return (
         <>
         {/* for small screen nav header */}
