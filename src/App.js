@@ -1,10 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import './app.css'
-import {
-  Switch,
-  Route,
-  __RouterContext
-} from "react-router-dom";
+import { Switch, Route, __RouterContext } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import Navigation from './components/navigation/Navigation'
 import Home from "./containers/home/Home"
