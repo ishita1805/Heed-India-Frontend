@@ -9,6 +9,12 @@ import '../../components/inputBox/inputbox.css'
 import { useForm } from 'react-hook-form';
 import axios from 'axios'
 import uri from '../../uri'
+/*import {cloudinary} from 'cloudinary'
+cloudinary.config({
+  cloud_name:"dtmhqs3e0",
+  api_key:"323497653845991",
+api_secret:"WDDW2x_CkmXKZ3AyWOEPoA5cfHg"
+})*/
 Quill.register('modules/imageResize', ImageResize);
 
 
@@ -60,23 +66,27 @@ const Admin = () => {
       ]
 
       const onSubmit =(data)=>{
-        const blog={
-          title:data.title,
-          subtitle:data.subtitle,
-          date:data.date,
-          link:data.link,
-          thumbnail:data.thumbnail,
-          banner:data.banner,
-          content:addData,
-        }
+
+       const formData = new FormData();
+
+       formData.append('thumbnail',data.thumbnail[0])
+       formData.append('title',data.title)
+       formData.append('subtitle',data.subtitle)
+       formData.append('author',data.author)
+       formData.append('date',data.date)
+       formData.append('link',data.link)
+       formData.append('banner',data.banner[0])
+
         //  axios request comes here .. data & addData needs to be sent 
-        axios.post(uri+'/addblog',blog )
+        axios.post('http://localhost:3001/blogs/addblog',formData)
         .then(res => 
           {
             console.log('success');
   
-          });
-        console.log(blog);
+          })
+        .catch(err => { console.log(err)});
+       // console.log(blog);
+       console.log(data)
         console.log(addData);
     }
 
