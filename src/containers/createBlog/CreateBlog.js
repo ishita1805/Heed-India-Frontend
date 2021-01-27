@@ -60,14 +60,13 @@ const Admin = () => {
       ]
 
       const onSubmit =(data)=>{
-        const input = new FormData(data.target);
         const blog={
-          title:input.get('title'),
-          subtitle:input.get('subtitle'),
-          date:input.get('date'),
-          link:input.get('link'),
-          thumbnail:input.get('thumbnail'),
-          banner:input.get('banner'),
+          title:data.title,
+          subtitle:data.subtitle,
+          date:data.date,
+          link:data.link,
+          thumbnail:data.thumbnail,
+          banner:data.banner,
           content:addData,
         }
         //  axios request comes here .. data & addData needs to be sent 
@@ -77,7 +76,7 @@ const Admin = () => {
             console.log('success');
   
           });
-        console.log(data);
+        console.log(blog);
         console.log(addData);
     }
 
