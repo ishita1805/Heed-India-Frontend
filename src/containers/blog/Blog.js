@@ -17,7 +17,7 @@ const Blog = () => {
                 userIp : ip,
               }
           
-              axios.post('http://localhost:3000/checklikes', userIp)
+              axios.post('http://localhost:3001/checklikes', userIp)
                 .then(res => 
                   {
                     console.log('success');
