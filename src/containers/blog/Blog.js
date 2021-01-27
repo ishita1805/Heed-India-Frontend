@@ -1,10 +1,31 @@
 import React, { useState } from 'react'
 import './blog.css'
+import axios from 'axios';
+import uri from '../../uri'
 
 const Blog = () => {
     const [liked,setLiked]=useState(true);
     const likeHandler = ()=>{
         setLiked(!liked);
+        fetch('https://api.ipify.org?format=jsonp?callback=?', {
+            method: 'GET',
+            headers: {},
+          })
+          .then(res => {
+            return res.text()
+          }).then(ip => {
+            const userIp = {
+                userIp : ip,
+              }
+          
+              axios.post(uri+'/checklikes', userIp)
+                .then(res => 
+                  {
+                    console.log('success');
+          
+                  });
+            }
+          )
     }
 
     return (
