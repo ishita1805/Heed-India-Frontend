@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './blog.css'
 import axios from 'axios';
+import uri from '../../uri'
 
 const Blog = () => {
     const [liked,setLiked]=useState(true);
@@ -17,7 +18,7 @@ const Blog = () => {
                 userIp : ip,
               }
           
-              axios.post('http://localhost:3001/checklikes', userIp)
+              axios.post(uri+'/checklikes', userIp)
                 .then(res => 
                   {
                     console.log('success');
