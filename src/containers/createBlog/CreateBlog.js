@@ -7,7 +7,10 @@ import ReactQuill, { Quill } from 'react-quill';
 import { ImageResize } from 'quill-image-resize-module';
 import '../../components/inputBox/inputbox.css'
 import { useForm } from 'react-hook-form';
+import axios from 'axios'
+import uri from '../../uri'
 Quill.register('modules/imageResize', ImageResize);
+
 
 const Admin = () => {
     const [addData,setAddData] = useState(null);
@@ -57,7 +60,23 @@ const Admin = () => {
       ]
 
       const onSubmit =(data)=>{
+        const input = new FormData(data.target);
+        const blog={
+          title:input.get('title'),
+          subtitle:input.get('subtitle'),
+          date:input.get('date'),
+          link:input.get('link'),
+          thumbnail:input.get('thumbnail'),
+          banner:input.get('banner'),
+          content:addData,
+        }
         //  axios request comes here .. data & addData needs to be sent 
+        axios.post(uri+'/addblog',blog )
+        .then(res => 
+          {
+            console.log('success');
+  
+          });
         console.log(data);
         console.log(addData);
     }
@@ -76,7 +95,7 @@ const Admin = () => {
                 {errors.title?<p className="error-text">Error: Title is require</p>:null}
                 {errors.subtitle?<p className="error-text">Error: Subtitle is require</p>:null}
                 {errors.date?<p className="error-text">Error: Date is require</p>:null}
-                {errors.author?<p className="error-text">Error: Author is require</p>:null}
+                {errors.author?<p className="error-text">Error: Author is require</p>:null} 
                 {errors.link?<p className="error-text">Error: Insagram Link is require</p>:null}
                 {errors.thumbnail?<p className="error-text">Error: Thumbnail is require</p>:null}
                 {errors.banner?<p className="error-text">Error: Banner image is require</p>:null}
