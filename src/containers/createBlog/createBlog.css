@@ -21,6 +21,11 @@
     padding:2vh !important;
     border-radius:2px;
 }
+.error-text{
+    color:red;
+    margin:0.5vh 0;
+    font-size:12px;
+}
 /* .ql-container img{
     max-width:auto !important;
     height:300px !important;;
@@ -29,6 +34,13 @@
     max-width:auto !important;
     height:300px !important;;
 } */
+.row-wrap-meta-createBlog{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:flex-start;
+}
 @media screen and (max-width:750px){
     .ckeditor{
         width:90vw;

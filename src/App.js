@@ -20,7 +20,7 @@ import PopUp from './components/popUp/PopUp'
 import CenterIcon from './components/centerIcon/CenterIcon'
 import Blog from './containers/blog/Blog'
 import Footer from './components/footer/Footer'
-import Admin from './containers/admin/Admin'
+import CreateBlog from './containers/createBlog/CreateBlog'
 import Contact from './components/contactUs/Contact'
 import list from './data/centerList'
 
@@ -116,8 +116,8 @@ function App() {
                   <Blog state={state}/>
                 </Route>
 
-                <Route path="/admin" exact >
-                  <Admin state={state}/>
+                <Route path="/admin/createBlog" exact >
+                  <CreateBlog state={state}/>
                 </Route>
               
             </Switch>

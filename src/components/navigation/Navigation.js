@@ -23,24 +23,24 @@ const Navigation = ({loc,...props}) => {
           <img  alt="" src={dark.includes(loc)?imgdark:img} className="logo" />
         </div>
 
-        {loc==="/admin"?
+        {loc.includes("/admin")?
         // for admin portal
         <>
         <div className={nav?"Nav2":"Navigation"}>
-          <NavLink exact to="/admin" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Create Blog</NavLink>
+          <NavLink exact to="/admin/createBlog" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Create Blog</NavLink>
           <NavLink exact to="/admin/view" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">My Blogs</NavLink>
           <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Home</NavLink>
           <div className="logo-nav">
-            <img alt="" src={dark.includes(loc)?imgdark:img} className="logo" />
+            <img alt="" src={imgdark} className="logo" />
           </div>
         </div> 
 
         <div className="Navigation2">
-          <NavLink exact to="/admin" className="nav-item" activeClassName="nav-item-active">Create Blog</NavLink>
+          <NavLink exact to="/admin/createBlog" className="nav-item" activeClassName="nav-item-active">Create Blog</NavLink>
           <NavLink exact to="/admin/view" className="nav-item" activeClassName="nav-item-active">My Blogs</NavLink>
           <NavLink exact to="/" className="nav-item" activeClassName="nav-item-active">Home</NavLink>
           <div className="logo-nav">
-            <img  alt="" src={dark.includes(loc)?imgdark:img} className="logo" />
+            <img  alt="" src={imgdark} className="logo" />
           </div>
         </div> 
         </>:

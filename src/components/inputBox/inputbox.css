@@ -9,6 +9,9 @@
     margin: 1vh 0;
     border: solid 1px rgb(173, 173, 173);
 }
+.m-r-input{
+    margin-right:2vh;
+}
 input:focus, select:focus, textarea:focus{
     outline: none;
     box-shadow: 0px 0px 3px inset rgba(0,0,0,0.1);
