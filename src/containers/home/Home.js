@@ -1,14 +1,17 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import BottomNav from '../../components/bottomNav/BottomNav'
 import './home.css'
 import Button from '../../components/button/Button'
+import { Redirect } from 'react-router-dom'
 
 const Home = ({state,...props}) => {
+    const [red,setRed] = useState(false);
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
     return (
     <div className="col in-body-2">
+        {red?<Redirect to="/donate" exact />:null}
         <div className="grow">
             {/* content comes here remove H1 tag */}
             <h1><span className="green-home">Heed</span> India</h1>
@@ -17,7 +20,8 @@ const Home = ({state,...props}) => {
             {/* <button className="button-green">Contact Us</button> */}
             <Button
             className="success"
-            label="Contact Us"/>
+            label="Donate"
+            onClick={()=>setRed(true)}/>
             <div className="bottom-nav-home">
                 <BottomNav/>
             </div> 

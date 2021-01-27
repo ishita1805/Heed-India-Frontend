@@ -1,10 +1,11 @@
-import React, {useEffect} from 'react'
-// import Paragraph from '../../components/paragraph/Paragraph.js'
-// import Header from '../../components/header/Header'
+import React, {useState, useEffect} from 'react'
+import { Redirect } from 'react-router-dom'
 import './about.css'
-// import Card from '../../components/card/Card'
+
 
 const About = (props) => {
+    const [red,setRed] = useState(false);
+    const [path,setPath] = useState('');
     useEffect(() => {
         window.scrollTo(0, 0)
         console.log(props.state)
@@ -12,7 +13,7 @@ const About = (props) => {
       
     return (
         <div className="in-body col background-about">
-
+            {red?<Redirect exact to = {path}/>:null}
            <div className="about-section">
                 <div className="abt-sec abt-dark-ov">
                     <h1>Be a Part of</h1>
@@ -67,7 +68,7 @@ const About = (props) => {
 
            <div className="dark-abt">
 
-               <div className="dark-abt-cover">
+               <div className="dark-abt-cover" onClick={()=>{setRed(true);setPath('/donate')}} >
                    <div className="dac-1">
                         <h2>Donate<br/>For<br/>A Cause</h2>
                    </div>
@@ -76,7 +77,7 @@ const About = (props) => {
                    </div>
                </div>
 
-               <div className="dark-abt-cover">
+               <div className="dark-abt-cover" >
                     <div className="dac-1">
                         <h2>Raise<br/>Money</h2>
                    </div>
@@ -85,7 +86,7 @@ const About = (props) => {
                    </div>
                </div>
 
-               <div className="dark-abt-cover">
+               <div className="dark-abt-cover" onClick={()=>{setRed(true);setPath('/initiatives#give-little-of-you')}}> 
                     <div className="dac-1">
                         <h2>Give<br/> little of<br/> YOU!</h2>
                    </div>
@@ -94,7 +95,7 @@ const About = (props) => {
                    </div>
                </div>
 
-               <div className="dark-abt-cover">
+               <div className="dark-abt-cover" onClick={()=>{setRed(true);setPath('/our-mission')}}>
                     <div className="dac-1">
                         <h2>Our<br/>Mission</h2>
                     </div>
