@@ -1,0 +1,222 @@
+
+.sports-vid-main {
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    min-width:100vw;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#SpVid{
+    min-width:100vw; 
+    min-height: 100vh;
+    max-height:102vh;
+    position: absolute;
+    align-self:center;
+    top:0;
+    left:auto;
+    object-fit: cover;
+}
+.sports-container{
+    background:rgba(0,0,0,0.3);
+    min-height:102vh;
+    width:100vw;
+    top:0;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    left:0;
+    position:absolute;
+    z-index:200;
+}
+.sp-header{
+    color: #AEDD66;
+}
+.sports-container h1{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 0%;
+    margin-bottom: 12px;
+}
+.sp-line{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 70px;
+    color:#aedd66;
+    font-weight: 300;
+    line-height: 0%;
+    margin-top: 12px;
+}
+.sp-subtitle{
+    color: #c4c0c0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 23px;
+    font-weight: lighter;
+    line-height: 0%;
+    margin-top: 0px;
+}
+.sports-hashtag{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    line-height: 0%;
+    margin-top: 22px;
+}
+.hash-1{
+    color: #aadc5d;
+}
+.hash-2{
+    color: #8cc634;
+}
+.hash-3{
+    color: #77ac26;
+}
+.card-sport-1{
+    background-color: white;
+}
+.card-sport-info-1{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+.card-sport-2{
+    background-color: #efefef;
+    text-align: right;
+}
+.card-sport-info-2{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    margin-left: 5vw;
+}
+.card-sport-3{
+    background-color: white;
+}
+.card-sport-info-3{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+@media screen and (max-width: 1200px){
+    .sports-container h1{
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
+    .sp-line{
+        font-size: 60px;
+        font-weight: 270;
+        margin-top: 10px;
+    }
+    .sp-subtitle{
+        font-size: 19px;
+        font-weight: lighter;
+    }
+    .sports-hashtag{
+        font-size: 28px;
+        margin-top: 18px;
+}
+}
+@media screen and (max-width: 900px){
+    .card-sport-info-1{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0vh;
+    }
+    .card-sport-info-2{
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        margin-left: 0vw;
+        gap: 0vh;
+    }
+    .card-sport-info-3{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0vh;
+    }
+    .card-sport-text-1{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 830px){
+    .sports-container h1{
+        font-size: 55px;
+        margin-bottom: 7px;
+    }
+    .sp-line{
+        font-size: 55px;
+        font-weight: 270;
+        margin-top: 7px;
+    }
+    .sp-subtitle{
+        font-size: 19px;
+        margin-top: 0px;
+    }
+    .sports-hashtag{
+        font-size: 28px;
+        margin-top: 18px;
+}
+}
+@media screen and (max-width: 700px){
+    .sports-container h1{
+        font-size: 50px;
+        margin-bottom: 7px;
+    }
+    .sp-line{
+        font-size: 50px;
+        font-weight: 270;
+        margin-top: 7px;
+    }
+    .sp-subtitle{
+        font-size: 19px;
+        margin-top: 0px;
+    }
+    .sports-hashtag{
+        font-size: 24px;
+        margin-top: 18px;
+}
+}
+@media screen and (max-width: 610px){
+    .sports-container h1{
+        font-size: 45px;
+        margin-bottom: 7px;
+    }
+    .sp-line{
+        font-size: 45px;
+        font-weight: 270;
+        margin-top: 7px;
+    }
+    .sp-subtitle{
+        font-size: 16px;
+        margin-top: 0px;
+    }
+    .sports-hashtag{
+        font-size: 24px;
+        margin-top: 18px;
+}
+}
+@media screen and (max-width: 556px){
+    .sports-container h1{
+        font-size: 40px;
+        margin-bottom: 7px;
+    }
+    .sp-line{
+        font-size: 40px;
+        font-weight: 270;
+        margin-top: 7px;
+    }
+    .sp-subtitle{
+        font-size: 14px;
+        margin-top: 0px;
+    }
+    .sports-hashtag{
+        font-size: 22px;
+        margin-top: 18px;
+}
+}

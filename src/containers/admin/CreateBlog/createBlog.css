@@ -1,0 +1,53 @@
+.ckeditor{
+    width:50vw;
+    margin:auto;
+    min-width:700px;
+}
+.auto{
+    margin:auto;
+}
+.width-blog{
+    width:50vw;
+    min-width:700px;
+    margin:3vh 2vw;
+    padding:3vh 2vh;
+    border-top:solid 2px rgb(204, 204, 204);
+    margin:auto;
+    overflow-x: hidden;
+}
+.ql-syntax{
+    background:rgb(65, 65, 65);
+    color:white;
+    padding:2vh !important;
+    border-radius:2px;
+}
+.error-text{
+    color:red !important;
+    margin:0.5vh 0 !important;
+    font-size:12px !important;
+}
+/* .ql-container img{
+    max-width:auto !important;
+    height:300px !important;;
+}
+.ql-editor img{
+    max-width:auto !important;
+    height:300px !important;;
+} */
+.row-wrap-meta-createBlog{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:flex-start;
+}
+@media screen and (max-width:750px){
+    .ckeditor{
+        width:90vw;
+        min-width:100px;
+    }
+    .width-blog{
+        width:90vw;
+        min-width:100px;
+    }
+}

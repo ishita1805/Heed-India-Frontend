@@ -1,0 +1,14 @@
+.card-img{
+    background-color: #ffafaf;
+    height: 70vh;
+    width: 40vw;
+    bottom: 0px;
+    position: relative;
+    margin-top: 150px;
+}
+@media screen and (max-width: 900px){
+    .card-img{
+        margin-top: 1vh;
+        height: 50vh;
+    }
+}

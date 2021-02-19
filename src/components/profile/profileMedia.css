@@ -1,0 +1,123 @@
+.profile{
+    min-height:20vh;
+    min-width:40vw;
+    width:auto;
+    margin:auto;
+    margin-top:5vh;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+    margin-bottom:5vh;
+    align-self:center;
+}
+.profile-image{
+    width:16vh;
+    height:16vh;
+    border-radius:8vh;
+    box-shadow:0 0 6px rgba(0,0,0,0.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:white;
+    overflow: hidden;
+}
+.profile-image img {
+    width:9vh;
+    height:auto;
+}
+.content-profile{
+    min-height:15vh;
+    display:flex;
+    margin-left:4vh;
+    flex-direction:column;
+    flex-grow: 1;
+}
+.content-profile h3{
+    font-size:24px;
+    margin:0;
+    margin-right:4vh;
+}
+.row-profile{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+.profile-stats{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    width:300px;
+    min-height:5vh;
+}
+.stat-specific{
+    font-size:16px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+}
+.profile-bio{
+    max-width:32vw;
+    font-size:16px;
+    width:auto;
+    margin:auto;
+    margin-top:2vh;
+}
+.profile-bio-2{
+    display:none;
+}
+@media screen and (max-width:1300px){
+    .profile-bio{
+        max-width:40vw;
+    }
+}
+@media screen and (max-width:900px){
+    .profile{
+        margin-top:0;
+        margin-bottom:0;
+    }
+    .profile-image{
+        width:13vh;
+        height:13vh;
+        border-radius:7vh;
+    }
+    .profile-image img {
+        width:7vh;
+        height:auto;
+    }
+    .profile-bio{
+        display:none;
+    }
+    .profile-bio-2{
+        display:flex;
+        max-width:60vw;
+        font-size:16px;
+        width:auto;
+        margin:auto;
+        margin-top:2vh;
+        margin-bottom:5vh;
+        text-align:center;
+    }
+}
+@media screen and (max-width:600px){
+    .profile-bio-2{
+        max-width:80vw;
+        font-size:14px;
+    }
+    .profile{
+        flex-direction:column;
+        justify-content:center;
+    }
+    .content-profile{
+        margin:auto;
+        width:80vw;
+    }
+    .row-profile{
+        justify-content:center;
+    }
+    .profile-stats{
+        width:70vw;
+        margin:auto;
+    }
+}

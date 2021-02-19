@@ -1,0 +1,40 @@
+.sports-card{
+    margin-top: 8vh;
+    margin-right: 5vw;
+    margin-left: 4vw;
+}
+.card-text{
+    margin-bottom: 3vh;
+    margin-right: 0vw;
+    width: 36vw;
+}
+.card-text h1{
+    color: #383838;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.card-text p{
+    color: #383838;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    width: 36.5vw;
+}
+@media screen and (max-width: 1080px){
+    .card-text h1{
+        font-size: 36px;
+    }
+    .card-text p{
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+@media screen and (max-width: 900px){
+    .card-para-1{
+        line-height: 20px;
+        
+    }
+    .card-para-2{
+        display: none;
+    }    
+}

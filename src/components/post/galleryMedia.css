@@ -1,0 +1,36 @@
+.gallery {
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    width:80vw;
+    justify-content:center;
+ }
+ 
+ .gallery-image {
+    width:22vw;
+    height:auto;
+    margin:1.5vh;
+    overflow:hidden;
+    color: #fff;
+    cursor: pointer;
+ }
+
+ @media screen and (max-width:40rem){
+    .gallery {
+        width:100vw;
+        margin-top:-2vh;
+     }
+     
+     .gallery-image {
+        width:35vw;
+     }
+    
+ }
+
+ @media screen and (max-width:40rem){
+    
+     .gallery-image {
+        width:35vw;
+     }
+    
+ }
