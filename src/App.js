@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import './App.css'
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, __RouterContext } from "react-router-dom";
 import ProtectedRoute from './protectedRoute/ProtectedRoute'
 import Nav from './components/navigation/Navigation'
 import Home from './containers/home/Home'
@@ -22,9 +22,11 @@ import Contacts from './containers/admin/Contacts/Contacts'
 
 const App = () => {
   const state='Mumbai'
+  const { location } = useContext(__RouterContext);
+
   return (
     <div>
-      <Nav loc={window.location.pathname}/>
+      <Nav loc={location.pathname}/>
       <Switch>
 
         <Route path="/" exact >
