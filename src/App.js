@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-import './app.css'
+import './App.css'
 import { Switch, Route } from "react-router-dom";
 import ProtectedRoute from './protectedRoute/ProtectedRoute'
 import Nav from './components/navigation/Navigation'
