@@ -101,6 +101,7 @@
     flex-direction: row;
     gap: 5vw;
 }
+
 @media screen and (max-width: 1200px){
     .sports-container h1{
         font-size: 60px;
