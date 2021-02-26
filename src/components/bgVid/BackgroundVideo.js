@@ -14,9 +14,9 @@ const BackgroundVideo = () => {
                 <video autoPlay muted loop id="myVideo">
                     <source src={vid} type="video/mp4"/>
                 </video>
-                {/* <audio autoPlay loop className="audio-story">
+                <audio autoPlay loop className="audio-story">
                     <source src={missionAudio} type="audio/mpeg"/>  
-                </audio> */}
+                </audio>
                 <div className="container-ini">
                     <h1 className='mission-heading-txt'>Our Mission</h1>
                     <div className="mission-underline"></div>

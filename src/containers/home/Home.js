@@ -28,8 +28,6 @@ const Home = ({state,...props}) => {
                     }}
                 />
             </h2>
-            {/* <span className="green-home">#be</span><span className="green-home-1">the</span><span className="green-home-2">change</span></h2> */}
-            
             
             <Button
             className="success"

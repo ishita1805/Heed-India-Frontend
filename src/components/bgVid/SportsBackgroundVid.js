@@ -3,7 +3,7 @@ import React, {useEffect} from 'react'
 import '../../containers/sports/sports.css'
 import vid from '../../assets/SportsBGVid.mp4'
 import Typewriter from 'typewriter-effect'
-import missionAudio from '../../assets/mission.mp3'
+import sport from '../../assets/sport.mp3'
 
 const SportsBackgroundVid = () => {
     useEffect(() => {
@@ -14,9 +14,9 @@ const SportsBackgroundVid = () => {
             <video autoPlay muted loop id = "SpVid">
                 <source src = {vid} type = "video/mp4"/>
             </video>
-            {/* <audio autoPlay loop className="audio-story">
-                <source src={missionAudio} type="audio/mpeg"/>  
-            </audio> */}
+            <audio autoPlay loop className="audio-story">
+                <source src={sport} type="audio/mpeg"/>  
+            </audio>
             <div className = "sports-container">
                 <h1>Sports For Every Child</h1>
                 <div className="mission-underline"></div>
