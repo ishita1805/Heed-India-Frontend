@@ -28,7 +28,15 @@
     width:100%;
     margin:3vh 0;
     height:30vh;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     background:rgb(171, 255, 199);
+}
+.thumbnail-blog img{
+    width:100%;
+    height:auto;
 }
 .blog-meta{
     margin:0;

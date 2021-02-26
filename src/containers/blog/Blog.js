@@ -14,6 +14,7 @@ const Blog = (props) => {
 //FETCHING BLOG FROM DATA_BASE
     axios.get(`${url}/blogs/blog/${props.match.params.id}`)
       .then(res => {
+        console.log(res.data.banner);
         setBlogData(res.data)
         // console.log(res.data)
       })
@@ -51,7 +52,9 @@ const Blog = (props) => {
         </div>
       </div>
 
-      <div className="thumbnail-blog"></div>
+      <div className="thumbnail-blog">
+        <img src={blogData.banner} alt='banner'/>
+      </div>
 
       <div className="blog-content">
       {ReactHtmlParser(blogData.content)}
