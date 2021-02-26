@@ -21,7 +21,7 @@ const Sports = () => {
     {
       heading: 'Taekwondo',
       p1: 'In the year 2019-2020, HEED India touched the lives of 161 students, with one coach training them across 3 centers.',
-      p2: 'Thanks to the many atrocities meted out to women in India, safeguarding them has become a major priority. The privileged section of women feels safe, with a pepper spray tucked away in their bags. But how many women can really afford these? Training them in Taekwondo seems to be the perfect solution, as a means of self-defense. This being the need-of-the-hour, prompted HEED India to strategize and start training sessions across Mumbai.',
+      p2: 'Thanks to the many atrocities meted out to women in India, safeguarding them has become a major priority. The privileged section of women feels safe, with a pepper spray tucked away in their bags. But how many women can really afford these? Training them in Taekwondo seems to be the perfect solution, as a means of self-defense. Being the need of the hour, this prompted HEED India to strategize and start training sessions across Mumbai.',
       p3: 'This art of self-defense that originated in Korea is recognized as one of the oldest forms of martial arts in the world, going back over 2,000 years. The name was selected for its appropriate description of the art: Tae (foot), Kwon (hand), Do (art). One of the earliest clues of Taekwondo’s existence is a mural painted on the wall of a tomb that was built in the Korean kingdom of Koguryo, between 37 BC and 66 AD.',
       img: taekwondo,
       set: 2,
@@ -67,27 +67,6 @@ const Sports = () => {
                set= {item.set}
                img={item.img}/>
             ))}
-           
-           
-           
-            
-
-            {/* 
-          
-               
-               
-          
-                header = "Kabaddi"
-                para1 = "In the year 2019-2020, HEED India touched the lives of 470 students, with 3 coaches training them across 5 centers."
-                para2 = "Team spirit, speed, agility, multi-tasking and enhancing one’s presence of mind are some of the key benefits of ‘Kabaddi’. Although it is a gully sport, thanks to organizations like HEED India, Kabaddi has now become a competitive sport, with professional-level tournaments being held regularly. Children from challenging backgrounds are hand-picked and trained by HEED India’s coaches, readying them for professional participation."
-                para3 = "Although unverified, theories from various sources state that kabaddi originated from the ancient Indian Vedic period. India has been credited with having helped to popularize kabaddi as a competitive sport, with the first organized competitions occurring in the 1920s."
-                />
-                <ICard
-                className = "card-sport-img-3"
-                img = {kabaddi}
-                />
-            </div>
-          </div> */}
         </div>
     )
 }

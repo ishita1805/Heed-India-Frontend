@@ -13,7 +13,7 @@ const Admin = () => {
     }, [change])
 
     const onSubmit =(data)=>{
-        console.log(data);
+        // console.log(data);
         if(data.pass === 'heed-india-123' && data.name === 'heedIndia123') {
             localStorage.setItem('pass','heed-india-123')
             setChange(true);

@@ -8,7 +8,11 @@
     justify-content: center;
 }
 .mission-2liner{
-    width:50%;
+    width:60%;
+    margin:0;
+    font-size: 23px !important;
+    color: #c4c0c0 !important;
+    margin-top:1.5vh !important;
     font-weight:300 !important;
 }
 #myVideo{

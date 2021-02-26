@@ -8,10 +8,16 @@ import donate from '../../assets/donateIcon.png'
 import give from '../../assets/give.png'
 import volunteer from '../../assets/volunteer.png'
 import prog from '../../assets/sponsorAProg.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Mission = () => {
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out-sine',
+        });
       }, [])
 
       const data = [
@@ -52,20 +58,19 @@ const Mission = () => {
 
             <div className="abt-sec abt-white">
                <div className="about-row-in">
-                <h2>Our Mission</h2>
-                <p>
-                Every drop makes an ocean. HEED India is one such passion-driven venture that is 
-                working towards bringing about that small change to steadily reduce suffering. Join us 
-                and be the one to lend the helping hand, the one to change people's lives forever, to 
-                put a smile on someone's face and to make the world a safer place!
+                <h2 data-aos='fade-up'>Our Mission</h2>
+                <p data-aos='fade-up'>
+                Sports is ‘The Biggest Unifier’ in India, where region, religion, language and caste divide the people.
+                 We at Heed India promote and encourage sports, to enhance the physical, mental and overall growth of not only an 
+                 individual but society as a whole. 
                 </p>
-                <p>
-                Giving to charity is neither a charitable or a generous act, it is our duty - something 
-                we owe to the society. So join us in our endeavour and experience how gratifying, 
-                enriching and enjoyable it is. Join us and revel in the Helper's High
+                <p data-aos='fade-up'>
+                HEED India endeavours to make a difference in the lives of children, by offering them opportunities in the fields of 
+                sports and education. A large percentage of kids hail from challenging backgrounds, having no access to either. 
+                HEED India is one such passion-driven venture that is working towards bringing about that small change. 
                 </p>
                </div>
-               <div className="about-row-in">
+               <div className="about-row-in" data-aos='fade-up'>
                     <img className="iframe-abt" src= {imgone} alt="missionImage"></img>
                </div>
            </div>

@@ -82,6 +82,7 @@
 .abt-semi-in h3{
   margin:1vh;
   font-size:20px;
+  font-weight:300 !important;
 }
 .dark-abt{
     min-height:60vh;

@@ -78,7 +78,7 @@ const Footer = () => {
                     <a target='__blank' href="https://github.com/ishita1805">Ishita Kabra</a><br/>
                     <a target='__blank' href="https://github.com/milanmandal">Milan Mandal</a><br/>
                     <a target='__blank' href="https://github.com/daredevil2020">Ritwik Ojha</a><br/>
-                    <a target='__blank' href="https://github.com/KKapoor0801">Keshav Kapoor</a><br/>
+                    {/* <a target='__blank' href="https://github.com/KKapoor0801">Keshav Kapoor</a><br/> */}
                 </span>
             </div>
 

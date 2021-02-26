@@ -1,11 +1,13 @@
 // import Header from '../../components/header/Header'
 import { Redirect } from 'react-router-dom'
+import Typewriter from 'typewriter-effect'
 import P from '../../components/paragraph/Paragraph'
 import Button from '../../components/button/Button'
 import './donate.css'
 import React, {useState,useEffect} from 'react'
 import logo from "../../assets/logo.png"
 const axios = require('axios');
+
 
 
 
@@ -40,8 +42,12 @@ const Donate = () => {
         const data = axios.post('https://heed-india-backend.herokuapp.com/payments/make-payment',{
             amount:amt
         })
-        .then(resp => console.log(resp))
-        .catch(e=>console.log(e))
+        .then(resp => {
+            //console.log(resp)
+        })
+        .catch(e=>{
+            // console.log(e)
+        })
 
         const options = {
             "key": "rzp_test_PsxGKItWtb7jwL",
@@ -74,7 +80,17 @@ const Donate = () => {
                     <p className = "d-subtitle">No amount is small. 
                     Let us show you how we can make every rupee 
                     count and help you be a part of this revolution.</p>
-                    <h2><span className = "hashtag-1">#responsible</span><span className = "hashtag-2">Living</span></h2>
+                    <h2 className="green-hashtag">
+                        <Typewriter 
+                            options={{
+                                strings: ['#ResponsibleLiving'],
+                                autoStart: true,
+                                loop: true,
+                                delay: 100,
+                                deleteSpeed: 50
+                            }}
+                        />
+                    </h2>
                     <div className="hbut"><Button className="success" label="Support Our Initiatives" onClick={()=>setRed(true)}/></div>
                 </div>
             </div>

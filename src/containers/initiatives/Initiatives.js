@@ -12,6 +12,7 @@ import tournament from '../../assets/poker.png'
 import { useForm } from 'react-hook-form';
 import DropDown from '../../components/dropDown/DropDown'
 import { Redirect } from 'react-router-dom'
+import Typewriter from 'typewriter-effect'
 
 const Initiatives = () => {
     const { register, handleSubmit, errors } = useForm();
@@ -53,7 +54,7 @@ const Initiatives = () => {
             text: 'Participation in Tournaments',
             url: tournament,
             color:'green-icon',
-            para: 'Having undergone training under the eagle eye of the trainer, the child is encouraged to participate in competitive tournaments. This instills confidence and a sense of self-esteem in the children, while readying them to accept both, victory and defeat with equanimity.',
+            para: 'Having undergone training under the eagle eye of the trainer, the child is encouraged to participate in competitive tournaments. This will instil confidence and a sense of self-esteem in the children, while readying them to accept both, victory and defeat with equanimity.',
         },
         {
             num: '05',
@@ -105,7 +106,7 @@ const Initiatives = () => {
     }
 
     const onSubmit =(data)=>{
-       console.log(data)
+    //    console.log(data)
     }
      const formButtonHandler = () => {
         butonRef.current.click();
@@ -116,8 +117,18 @@ const Initiatives = () => {
             {red?<Redirect to="/donate" exact />:null}
             <div className='init-land'>
                     <h1><span className="green-home">Join Our</span> Initiative</h1>
-                    <p>Do we have a moral obligation to help people we do not know? If so, why?</p>
-                    <h2><span className="green-home">#be</span><span className="green-home-1">the</span><span className="green-home-2">change</span></h2>
+                    <p className='sp-subtitle'>Do we have a moral obligation to help people we do not know? If so, why?</p>
+                    <h2 className="green-hashtag">
+                        <Typewriter 
+                            options={{
+                                strings: ['#bethechange'],
+                                autoStart: true,
+                                loop: true,
+                                delay: 100,
+                                deleteSpeed: 50
+                            }}
+                        />
+                    </h2>
                     <Button
                     className="success"
                     label="Donate Now"
@@ -153,7 +164,7 @@ const Initiatives = () => {
 
             <div className='init-whitesec-2'>
                 <h2>Give Little of You</h2>
-                <p> Find a programme to support or fund! fill up the form and we will reach out to you 😇</p>
+                <p> Find a programme to support or fund! Fill up the form and we will reach out to you 😇</p>
                 <DropDown value={val} values={dropdownArray} returnVal={(data)=>setVal(data)}/>
                 <form className='form-init' onSubmit={handleSubmit(onSubmit)}>
                     <input className='input gly' name='name' type="text" placeholder="Enter Name" ref={register({ required: true })}/>

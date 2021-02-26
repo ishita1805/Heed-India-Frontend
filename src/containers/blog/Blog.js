@@ -15,10 +15,10 @@ const Blog = (props) => {
     axios.get(`${url}/blogs/blog/${props.match.params.id}`)
       .then(res => {
         setBlogData(res.data)
-        console.log(res.data)
+        // console.log(res.data)
       })
       .catch((error) => {
-      console.log('error');
+      // console.log('error');
       })
   }, [])
 

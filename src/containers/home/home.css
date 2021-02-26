@@ -18,8 +18,10 @@
     color:rgb(212, 212, 212);
 }
 .grow h2{
+    background-image: linear-gradient(45deg, #c6ff7b, #549419);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
     font-size:30px;
-    color:rgb(51, 51, 51);
     margin:0;
     font-family: 'Playfair Display', serif;
 }
@@ -42,13 +44,27 @@
     border-radius:5px;
 }
 .green-home{
+    margin:0;
     color:#ADDD64;
+    font-family: 'Playfair Display', serif;
+}
+.green-hashtag{
+    background-image: linear-gradient(45deg, #c6ff7b, #549419) !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important; 
+    font-size:30px !important;
+    margin:0 !important !important;
+    font-family: 'Playfair Display', serif !important;
 }
 .green-home-1{
+    margin:0;
     color:#8CC634;
+    font-family: 'Playfair Display', serif;
 }
 .green-home-2{
+    margin:0;
     color:#77AC26;
+    font-family: 'Playfair Display', serif;
 }
 .bottom-nav-home{
     position:absolute;

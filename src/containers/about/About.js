@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import { Redirect } from 'react-router-dom'
 import './about.css'
+import VisibilitySensor from 'react-visibility-sensor'
+import CountUp from 'react-countup'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const About = (props) => {
@@ -8,9 +12,27 @@ const About = (props) => {
     const [path,setPath] = useState('');
     useEffect(() => {
         window.scrollTo(0, 0)
-        console.log(props.state)
+        // console.log(props.state)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out-sine',
+          });
       }, [props.state])
       
+    const dataList = [
+        {
+            number: 7500,
+            label: 'Books Donated',
+        },
+        {
+            number: 350,
+            label: 'Events',
+        },
+        {
+            number: 1325,
+            label: 'Lives Changed',
+        },
+    ]
     return (
         <div className="in-body col background-about">
             {red?<Redirect exact to = {path}/>:null}
@@ -23,15 +45,15 @@ const About = (props) => {
 
            <div className="abt-sec abt-white">
                <div className="about-row-in">
-                <h3>On a mission to provide and aid</h3>
-                <p>
+                <h3 data-aos='fade-up'>On a mission to provide and aid</h3>
+                <p data-aos='fade-up'>
                 In 2012 HEED India started as Samarpan Charitable Trust engaging in a number of philanthropic activities with 
                 the key philosophy of 'Responsible Living', i.e., responding to the immediate and essential needs of various 
                 communities. With these efforts HEED India has reached out to schools, urban and rural communities, especially 
                 students, women, SHG groups, elderly and disabled and others aiding them in areas of healthcare, education, 
                 livelihood, and more.
                 </p>
-                <p>
+                <p data-aos='fade-up'>
                 Through the years, HEED India programmes have matured and are moving to a more structured approach of community 
                 development. Moving from a need based philanthropic approach to the right mix of need-based & project-based 
                 approach, is what drives HEED India’s endeavours.
@@ -51,15 +73,18 @@ const About = (props) => {
 
 
            <div className="abt-semi">
-               <div className="abt-semi-in">
-                   7500<h3>Books Donated</h3>
-               </div>
-               <div className="abt-semi-in">
-                   325<h3>Events</h3>
-               </div>
-               <div className="abt-semi-in">
-                   1325<h3>Lives Changed</h3>
-               </div>
+               {dataList.map((item)=>(
+                   <CountUp start={0} end={item.number} duration={2} redraw preserveValue>
+                   { ({countUpRef, start}) =>
+                       <VisibilitySensor onChange={start} delayedCall>
+                           <div className="abt-semi-in" data-aos='fade-up'>
+                               <span className='num' ref={countUpRef} />
+                               <h3>{item.label}</h3>
+                           </div>
+                       </VisibilitySensor>
+                   }
+                   </CountUp>
+               ))}
            </div>
 
 

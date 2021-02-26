@@ -10,7 +10,9 @@ const Contacts = () => {
     useEffect(() => {
        axios.get(url+'/contacts/getContacts')
        .then((res)=>{setContacts(res.data.data);setLoading(false)})
-       .catch(e=>console.log(e))
+       .catch(e=>{
+        // console.log(e)
+       })
     }, [contacts])
     return (
         <div className="in-body padding-t-12 arrange-center-blogs">

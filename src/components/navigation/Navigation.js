@@ -10,7 +10,7 @@ const Navigation = ({loc,...props}) => {
   const navHandler = ()=>{
       setNav(!nav);
   }
-  console.log(loc)
+  // console.log(loc)
   // console.log(props.loc);
     if(loc !=="/admin" || (loc.includes("/admin") && localStorage.getItem('pass')) ) return (
         <>

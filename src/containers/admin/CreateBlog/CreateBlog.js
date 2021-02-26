@@ -82,7 +82,7 @@ const Admin = () => {
             closeBar();
           })
           .catch((err) => {
-            console.log(err);
+            // console.log(err);
             setColor('red-bar')
             setSnackBarCont(['Error Creating Blog', <i>&ensp;</i> ,<i class="fa fa-times" aria-hidden="true"></i>])
             closeBar();
