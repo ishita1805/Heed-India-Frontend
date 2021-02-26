@@ -20,6 +20,7 @@ const Initiatives = () => {
     const { register, handleSubmit, errors } = useForm();
     const [val,setVal] = useState('One Book To Read')
     const [red,setRed] = useState(false);
+    const [click,setClick] = useState(false);
     const butonRef = useRef();
     const intoViewRef = useRef();
     useEffect(() => {
@@ -117,9 +118,9 @@ const Initiatives = () => {
             val: val,
         }
         axios.post(url+'/supports/supportdata',user)
-        .then((res)=>{console.log(res.data)})
+        .then( (res)=>{console.log(res.data)})
         .catch((err) =>{console.log(err)});
-
+        setClick(true)
     
     }
     
@@ -192,7 +193,7 @@ const Initiatives = () => {
                     <input className='input gly' name='email' type="email" placeholder="Enter Email" ref={register({ required: true })}/>
                     {errors.email?<p className="error-text">Email is required</p>:null}
 
-                    <button ref={butonRef} style={{display:'none'}}>Submit</button>
+                    {click?<p> Thank you for your support &#10084; </p>: <button ref={butonRef} style={{display:'none'}}>Submit</button>}
 
                 </form>
                 <Button 
