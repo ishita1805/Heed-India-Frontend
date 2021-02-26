@@ -156,7 +156,7 @@ const Initiatives = () => {
                     <h1>{item.num} <span className='vr-bar' style={{fontWeight:300}}>|</span></h1>
                     <div className='white-content-init'>
                             <h3>{item.text}</h3>
-                            <p>{item.subtext}</p>
+                            <p className='hide-init-cont'>{item.subtext}</p>
                     </div>
             
                     <i className="fa fa-chevron-down" onClick={handleOnClick}></i>

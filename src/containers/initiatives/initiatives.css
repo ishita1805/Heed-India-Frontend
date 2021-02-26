@@ -287,6 +287,11 @@
         font-size:14px !important;
     }
 }
+@media screen and (max-width:700px){
+    .init-land h1{
+        font-size:40px;
+    }
+}
 @media screen and (max-width:650px){
     .vr-bar{
         display:none;
@@ -298,8 +303,8 @@
         height:15vh;
     }
 }
-@media screen and (max-width:700px){
-    .init-land h1{
-        font-size:40px;
+@media screen and (max-width:500px){
+    .hide-init-cont{
+        display:none;
     }
 }
