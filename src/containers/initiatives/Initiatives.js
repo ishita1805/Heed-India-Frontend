@@ -125,10 +125,7 @@ const Initiatives = () => {
         .then((res)=>{console.log(res.data)})
         .catch((err) =>{console.log(err)});
 
-        setName('');
-        setEmail();
-        setNumber(0);
-        setVal('One Book To Read')
+    
     }
     
     const formButtonHandler = () => {
