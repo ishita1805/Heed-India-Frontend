@@ -116,7 +116,6 @@ const Initiatives = () => {
             number: data.number,
             val: val,
         }
-        console.log(user);
         axios.post('http://localhost:3001/supports/supportdata',user)
         .then((res)=>{console.log(res.data)})
         .catch((err) =>{console.log(err)});
