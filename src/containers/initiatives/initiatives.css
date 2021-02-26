@@ -47,6 +47,11 @@
     height:20vh;
     width:100vw;
 }
+.support-thankyou{
+    font-weight:600;
+    font-size:17px;
+    color:rgb(111, 171, 250);
+}
 .white-content-init{
     display:none !important;
     flex-direction:column !important;

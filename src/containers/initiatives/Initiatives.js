@@ -193,14 +193,18 @@ const Initiatives = () => {
                     <input className='input gly' name='email' type="email" placeholder="Enter Email" ref={register({ required: true })}/>
                     {errors.email?<p className="error-text">Email is required</p>:null}
 
-                    {click?<p> Thank you for your support &#10084; </p>: <button ref={butonRef} style={{display:'none'}}>Submit</button>}
+                    <button ref={butonRef} style={{display:'none'}}>Submit</button>
 
                 </form>
-                <Button 
-                label='Submit'
-                onClick={formButtonHandler}
-                className='primary'
-                />
+                {
+                    click?
+                    <p className='support-thankyou'> Thank you for your support &#10084; </p>:
+                    <Button 
+                    label='Submit'
+                    onClick={formButtonHandler}
+                    className='primary'
+                    />
+                }
             </div>
         </div>
     )
