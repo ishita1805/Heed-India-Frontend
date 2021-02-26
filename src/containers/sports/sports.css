@@ -132,7 +132,10 @@
     .sports-hashtag{
         font-size: 28px;
         margin-top: 18px;
-}
+    }
+    .sp-subtitle{
+        font-size: 19px !important;
+    }
 }
 @media screen and (max-width: 700px){
     .sports-container h1{
@@ -152,15 +155,19 @@
     .sports-hashtag{
         font-size: 24px;
         margin-top: 18px;
-}
+    }
+    .sp-subtitle{
+        font-size: 16px !important;
+        margin:0 1vw;
+    }
 }
 @media screen and (max-width: 556px){
     .sports-container h1{
-        font-size: 40px;
+        font-size: 30px;
         margin-bottom: 7px;
     }
     .sports-hashtag{
         font-size: 22px;
         margin-top: 18px;
-}
+    }
 }

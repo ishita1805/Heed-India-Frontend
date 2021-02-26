@@ -114,4 +114,10 @@
         font-size:16px !important;
         font-weight:300 !important;
     }
+    .mission-heading-txt{
+        font-size:34px !important;
+    }
+    .mission-underline{
+        width:190px;
+    }
 }

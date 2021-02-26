@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {useEffect} from 'react'
 import '../../containers/mission/mission.css'
 import vid from '../../assets/1.5mb.mp4'
