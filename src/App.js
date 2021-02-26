@@ -19,6 +19,9 @@ import Footer from './components/footer/Footer'
 import ConactUs from './components/contactUs/Contact'
 import Blog from './containers/blog/Blog'
 import Contacts from './containers/admin/Contacts/Contacts'
+import Support from './containers/admin/Support/Support'
+import Content from './containers/admin/ChangeContent/Content'
+import Donations from './containers/admin/Donations/Donate'
 
 const App = () => {
   const state='Mumbai'
@@ -70,6 +73,9 @@ const App = () => {
         <ProtectedRoute path="/admin/createBlog" Component={CreatedBlog}/>
         <ProtectedRoute path="/admin/view" Component={ViewBlogs}/>
         <ProtectedRoute path="/admin/messages" Component={Contacts}/>
+        <ProtectedRoute path="/admin/support" Component={Support}/>
+        <ProtectedRoute path="/admin/donations" Component={Donations}/>
+        <ProtectedRoute path="/admin/change-content" Component={Content}/>
 
         <Route path="/*">
           <Error state={state}/>
