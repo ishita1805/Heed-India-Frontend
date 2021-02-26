@@ -71,9 +71,9 @@ const Donate = () => {
             <div className="donate-content">
                 <h1><span className = "donate-header-1">Donate</span> and help a child</h1>         
                 <div className="donate-text">
-                    <P text="No amount is small. 
+                    <p className = "d-subtitle">No amount is small. 
                     Let us show you how we can make every rupee 
-                    count and help you be a part of this revolution." />
+                    count and help you be a part of this revolution.</p>
                     <h2><span className = "hashtag-1">#responsible</span><span className = "hashtag-2">Living</span></h2>
                     <div className="hbut"><Button className="success" label="Support Our Initiatives" onClick={()=>setRed(true)}/></div>
                 </div>

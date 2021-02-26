@@ -7,6 +7,10 @@
     align-items: center;
     justify-content: center;
 }
+.mission-2liner{
+    width:50%;
+    font-weight:300 !important;
+}
 #myVideo{
     min-width:100vw; 
     min-height: 100vh;
@@ -43,6 +47,9 @@
     height:2px;
     background:white;
 }
+.mission-heading-txt{
+    font-size:55px !important;
+}
 .mission-2 h2{
     margin:0;
     padding:0;
@@ -71,6 +78,7 @@
     justify-content:center;
 }
 .mission-hashtags{
+    margin:0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px !important;
 }
@@ -78,5 +86,28 @@
     color: #aadc5d;
 }
 .mission-hash-2{
-    color: #65a306;
+    color: #88cc21;
+}
+@media screen and (max-width:1000px) {
+    .mission-2liner{
+        width:80%;
+    }
+    .mission-underline{
+        width:300px;
+    }
+    .mission-heading-txt{
+        font-size:50px !important;
+    }
+}
+@media screen and (max-width:700px) {
+    .mission-2liner{
+        width:90%;
+    }
+}
+@media screen and (max-width:600px) {
+    .mission-2liner{
+        width:95%;
+        font-size:16px !important;
+        font-weight:300 !important;
+    }
 }

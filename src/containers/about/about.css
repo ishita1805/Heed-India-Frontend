@@ -79,6 +79,10 @@
     margin:0 5vw;
     text-align:center;
 }
+.abt-semi-in h3{
+  margin:1vh;
+  font-size:20px;
+}
 .dark-abt{
     min-height:60vh;
     display:flex;

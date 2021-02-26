@@ -1,16 +1,21 @@
 import React from 'react'
 import './cardsports.css'
 
-function Card({header, para1, para2, para3,...props}){
+function Card({img,heading,p1,p2,p3,set,...props}){
     return(
-        <div className = "sports-card">
-                <div className = "card-text">
-                    <h1>{header}</h1>
-                    <p className = "card-para-1">{para1}</p>
-                    <p className = "card-para-2">{para2}</p>
-                    <p className = "card-para-2">{para3}</p>
-                </div>
-        </div>
+        <div className={set===1?'sp-cont':'sp-cont-2'}>
+
+             <div className='sp-card-text'>
+                <h2>{heading}</h2>
+                <p>{p1}</p>
+                <p>{p2}</p>
+                <p>{p3}</p>
+            </div>
+
+            <div className='sp-card-img'>
+                <img src={img} alt={heading}/>
+            </div>
+      </div>
     )
 }
 

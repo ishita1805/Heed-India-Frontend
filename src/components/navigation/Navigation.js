@@ -34,8 +34,6 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/admin/support" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Supports</NavLink>
           <NavLink exact to="/admin/donations" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Donations</NavLink>
           <NavLink exact to="/admin/change-content" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Edit Content</NavLink>
-          <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Home</NavLink>
-          
           <div className="logo-nav">
             <img alt="" src={imgdark} className="logo" />
           </div>
@@ -48,7 +46,6 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/admin/support" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Supports</NavLink>
           <NavLink exact to="/admin/donations" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Donations</NavLink>
           <NavLink exact to="/admin/change-content" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Edit Site</NavLink>
-          <NavLink exact to="/" className="nav-item" activeClassName="nav-item-active">Home</NavLink>
           <div className="logo-nav">
             <img  alt="" src={imgdark} className="logo" />
           </div>

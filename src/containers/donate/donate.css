@@ -9,6 +9,9 @@
     width: 100vw;
     min-height:100vh;
 }
+.d-subtitle{
+    font-size:17px !important;
+}
 .donate-container{
     background: rgba(0,0,0,0.6);
     display:flex;

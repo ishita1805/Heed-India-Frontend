@@ -1,9 +1,8 @@
 .card-img{
     background-color: #ffafaf;
+    width: 30vw;
     height: auto;
-    width: auto;
     bottom: 0px;
-    position: relative;
     margin-top: 150px;
     object-fit: cover;
 }

@@ -7,22 +7,21 @@
     text-align:center;
     align-items: center;
     justify-content: center;
+    overflow:hidden !important;
     margin-left: 0px;
     margin-right: 0px;
 }
 #SpVid{
     min-width:100vw; 
-    min-height: 100vh;
-    max-height:102vh;
-    position: absolute;
+    min-height: 100vh !important;
+    max-height:100vh;
     align-self:center;
-    top:0;
     left:auto;
     object-fit: cover;
 }
 .sports-container{
     background:rgba(0,0,0,0.3);
-    min-height:102vh;
+    height:100vh;
     width:100vw;
     top:0;
     display:flex;
@@ -31,7 +30,6 @@
     justify-content: center;
     left:0;
     position:absolute;
-    z-index:200;
 }
 .sp-header{
     color: #AEDD66;

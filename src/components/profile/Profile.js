@@ -19,6 +19,7 @@ const data = [
 ]
 
 export default function Profile() {
+  
     return (
       <>
         <div className="profile">
@@ -31,7 +32,7 @@ export default function Profile() {
 
             <div className='row-profile'>
                 <h3>heedindia.ngo</h3>
-                <Button label='Follow' className='primary'/>
+                <a href='https://www.instagram.com/heedindia.ngo/' target='__blank'><Button label='Follow' className='primary'/></a>
             </div>
 
             <div className='profile-stats'>

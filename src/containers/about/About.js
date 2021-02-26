@@ -52,7 +52,7 @@ const About = (props) => {
 
            <div className="abt-semi">
                <div className="abt-semi-in">
-                   2525<h3>Books Donated</h3>
+                   7500<h3>Books Donated</h3>
                </div>
                <div className="abt-semi-in">
                    325<h3>Events</h3>
