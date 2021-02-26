@@ -13,11 +13,16 @@ import { useForm } from 'react-hook-form';
 import DropDown from '../../components/dropDown/DropDown'
 import { Redirect } from 'react-router-dom'
 import Typewriter from 'typewriter-effect'
+import axios from 'axios'
+import url from '../../url'
 
 const Initiatives = () => {
     const { register, handleSubmit, errors } = useForm();
     const [val,setVal] = useState('One Book To Read')
     const [red,setRed] = useState(false);
+    const [name,Setname] = useState('');
+    const [number,Setnumber] = useState(0);
+    const [email,Setemail] = useState('');
     const butonRef = useRef();
     const intoViewRef = useRef();
     useEffect(() => {
@@ -106,9 +111,21 @@ const Initiatives = () => {
     }
 
     const onSubmit =(data)=>{
-    //    console.log(data)
+        Setname(data.name);
+        Setemail(data.email);
+        Setnumber(data.number);
+
+        const user ={
+            name,
+            email,
+            number
+        }
+        axios.post(url+'/supports/supportdata',user)
+        .then((res)=>{console.log(res.data)})
+        .catch((err) =>{console.log(err)});
     }
-     const formButtonHandler = () => {
+    
+    const formButtonHandler = () => {
         butonRef.current.click();
      }
 
@@ -167,13 +184,18 @@ const Initiatives = () => {
                 <p> Find a programme to support or fund! Fill up the form and we will reach out to you 😇</p>
                 <DropDown value={val} values={dropdownArray} returnVal={(data)=>setVal(data)}/>
                 <form className='form-init' onSubmit={handleSubmit(onSubmit)}>
+
                     <input className='input gly' name='name' type="text" placeholder="Enter Name" ref={register({ required: true })}/>
                     {errors.name?<p className="error-text">Name is required</p>:null}
+
                     <input className='input gly' name='number' type="number" placeholder="Enter Number" ref={register({ required: true })}/>
                     {errors.number?<p className="error-text">Number is required</p>:null}
+
                     <input className='input gly' name='email' type="email" placeholder="Enter Email" ref={register({ required: true })}/>
                     {errors.email?<p className="error-text">Email is required</p>:null}
+
                     <button ref={butonRef} style={{display:'none'}}>Submit</button>
+
                 </form>
                 <Button 
                 label='Submit'
