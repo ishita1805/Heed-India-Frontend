@@ -17,25 +17,25 @@ const Mission = () => {
       const data = [
         {
           heading: 'Sponsor a Child',
-          para: 'We urgently need your support to help needy children receive good education, health and nutrition. Sponsor a child for one of more of his/her needs. Sponsor a child NOW!​',
+          para: 'Support our efforts by sponsoring the needs of at least one child, and help the child stay healthy.',
           url: sponsorAChild,
           color:'blue-icon'
         },
         {
           heading: 'Make A Donation',
-          para: 'Your donation will help provide critical support to all beneficiaries of the programmes we undertake. Donate for a cause NOW! spread smiles and joy',
+          para: 'The programmes we undertake to bring about that small change, need a constant flow of funds. By making a donation, you lessen the stress on us, thereby helping us move ahead with no roadblocks.',
           url: donate,
           color:'green-icon'
         },
         {
           heading: 'Give Little of You',
-          para:' Your donation will ensure that our projects create the most impact. Your money will be utilised in areas that you will feel most strongly about.',
+          para:'One of the most gratifying acts of reaching out involves volunteering one’s time. After all, time is money. If there is a talent you wish to share, we’ll be more than happy to welcome you in our fold.',
           url: give,
           color:'purple-icon'
         },
         {
           heading: 'Volunteer',
-          para: 'Volunteer your time for a cause of your liking. If you would like to bring a group of friends, family or colleagues, reach out to us and we will work with you and your ideas to make a social impact.',
+          para: 'We invite corporates and foundations to partner with us by either donating sports kits for our beneficiaries, or by promoting employee giving or by sponsoring our events.',
           url: volunteer,
           color:'red-icon'
         },

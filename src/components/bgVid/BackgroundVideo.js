@@ -15,6 +15,7 @@ const BackgroundVideo = () => {
                     <h1>Our Mission</h1>
                     <div className="mission-underline"></div>
                     <p>One medium sized line about their <span className="green-home">mission</span> comes here </p>
+                    <p className = "mission-hashtags"><span className = "mission-hash-1">#Fit</span><span className = "mission-hash-2">India</span> <span className = "mission-hash-1">#United</span><span className = "mission-hash-2">India</span></p>
                 </div>
             </div>
     )

@@ -25,19 +25,16 @@ const About = (props) => {
                <div className="about-row-in">
                 <h3>On a mission to provide and aid</h3>
                 <p>
-                In 2012 HEED India started as Samarpan Charitable Trust engaging in a number of 
-                philanthropic activities with the key philosophy of 'Responsible Living', i.e., 
-                responding to the immediate and essential needs of various communities. With these 
-                efforts HEED India has reached out to schools, urban and rural communities, especially 
-                students, women, SHG groups, elderly and disabled and others aiding them in areas of healthcare, 
-                education, livelihood and so on.
+                In 2012 HEED India started as Samarpan Charitable Trust engaging in a number of philanthropic activities with 
+                the key philosophy of 'Responsible Living', i.e., responding to the immediate and essential needs of various 
+                communities. With these efforts HEED India has reached out to schools, urban and rural communities, especially 
+                students, women, SHG groups, elderly and disabled and others aiding them in areas of healthcare, education, 
+                livelihood, and more.
                 </p>
                 <p>
-                Through the years, HEED India programmes have matured and are moving to a more structured approach 
-                of community development.
-                </p>
-                <p>
-                Moving from NEED BASED PHILANTHROPIC APPROACH TO the right mix of NEED based & PROJECT BASED APPROACH.
+                Through the years, HEED India programmes have matured and are moving to a more structured approach of community 
+                development. Moving from a need based philanthropic approach to the right mix of need-based & project-based 
+                approach, is what drives HEED India’s endeavours.
                 </p>
                </div>
                <div className="about-row-in">

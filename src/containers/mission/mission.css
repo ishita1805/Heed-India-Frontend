@@ -70,3 +70,13 @@
     align-items:center;
     justify-content:center;
 }
+.mission-hashtags{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px !important;
+}
+.mission-hash-1{
+    color: #aadc5d;
+}
+.mission-hash-2{
+    color: #65a306;
+}

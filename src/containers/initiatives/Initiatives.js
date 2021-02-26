@@ -11,7 +11,7 @@ import { Redirect } from 'react-router-dom'
 
 const Initiatives = () => {
     const { register, handleSubmit, errors } = useForm();
-    const [val,setVal] = useState('One book to read')
+    const [val,setVal] = useState('One Book To Read')
     const [red,setRed] = useState(false);
     const butonRef = useRef();
     const intoViewRef = useRef();
@@ -22,38 +22,61 @@ const Initiatives = () => {
     const array =[
         {
             num: '01',
-            text: 'One Book To Read',
+            text: 'Sports Training',
             subtext: 'One line description about the initiative',
             url: sponsorAChild,
             color:'blue-icon',
-            para: 'We urgently need your support to help needy children receive good education, health and nutrition. Sponsor a child for one of more of his/her needs. Sponsor a child NOW!​',
+            para: 'HEED India identifies kids with potential and an interest in sports. This is followed by intensive training sessions under qualified coaches. The training is structured to instil a spirit of ambition, readying the child for competitive participation. Every aspect of the sport is emphasized upon, ensuring correct posture, and an ability to keep injury to the minimum. The training sessions are designed to transform the child holistically, thus creating better citizens of tomorrow. ',
         },
         {
             num: '02',
-            text: 'One Book To Read',
+            text: 'Participation in Tournaments',
             subtext: 'One line description about the initiative',
             url: donate,
             color:'green-icon',
-            para: 'Your donation will help provide critical support to all beneficiaries of the programmes we undertake. Donate for a cause NOW! spread smiles and joy',
+            para: 'Having undergone training under the eagle eye of the trainer, the child is encouraged to participate in competitive tournaments. This instills confidence and a sense of self-esteem in the children, while readying them to accept both, victory and defeat with equanimity.',
         },
         {
             num: '03',
-            text: 'One Book To Read',
+            text: 'Provision of Sports Kits',
             subtext: 'One line description about the initiative',
             url: give,
             color:'purple-icon',
-            para:' Your donation will ensure that our projects create the most impact. Your money will be utilised in areas that you will feel most strongly about.',
+            para:'Every child is provided with comfortable tee shirts, track suits, protective gear, and even high-end gloves and sports equipment, making sure the child is not put under any pressure to procure these items. This small gesture gives the child a sense of belonging, thus building camaraderie amongst all.',
+        },
+        {
+            num: '04',
+            text: 'Collection Drives',
+            subtext: 'One line description about the initiative',
+            url: give,
+            color:'red-icon',
+            para:'HEED India conducts regular collection drives to gather sport equipment as well as books. These drives offer opportunities to individuals and corporates to contribute and be a part of HEED India’s various activities.',
+        },
+        {
+            num: '05',
+            text: 'One Book To Read',
+            subtext: 'One line description about the initiative',
+            url: give,
+            color:'blue-icon',
+            para:'To encourage children to develop the habit of reading, particularly in an age where digitalisation has taken over lives, the ‘1BookTo Read’ initiative by HEED India makes physical books available to all, especially children from challenging environments. The online classes have taken children further away from reading books. Thanks to this initiative, a number of videos have reached us featuring kids sharing a synopsis of their favourite books besides speaking about what inspired them to read them.',
+        },
+        {
+            num: '06',
+            text: 'Digital Health Literacy',
+            subtext: 'One line description about the initiative',
+            url: give,
+            color:'green-icon',
+            para:'‘Liberate’ is a unique app which ensures that those with less developed digital skills should receive the best possible care and are not inadvertently excluded. The app gives one’s doctor or even a family member access to one’s health records and medicines, besides tracking symptoms. All this and more, at the click of a button.',
         },
     ]
 
     const dropdownArray = [
+        'Sports Training',
+        'Participation in Tournaments',
+        'Provision of Sports Kits',
+        'Collection Drives',
         'One Book To Read',
-        'One Book To Read',
-        'One Book To Read',
-        'One Book To Read',
-        'One Book To Read',
-        'One Book To Read',
-        'One Book To Read',
+        'Digital Health Literacy'
     ]
 
 

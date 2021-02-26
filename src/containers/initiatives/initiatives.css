@@ -130,18 +130,83 @@
     background:rgba(4, 184, 255, 0.3);
     color:#3e6583;
 }
+.init-secs div:nth-child(4){
+    height:20vh;
+    background:rgba(255, 230, 4, 0.3);
+    flex-grow:1;
+    cursor:pointer;
+    display:flex;
+    flex-direction:row;
+    padding:0 2vh;
+    align-items:center;
+    justify-content:flex-start;
+    font-family:'Segoe UI';
+    font-size:40px;
+    color:#817106;
+    transition:1s;
+}
+.init-secs div:nth-child(5){
+    height:20vh;
+    background:#ff4e6c6e;
+    flex-grow:1;
+    cursor:pointer;
+    display:flex;
+    padding:0 2vh;
+    flex-direction:row;
+    font-size:40px;
+    font-family:'Segoe UI';
+    align-items:center;
+    justify-content:flex-start;
+    color:#630B0B;
+    transition:1s;
+}
+.init-secs div:nth-child(6){
+    height:20vh;
+    background:#ff4e6c6e;
+    flex-grow:1;
+    cursor:pointer;
+    display:flex;
+    padding:0 2vh;
+    flex-direction:row;
+    font-size:40px;
+    font-family:'Segoe UI';
+    align-items:center;
+    justify-content:flex-start;
+    color:#630B0B;
+    transition:1s;
+    background:rgba(4, 184, 255, 0.3);
+    color:#3e6583;
+}
 
 .init-secs div:nth-child(1):hover{
     transition:1s;
     flex-grow:2;
+    font-size: 2em;
 }
 .init-secs div:nth-child(2):hover{
     transition:1s;
     flex-grow:2;
+    font-size: 2em;
 }
 .init-secs div:nth-child(3):hover{
     transition:1s;
     flex-grow:2;
+    font-size: 2em;
+}
+.init-secs div:nth-child(4):hover{
+    transition:1s;
+    flex-grow:2;
+    font-size: 2em;
+}
+.init-secs div:nth-child(5):hover{
+    transition:1s;
+    flex-grow:2;
+    font-size: 2em;
+}
+.init-secs div:nth-child(6):hover{
+    transition:1s;
+    flex-grow:2;
+    font-size: 2em;
 }
 
 .init-secs div:hover .white-content-init:nth-child(1){
@@ -153,6 +218,18 @@
     transition:1s;
 }
 .init-secs div:hover .white-content-init:nth-child(3){
+    display:flex;
+    transition:1s;
+}
+.init-secs div:hover .white-content-init:nth-child(4){
+    display:flex;
+    transition:1s;
+}
+.init-secs div:hover .white-content-init:nth-child(5){
+    display:flex !important;
+    transition:1s;
+}
+.init-secs div:hover .white-content-init:nth-child(6){
     display:flex;
     transition:1s;
 }
