@@ -20,9 +20,9 @@ const Initiatives = () => {
     const { register, handleSubmit, errors } = useForm();
     const [val,setVal] = useState('One Book To Read')
     const [red,setRed] = useState(false);
-    const [name,Setname] = useState('');
-    const [number,Setnumber] = useState(0);
-    const [email,Setemail] = useState('');
+    const [name,setName] = useState('');
+    const [number,setNumber] = useState(0);
+    const [email,setEmail] = useState('');
     const butonRef = useRef();
     const intoViewRef = useRef();
     useEffect(() => {
@@ -111,18 +111,24 @@ const Initiatives = () => {
     }
 
     const onSubmit =(data)=>{
-        Setname(data.name);
-        Setemail(data.email);
-        Setnumber(data.number);
+        setName(data.name);
+        setEmail(data.email);
+        setNumber(data.number);
 
         const user ={
             name,
             email,
-            number
+            number,
+            val,
         }
         axios.post(url+'/supports/supportdata',user)
         .then((res)=>{console.log(res.data)})
         .catch((err) =>{console.log(err)});
+
+        setName('');
+        setEmail();
+        setNumber(0);
+        setVal('One Book To Read')
     }
     
     const formButtonHandler = () => {
