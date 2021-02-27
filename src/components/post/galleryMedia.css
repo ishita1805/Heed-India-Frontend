@@ -1,36 +1,97 @@
-.gallery {
-    display:flex;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    width:80vw;
-    justify-content:center;
- }
- 
- .gallery-image {
-    width:22vw;
-    height:auto;
-    margin:1.5vh;
-    overflow:hidden;
-    color: #fff;
-    cursor: pointer;
- }
-
- @media screen and (max-width:40rem){
-    .gallery {
-        width:100vw;
-        margin-top:-2vh;
-     }
-     
-     .gallery-image {
-        width:35vw;
-     }
-    
- }
-
- @media screen and (max-width:40rem){
-    
-     .gallery-image {
-        width:35vw;
-     }
-    
- }
+.gallery{
+   width:80vw;
+   margin:0;
+   padding:8vh 10vw;
+   background:black;
+   display:flex;
+   flex-direction: row;
+   flex-wrap:wrap;
+   align-items:center;
+   color:white;
+   justify-content:center;
+}
+.event-card{
+   width:40vh;
+   height:43vh;
+   background:white;
+   border-radius:8px;
+   margin:5vh;
+   overflow:hidden !important;
+}
+.gallery-image{
+   width:100%;
+   height:30vh;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   overflow:hidden;
+   overflow: hidden;
+}
+.gallery-image img{
+   min-width:100%;
+   height:auto;
+   min-height:30vh;
+}
+.text-event-card{
+   width:90%;
+   padding:1vh 5%;
+   height:11vh;
+   display:flex;
+   flex-direction:column;
+   align-items:flex-start;
+   justify-content:flex-start;
+   overflow:hidden;
+   color:black;
+}
+.text-event-card h3{
+   font-weight:bold !important;
+   margin:0.5vh 0;
+}
+.text-event-card p{
+ margin:0.5vh 0;
+}
+.arrow-event-card{
+   height:8vh;
+   width:8vh;
+   border-radius:4vh;
+   margin-left:30vh;
+   color:white;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   font-size:25px;
+   margin-top:-4vh;
+   background:rgb(57, 159, 255);
+   position:absolute;
+}
+@media screen and (max-width:900px){
+   .gallery{
+      width:90vw;
+      padding:8vh 5vw;
+   } 
+   .event-card{
+      width:40vh;
+      height:43vh;
+      margin:3vh;
+   }
+}
+@media screen and (max-width:700px){
+   .gallery{
+      width:94vw;
+      padding:8vh 3vw;
+   } 
+   .event-card{
+      width:37vh;
+      height:43vh;
+      margin:2.5vh;
+   }
+   .arrow-event-card{
+      height:8vh;
+      width:8vh;
+      border-radius:4vh;
+      margin-left:28vh;
+      margin-top:-4vh;
+      background:rgb(57, 159, 255);
+      position:absolute;
+   }
+}

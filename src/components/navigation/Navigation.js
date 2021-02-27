@@ -6,7 +6,7 @@ import imgdark from '../../assets/logo.png'
 
 const Navigation = ({loc,...props}) => {
   const [nav,setNav] =useState(false);
-  const dark = ["/blog","/events","/initiatives"]
+  const dark = ["/blog","/initiatives"]
   const navHandler = ()=>{
       setNav(!nav);
   }

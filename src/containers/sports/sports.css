@@ -46,6 +46,8 @@
     color: #c4c0c0  !important;
     font-size: 23px !important;
     font-weight: lighter !important;
+    text-align:center !important;
+    padding:0 2vh !important;
     margin-top: 1.5vh  !important;
 }
 .sports-hashtag{

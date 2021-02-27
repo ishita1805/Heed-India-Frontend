@@ -118,8 +118,12 @@ const Initiatives = () => {
             val: val,
         }
         axios.post(url+'/supports/supportdata',user)
-        .then( (res)=>{console.log(res.data)})
-        .catch((err) =>{console.log(err)});
+        .then( (res)=>{
+            // console.log(res.data)
+        })
+        .catch((err) =>{
+            // console.log(err)
+        });
         setClick(true)
     
     }
