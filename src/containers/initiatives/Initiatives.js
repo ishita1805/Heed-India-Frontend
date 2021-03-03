@@ -137,7 +137,7 @@ const Initiatives = () => {
             {red?<Redirect to="/donate" exact />:null}
             <div className='init-land'>
                     <h1><span className="green-home">Join Our</span> Initiative</h1>
-                    <p className='sp-subtitle'>Do we have a moral obligation to help people we do not know? If so, why?</p>
+                    <p className='sp-left'>Do we have a moral obligation to help people we do not know? If so, why?</p>
                     <h2 className="green-hashtag">
                         <Typewriter 
                             options={{

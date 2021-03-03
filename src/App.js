@@ -22,6 +22,9 @@ import Contacts from './containers/admin/Contacts/Contacts'
 import Support from './containers/admin/Support/Support'
 import Content from './containers/admin/ChangeContent/Content'
 import Donations from './containers/admin/Donations/Donate'
+import Privacy from './containers/footerLinks/PrivacyPolicy'
+import Terms from './containers/footerLinks/TermsConditions'
+import Refund from './containers/footerLinks/RefundsCancellation'
 
 const App = () => {
   const state='Mumbai'
@@ -70,6 +73,16 @@ const App = () => {
           <Admin/>
         </Route>
 
+        <Route path="/privacy-policy" exact >
+          <Privacy/>
+        </Route>
+        <Route path="/terms&conditions" exact >
+          <Terms/>
+        </Route>
+        <Route path="/refunds&cancellations" exact >
+          <Refund/>
+        </Route>
+
         <ProtectedRoute path="/admin/createBlog" Component={CreatedBlog}/>
         <ProtectedRoute path="/admin/view" Component={ViewBlogs}/>
         <ProtectedRoute path="/admin/messages" Component={Contacts}/>
@@ -80,7 +93,6 @@ const App = () => {
         <Route path="/*">
           <Error state={state}/>
         </Route>
-
       </Switch>
       <Footer/>
       <ConactUs loc={window.location.pathname}/>

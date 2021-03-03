@@ -22,14 +22,8 @@ const Mission = () => {
 
       const data = [
         {
-          heading: 'Sponsor a Child',
-          para: 'We at Heed India promote and encourage sports, to enhance the physical, mental and of an individual. Support our efforts by sponsoring the needs of at least one child, and help the child stay healthy.',
-          url: sponsorAChild,
-          color:'blue-icon'
-        },
-        {
           heading: 'Make A Donation',
-          para: 'The programmes we undertake to bring about that small change, need a constant flow of funds. By making a donation, you lessen the stress on us, thereby helping us move ahead with no roadblocks.',
+          para: 'The programmes we undertake, need a constant flow of funds. By making a donation, you lessen the stress on us, thereby helping us move ahead with no roadblocks.',
           url: donate,
           color:'green-icon'
         },
@@ -40,17 +34,17 @@ const Mission = () => {
           color:'purple-icon'
         },
         {
-          heading: 'Volunteer',
-          para: 'We invite corporates and foundations to partner with us by either donating sports kits for our beneficiaries, or by promoting employee giving or by sponsoring our events.',
-          url: volunteer,
-          color:'red-icon'
-        },
-        {
           heading: 'Sponsor a Programme',
-          para: 'We invite corporations and foundations to join our efforts as partners by donating direct gifts, promoting employee giving or supporting a worthy cause - there can be a role for everyone.',
+          para: 'We invite corporates and foundations to partner with us by either donating sports kits for our beneficiaries, or by promoting employee giving or by sponsoring our events..',
           url: prog,
           color:'orange-icon'
-        }
+        },
+        {
+          heading: 'Sponsor a Child',
+          para: 'Support our efforts by sponsoring the needs of at least one child, and help the child stay healthy.',
+          url: sponsorAChild,
+          color:'blue-icon'
+        },
       ]
     return (
         <div>
@@ -60,14 +54,10 @@ const Mission = () => {
                <div className="about-row-in">
                 <h2 data-aos='fade-up'>Our Mission</h2>
                 <p data-aos='fade-up'>
-                Sports is ‘The Biggest Unifier’ in India, where region, religion, language and caste divide the people.
-                 We at Heed India promote and encourage sports, to enhance the physical, mental and overall growth of not only an 
-                 individual but society as a whole. 
+                  Sports is ‘The Biggest Unifier’ in India, where region, religion, language and caste divide the people. We at Heed India promote and encourage sports, to enhance the physical, mental and overall growth of not only an individual but society as a whole
                 </p>
                 <p data-aos='fade-up'>
-                HEED India endeavours to make a difference in the lives of children, by offering them opportunities in the fields of 
-                sports and education. A large percentage of kids hail from challenging backgrounds, having no access to either. 
-                HEED India is one such passion-driven venture that is working towards bringing about that small change. 
+                  HEED India endeavours to make a difference in the lives of children, by offering them opportunities in the fields of sports and education. A large percentage of kids hail from challenging backgrounds, having no access to either. HEED India is one such passion-driven venture that is working towards bringing about that small change. 
                 </p>
                </div>
                <div className="about-row-in" data-aos='fade-up'>

@@ -55,11 +55,11 @@ const Footer = () => {
             </div>
 
             <div className="footer-inner">
-                <h4>Make a change</h4>
+                <h4>Helpful Links</h4>
                 <span>
-                    <NavLink exact to="/donate">Donate</NavLink><br/>
-                    {/* <NavLink exact to="/raise-money">Raise Money</NavLink><br/> */}
-                    <NavLink exact to="/our-mission">Our Mission</NavLink><br/>
+                    <a target='__blank' href="/privacy-policy">Privacy Policy</a><br/>
+                    <a target='__blank' href="/terms&conditions">Terms and Conditions</a><br/>
+                    <a target='__blank' href="/refunds&cancellations">Cancellation/Refund Policy</a><br/>
                 </span>
                 <h4>Contact Us</h4>
                 <span>
@@ -68,10 +68,10 @@ const Footer = () => {
             </div>
 
             <div className="footer-inner">
-                <h4>Helpful Links</h4>
+                <h4>Make a change</h4>
                 <span>
-                    <a target='__blank' href="/">Privacy Policy</a><br/>
-                    <a target='__blank' href="/">Terms and Conditions</a><br/>
+                    <NavLink exact to="/donate">Donate</NavLink><br/>
+                    <NavLink exact to="/our-mission">Our Mission</NavLink><br/>
                 </span>
                 <h4>Developers</h4>
                 <span>

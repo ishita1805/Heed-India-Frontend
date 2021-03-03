@@ -1,0 +1,12 @@
+.footer-links-cont{
+    width:90vw;
+    padding:0 5vw;
+    margin:12vh 0;
+    min-height:100vh;
+    display:flex;
+    color:rgb(53, 53, 53);
+    flex-direction:column;
+}
+.footer-links-cont p{
+  margin:1vh 0;
+}

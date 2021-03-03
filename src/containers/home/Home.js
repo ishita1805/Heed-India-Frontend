@@ -15,8 +15,8 @@ const Home = ({state,...props}) => {
         {red?<Redirect to="/donate" exact />:null}
         <div className="grow">
           
-            <h1><span className="green-home">Heed</span> India</h1>
-            <p>Facilitating health and education for children across the globe.</p>
+            <h1><span className="green-home">HEED</span> India</h1>
+            <p className='sp-left'>Facilitating health and education for children across the globe.</p>
             <h2 className="green-home">
                 <Typewriter 
                     options={{

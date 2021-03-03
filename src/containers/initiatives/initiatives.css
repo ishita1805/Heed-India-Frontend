@@ -15,6 +15,16 @@
     width:96vw;
     background:rgba(0,0,0,0.5);
 }
+.sp-left{
+    color: #c4c0c0  !important;
+    font-size: 23px !important;
+    font-weight: lighter !important;
+    text-align:left !important;
+    padding:0 2vh !important;
+    margin:0;
+    margin-top: 1.5vh  !important;
+    margin-bottom:1vh !important;
+}
 .error-text{
     color:red !important;
     margin:0.5vh 0 !important;
