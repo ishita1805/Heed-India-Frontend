@@ -24,7 +24,6 @@ import Content from './containers/admin/ChangeContent/Content'
 import Donations from './containers/admin/Donations/Donate'
 import Privacy from './containers/footerLinks/PrivacyPolicy'
 import Terms from './containers/footerLinks/TermsConditions'
-import Refund from './containers/footerLinks/RefundsCancellation'
 
 const App = () => {
   const state='Mumbai'
@@ -80,7 +79,7 @@ const App = () => {
           <Terms/>
         </Route>
         <Route path="/refunds&cancellations" exact >
-          <Refund/>
+          <Terms/>
         </Route>
 
         <ProtectedRoute path="/admin/createBlog" Component={CreatedBlog}/>
