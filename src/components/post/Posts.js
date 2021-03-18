@@ -9,9 +9,7 @@ import url from '../../url'
 const ImageLink = props =>{
 
 	return(
-		// <Link to={"/blog/"+props.img._id} >
-		// 	<img src={props.img.thumbnail} className='gallery-image' alt=''/>
-		// </Link>
+		
 		<Link to={"/blog/"+props.img._id} >
 			<div className='event-card'>
 				<div className='gallery-image'>
@@ -21,8 +19,8 @@ const ImageLink = props =>{
 					<i className='fa fa-chevron-right'></i>
 				</div>
 				<div className='text-event-card'>
-					<h3>{props.img.title}</h3>
-					<p>{props.img.subtitle.substring(0,34)} ...</p>
+					<h3>{props.img.heading}</h3>
+					<p>{props.img.subheading.substring(0,34)} {props.img.subheading.length>34?'...':null}</p>
 				</div>
 			</div>
 		</Link>
@@ -32,7 +30,6 @@ const ImageLink = props =>{
 export default function Posts() {
 	
 	const [image, setimage] = useState([]);
-	// const arrTemp = [1,2,3,4,5];
 
 	useEffect(() => {
 		axios.get(url+'/blogs/getblog')

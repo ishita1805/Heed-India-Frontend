@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState ,useEffect} from 'react'
 import './blog.css'
@@ -48,7 +49,7 @@ const Blog = (props) => {
         </div>
         <div className="blog-social">
           {liked ? <i class="fa fa-heart icon-filled-blog" aria-hidden="true" onClick={likeHandler}></i> : <i class="fa fa-heart-o icon-blog" aria-hidden="true" onClick={likeHandler}></i>}
-          <i target = "__blank" href = {blogData.instalink} className = "fa fa-instagram icon-blog" aria-hidden = "true" ></i>
+          <a target = "__blank" href = {blogData.instalink}><i className ="fa fa-instagram icon-blog" aria-hidden ="true" ></i></a>
         </div>
       </div>
 
