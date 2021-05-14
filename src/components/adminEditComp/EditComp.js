@@ -174,8 +174,8 @@ const EditComp = (props) => {
                 pid: resp.data.resp.pid,
             });
             setTitle(resp.data.resp.title)
-            setHashtag(resp.data.resp.subtitle)
-            setSubtitle(resp.data.resp.hashtag)
+            setHashtag(resp.data.resp.hashtag)
+            setSubtitle(resp.data.resp.subtitle)
             setAddData(resp.data.resp.para)
             setStatsArr(resp.data.resp.stats)
             setCardsArr(resp.data.resp.cards)
@@ -369,13 +369,18 @@ const EditComp = (props) => {
                         
                         <input ref={cardRef} type='file'/>
                         <div className='card-admin-ce'>
-                        <ReactQuill 
-                        theme="snow"
-                        value={cardData}
-                        onChange={handleChangeCard} 
-                        modules={modules}
-                        formats={formats}
-                        />
+                        {
+                            props.editor?
+                            <ReactQuill 
+                            theme="snow"
+                            value={cardData}
+                            onChange={handleChangeCard} 
+                            modules={modules}
+                            formats={formats}
+                            />:
+                            <textarea value={cardData} onChange={(e)=>handleChangeCard(e.target.value)}/>
+
+                        }
                         </div>
                         {contentError2?<p className="error-text">Error: Description cannot be empty</p>:null}
                         {

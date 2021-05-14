@@ -1,16 +1,15 @@
 import React from 'react'
 import './profileMedia.css'
-import img from '../../assets/events.jpg';
 
 
-export default function Profile() {
+export default function Profile(props) {
   
     return (
-      <div style={{background: `url(${img})`}}className='profile'>
+      <div style={{background: `url(${props.image})`}}className='profile'>
         <div className='profile-in'>
-          <h1>Making the good visible</h1>
+          <h1>{props.title}</h1>
           <div className="profile-sub"></div>
-          <p className = "sp-subtitle">Join hands with HEED India as it <span className="green-home">organizes</span> events</p>
+          <p className = "sp-subtitle">{props.subtitle}</p>
         </div>
       </div>
     )

@@ -18,6 +18,7 @@ const Content = () => {
            hashtag={true}
            paras={false}
            cards={false}
+           editor={false}
            stats={false}
            id='609c2a8b05752e403ccd44ef'
           />
@@ -30,6 +31,7 @@ const Content = () => {
            hashtag={false}
            paras={true}
            cards={true}
+           editor={false}
            stats={true}
            id='609c2b89a0996a0bec3f4a45'
            />
@@ -42,6 +44,7 @@ const Content = () => {
            hashtag={true}
            paras={false}
            cards={true}
+           editor={true}
            stats={false}
            id='609c2bc1a0996a0bec3f4a46'
           
@@ -55,6 +58,7 @@ const Content = () => {
            hashtag={false}
            paras={false}
            cards={false}
+           editor={false}
            stats={false}
            id='609c2be2a0996a0bec3f4a47'
            />
@@ -67,6 +71,7 @@ const Content = () => {
            hashtag={true}
            paras={false}
            cards={true}
+           editor={false}
            stats={false}
            id='609c2c12a0996a0bec3f4a48'
            />
@@ -79,6 +84,7 @@ const Content = () => {
            hashtag={true}
            paras={true}
            cards={true}
+           editor={false}
            stats={false}
           id='609c2cbea0996a0bec3f4a49'
           />

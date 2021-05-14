@@ -6,7 +6,7 @@
     background-repeat: repeat;
 }
 .about-section{
-    background:url("../../assets/about-sec-1-1.jpeg");
+    /* background:url("../../assets/about-sec-1-1.jpeg"); */
     background-size:100vw;
     background-position:top;
     width:100vw;
@@ -107,21 +107,6 @@
     margin:2vh 2vw;
     padding:0;
     transition:0.5s ease-in-out;
-}
-.dark-abt-cover:nth-child(1) {
-    background:url("../../assets/about-sec-4.jpeg");
-    background-size:cover;
-}
-.dark-abt-cover:nth-child(2) {
-    background:url("../../assets/about-sec-3.jpeg");
-    background-size:cover;
-}
-.dark-abt-cover:nth-child(3) {
-    background:url("../../assets/about-sec-5.jpeg");
-    background-size:cover;
-}
-.dark-abt-cover:nth-child(4) {
-    background:url("../../assets/about-sec-2.jpeg");
     background-size:cover;
 }
 .dark-abt-cover:hover{
@@ -150,7 +135,7 @@
 .dac-1{
     position:absolute;
     background:rgba(0,0,0,0.4);
-    padding-left:10px;
+    padding:0 5px;
     height:200px;
     width:190px;
     display:flex;
@@ -169,8 +154,8 @@
     text-align: center;
     font-size:14px;
     font-weight:500;
-    height:260px;
-    width:180px;
+    min-height:260px;
+    max-width:180px;
     opacity:0;
     transform: translateY(30px);
     color:white;

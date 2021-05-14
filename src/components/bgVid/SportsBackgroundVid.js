@@ -5,7 +5,7 @@ import vid from '../../assets/SportsBGVid.mp4'
 import Typewriter from 'typewriter-effect'
 import sport from '../../assets/sport.mp3'
 
-const SportsBackgroundVid = () => {
+const SportsBackgroundVid = (props) => {
     useEffect(() => {
         window.scrollTo(0,0)
     },[])
@@ -18,13 +18,15 @@ const SportsBackgroundVid = () => {
                 <source src={sport} type="audio/mpeg"/>  
             </audio>
             <div className = "sports-container">
-                <h1>Sports For Every Child</h1>
+                <h1>{props.title}</h1>
                 <div className="mission-underline"></div>
-                <p className = "sp-subtitle">Support Heed India as it helps the youth excel in sports</p>
+                <p className = "sp-subtitle">
+                    {props.subtitle}
+                </p>
                 <h2 className="green-hashtag">
                     <Typewriter 
                         options={{
-                            strings: ['#SportsForEveryone'],
+                            strings: props.hashtag,
                             autoStart: true,
                             loop: true,
                             delay: 100,

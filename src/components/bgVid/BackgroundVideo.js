@@ -5,7 +5,7 @@ import vid from '../../assets/1.5mb.mp4'
 import Typewriter from 'typewriter-effect'
 import missionAudio from '../../assets/mission.mp3'
 
-const BackgroundVideo = () => {
+const BackgroundVideo = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -18,18 +18,16 @@ const BackgroundVideo = () => {
                     <source src={missionAudio} type="audio/mpeg"/>  
                 </audio>
                 <div className="container-ini">
-                    <h1 className='mission-heading-txt'>Our Mission</h1>
+                    <h1 className='mission-heading-txt'>{props.title}</h1>
                     <div className="mission-underline"></div>
                     
                     <p className='mission-2liner sp-subtitle'>
-                        To unify humanitythrough <span className="green-home">sports and education,</span> by making both
-                        accessible to one and all
-                        {/* Sports is <span className="green-home">‘The Biggest Unifier’</span> in India, where region, religion, language and caste divide the people. Join us as we promote sports for */}
+                        {props.subtitle}
                     </p>
                     <h2 className="green-hashtag">
                         <Typewriter 
                             options={{
-                                strings: ['#FitIndia','#UnitedIndia'],
+                                strings: props.hashtag,
                                 autoStart: true,
                                 loop: true,
                                 delay: 100,

@@ -2,13 +2,7 @@
 import React, {useEffect, useState, useRef} from 'react'
 import './initiatives.css'
 import Button from '../../components/button/Button'
-import sponsorAChild from '../../assets/sponsorAChild.png'
-import kit from '../../assets/kit.png'
-import give from '../../assets/give.png'
-import train from '../../assets/sportsman.png'
 import Card from '../../components/cardMission/cardsMission'
-import book from '../../assets/book.png'
-import tournament from '../../assets/poker.png'
 import { useForm } from 'react-hook-form';
 import DropDown from '../../components/dropDown/DropDown'
 import { Redirect } from 'react-router-dom'
@@ -23,76 +17,64 @@ const Initiatives = () => {
     const [click,setClick] = useState(false);
     const butonRef = useRef();
     const intoViewRef = useRef();
+    const [content,setContent] = useState({
+        cards:[{
+            title:'',
+            description:'',
+            media:'',
+        },
+        {
+            title:'',
+            description:'',
+            media:'',
+        },
+        {
+            title:'',
+            description:'',
+            media:'',
+        }],
+        title:'',
+        subtitle:'',
+        hashtag:'',
+        media:'',
+    });
+
     useEffect(() => {
         window.scrollTo(0, 0)
+        axios.post(`${url}/page/get`, { id: '609c2c12a0996a0bec3f4a48' })
+        .then((resp) => { 
+            console.log(resp.data.resp);
+            setContent(resp.data.resp);
+         })
+        .catch((e) => { console.log(e); })
       }, [])
 
     const array =[
-        {
-            num: '01',
-            text: 'Sports Training',
-            subtext: 'One line description about the initiative',
-            url: train,
-            color:'blue-icon',
-            para: 'HEED India identifies kids with potential and an interest in sports. This is followed by intensive training sessions under qualified coaches. The training is structured to instil a spirit of ambition, readying the child for competitive participation. Every aspect of the sport is emphasized upon, while transforming the child holistically, thus creating better citizens of tomorrow.',
-        },
-        {
-            num: '02',
-            text: 'One Book To Read',
-            subtext: 'One line description about the initiative',
-            url: book,
-            color:'red-icon',
-            para:'Encouraging children to read, particularly in an age where digitalisation has taken over lives, the ‘1BookTo Read’ initiative by HEED India makes physical books available to all, especially children from challenging environments. This has led to us receiving a number of videos featuring kids, sharing a synopsis of their favourite books, besides speaking about what inspired them to read.',
-        },
-        {
-            num: '03',
-            text: 'Digital Health Literacy',
-            url: give,
-            color:'green-icon',
-            para:'‘Liberate’ is a unique app which ensures that those with less developed digital skills should receive the best possible care and are not inadvertently excluded. The app gives one’s doctor or even a family member access to one’s health records and medicines, besides tracking symptoms. All this and more, at the click of a button. ',
-        },
-        
-        {
-            num: '04',
-            text: 'Participation in Tournaments',
-            url: tournament,
-            color:'green-icon',
-            para: 'Having undergone training under the eagle eye of the trainer, the child is encouraged to participate in competitive tournaments. This will instil confidence and a sense of self-esteem in the children, while readying them to accept both, victory and defeat with equanimity.',
-        },
-        {
-            num: '05',
-            text: 'Collection Drives',
-            url: sponsorAChild,
-            color:'purple-icon',
-            para: "HEED India conducts regular collection drives to gather sport equipment as well as books. These drives offer opportunities to individuals and corporates to contribute and be a part of HEED India’s various activities, ensuring that quality books and sport equipment reach the deserving children.",
-        },
-        {
-            num: '06',
-            text: 'Provision of Sports Kits',
-            url: kit,
-            color:'orange-icon',
-            para: 'Every child is provided with comfortable tee shirts, track suits, protective gear, and even high-end gloves and sports equipment, making sure the child is not put under any pressure to procure these items. This small gesture gives the child a sense of belonging, thus building camaraderie amongst all.',
-        },
-       
+        'blue-icon',
+        'red-icon',
+        'green-icon',
+        'purple-icon',
+        'orange-icon',
     ]
 
     const array2 =[
         {
             num: '01',
-            text: 'Sports Training',
-            subtext: 'Support kids with potential and an interest in sports.',
+            text: content.cards[0].title,
+            subtext: `${content.cards[0].description.substring(0,60)}...`,
         },
         {
             num: '02',
-            text: 'One Book To Read',
-            subtext: 'Help Heed India encouraging the youth to read,',
+            text: content.cards[1].title,
+            subtext: `${content.cards[1].description.substring(0,60)}...`,
         },
         {
             num: '03',
-            text: 'Digital Health Literacy',
-            subtext: 'Be a part of our mission to provide education and basic medical support to all',
+            text: content.cards[2].title,
+            subtext: `${content.cards[2].description.substring(0,60)}...`,
         },
     ]
+    // const array2=[]
 
     const dropdownArray = [
         'Sports Training',
@@ -103,14 +85,11 @@ const Initiatives = () => {
         'Digital Health Literacy'
     ]
 
-
     const handleOnClick = () => {
         intoViewRef.current.scrollIntoView({behavior: "smooth",block: "end"});
     }
 
     const onSubmit =(data)=>{
-   
-
         const user ={
             name: data.name,
             email: data.email,
@@ -125,7 +104,6 @@ const Initiatives = () => {
             // console.log(err)
         });
         setClick(true)
-    
     }
     
     const formButtonHandler = () => {
@@ -133,19 +111,23 @@ const Initiatives = () => {
      }
 
     return (
-        <div className='in-body background-initiate'>
+        <div style={{ backgroundImage:`url(${content.media})`}} className='in-body background-initiate'>
             {red?<Redirect to="/donate" exact />:null}
             <div className='init-land'>
-                    <h1><span className="green-home">Join Our</span> Initiative</h1>
+                    <h1>
+                        {content.title.substring(0,content.title.indexOf(' '))}
+                        <span className="green-home">
+                            {` ${content.title.substring(content.title.indexOf(' ')+1)}`} 
+                        </span>
+                        
+                    </h1>
                     <p className='sp-left'>
-                        HEED India is on a mission to make this a better world. With multiple
-                        Education and Sports initiatives, we are constantly seeking help, both in kind and cash. Reach
-                        out to us and tell us how you can be a part of this philanthropic movement
+                       {content.subtitle}
                     </p>
                     <h2 className="green-hashtag">
                         <Typewriter 
                             options={{
-                                strings: ['#bethechange'],
+                                strings: content.hashtag.split(' '),
                                 autoStart: true,
                                 loop: true,
                                 delay: 100,
@@ -175,14 +157,17 @@ const Initiatives = () => {
             <div id="give-little-of-you" className='init-whitesec' ref={intoViewRef}>
                 <h2>Our Initiatives</h2>
                 <div className="grid-mission">
-                { array.map((item)=>(
-                    <Card
-                    heading={item.text}
-                    para={item.para}
-                    img={item.url}
-                    color={item.color}
+                { content.cards.map((item,index)=>{
+                    let col;
+                    if(array[index]) col=array[index];
+                    else col=array[index%array.length];
+                    return <Card
+                    heading={item.title}
+                    para={item.description}
+                    img={item.media}
+                    color={col}
                     />
-                ))}
+                })}
                 </div>
             </div>
 
