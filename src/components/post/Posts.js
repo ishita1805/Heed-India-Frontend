@@ -30,7 +30,8 @@ const ImageLink = props =>{
 				</div>
 				<div className='text-event-card'>
 					<h3>{props.img.heading}</h3>
-					<p>{props.img.subheading.substring(0,34)} {props.img.subheading.length>34?'...':null}</p>
+					<p className='event-text-toggle-1'>{props.img.subheading.substring(0,34)} {props.img.subheading.length>34?'...':null}</p>
+					<p className='event-text-toggle-2'>{props.img.subheading.substring(0,200)} {props.img.subheading.length>200?'...':null}</p>
 				</div>
 			</div>
 		
@@ -44,11 +45,11 @@ export default function Posts(props) {
 	useEffect(() => {
 		axios.get(url+'/blogs/getblog')
 		  .then(response => {
-			//   console.log(response.data);
+			console.log(response.data);
 			setimage(response.data);
 		  })
 		  .catch((error) => {
-			// console.log(error);
+			console.log(error);
 		  })
 	  },[])
 

@@ -30,6 +30,19 @@
    margin:5vh;
    overflow:hidden !important;
 }
+.event-card:hover .gallery-image{
+   height:11vh;
+   transition:0.4s;
+}
+.event-text-toggle-2{
+   display:none;
+}
+.event-card:hover .event-text-toggle-2{
+  display:flex;
+}
+.event-card:hover .event-text-toggle-1{
+   display:none;
+ }
 .del-icon-event{
    margin-top:2vh;
    font-size:20px;
@@ -48,6 +61,7 @@
    align-items:center;
    justify-content:center;
    overflow:hidden;
+   transition:0.4s;
    overflow: hidden;
 }
 .gallery-image img{

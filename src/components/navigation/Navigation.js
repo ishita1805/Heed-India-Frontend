@@ -6,7 +6,7 @@ import imgdark from '../../assets/logo.png'
 
 const Navigation = ({loc,...props}) => {
   const [nav,setNav] =useState(false);
-  const dark = ["/blog","/initiatives","/privacy-policy","/terms&conditions","/refunds&cancellations"]
+  const dark = ["/blog","/privacy-policy","/terms&conditions","/refunds&cancellations"]
   const navHandler = ()=>{
       setNav(!nav);
   }
@@ -21,35 +21,33 @@ const Navigation = ({loc,...props}) => {
             <div className={nav?"new-2":"cross"}></div>
             <div className={nav?"new-3 cross":"cross"}></div>
           </div>
-          <img  alt="" src={(dark.includes(loc) || loc.includes("/blog"))?imgdark:img} className="logo" />
+          <img  alt="" src={(dark.includes(loc) || loc.includes("/admin") || loc.includes("/blog"))?imgdark:img} className="logo" />
         </div>
 
         {loc.includes("/admin")?
         // for admin portal
         <>
         <div className={nav?"Nav2":"Navigation"}>
-          <NavLink exact to="/admin/createBlog" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Create Blog</NavLink>
-          <NavLink exact to="/admin/view" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">My Blogs</NavLink>
-          <NavLink exact to="/admin/messages" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Messages</NavLink>
-          <NavLink exact to="/admin/support" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Supports</NavLink>
-          {/* <NavLink exact to="/admin/donations" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Donations</NavLink> */}
-          <NavLink exact to="/admin/change-content" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Edit Content</NavLink>
+          <NavLink exact to="/admin/createBlog" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Create Blog</NavLink>
+          <NavLink exact to="/admin/view" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">My Blogs</NavLink>
+          <NavLink exact to="/admin/messages" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Messages</NavLink>
+          <NavLink exact to="/admin/support" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Supports</NavLink>
+          <NavLink exact to="/admin/change-content" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Edit Content</NavLink>
           <div className="logo-nav">
-          <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">
+          <NavLink exact to="/" onClick={navHandler} activeClassName="nav-item-active">
             <img alt="" src={imgdark} className="logo" />
           </NavLink>
           </div>
         </div> 
 
-        <div className="Navigation2">
-          <NavLink exact to="/admin/createBlog" className="nav-item" activeClassName="nav-item-active">New Blog</NavLink>
-          <NavLink exact to="/admin/view" className="nav-item" activeClassName="nav-item-active">My Blogs</NavLink>
-          <NavLink exact to="/admin/messages" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Messages</NavLink>
-          <NavLink exact to="/admin/support" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Supports</NavLink>
-          {/* <NavLink exact to="/admin/donations" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Donations</NavLink> */}
-          <NavLink exact to="/admin/change-content" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Edit Site</NavLink>
+        <div className="Navigation2-white">
+          <NavLink exact to="/admin/createBlog" className="nav-item-white" activeClassName="nav-item-active">New Blog</NavLink>
+          <NavLink exact to="/admin/view" className="nav-item-white" activeClassName="nav-item-active">My Blogs</NavLink>
+          <NavLink exact to="/admin/messages" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Messages</NavLink>
+          <NavLink exact to="/admin/support" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Supports</NavLink>
+          <NavLink exact to="/admin/change-content" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Edit Site</NavLink>
           <div className="logo-nav">
-          <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">
+          <NavLink exact to="/" onClick={navHandler} activeClassName="nav-item-active">
             <img  alt="" src={imgdark} className="logo" />
           </NavLink>
           </div>
@@ -68,7 +66,7 @@ const Navigation = ({loc,...props}) => {
           {/* <NavLink exact to="/raise-money" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Raise Money</NavLink> */}
           <NavLink exact to="/our-mission" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Mission</NavLink>
           <div className="logo-nav">
-          <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">
+          <NavLink exact to="/" onClick={navHandler} activeClassName="nav-item-active">
             <img alt="" src={(dark.includes(loc) || loc.includes("/blog"))?imgdark:img} className="logo" />
             </NavLink>
           </div>
@@ -82,7 +80,7 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/initiatives" className="nav-item" activeClassName="nav-item-active">Initiatives</NavLink>
           {/* <NavLink exact to="/our-branches" className="nav-item" activeClassName="nav-item-active">Our Branches</NavLink> */}
           <div className="logo-nav">
-          <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">
+          <NavLink exact to="/" onClick={navHandler} activeClassName="nav-item-active">
             <img alt="" src={(dark.includes(loc) || loc.includes("/blog"))?imgdark:img} className="logo" />
           </NavLink>
           </div>

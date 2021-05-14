@@ -14,6 +14,7 @@ const EditComp = (props) => {
     const [id,setId] = useState(props.id);
     const [contentError,setContentError] = useState(false);
     const [contentError2,setContentError2] = useState(false);
+    const [reload,setReload] = useState(false);
     const [comp, setComp] = useState({
         media:'',
         pid:'',
@@ -52,7 +53,8 @@ const EditComp = (props) => {
         }
         axios.post(`${url}/page/deleteCard`, data )
             .then((resp) => { 
-                console.log(resp);
+                // console.log(resp);
+                setReload(!reload);
              })
             .catch((e) => { console.log(e); })
     }
@@ -73,7 +75,8 @@ const EditComp = (props) => {
         if(!contentError2) {
             axios.post(`${url}/page/createCard`, fd )
             .then((resp) => { 
-                console.log(resp);
+                setReload(!reload);
+                // console.log(resp);
              })
             .catch((e) => { console.log(e); })
         }
@@ -93,7 +96,8 @@ const EditComp = (props) => {
         if(!contentError2) {
             axios.post(`${url}/page/updateCard`, fd )
             .then((resp) => { 
-                console.log(resp);
+                setReload(!reload);
+                // console.log(resp);
              })
             .catch((e) => { console.log(e); })
         }
@@ -105,7 +109,8 @@ const EditComp = (props) => {
             id,
         })
         .then((resp) => { 
-            console.log(resp);
+            setReload(!reload);
+            // console.log(resp);
         })
         .catch((e) => { console.log(e); })
     }
@@ -118,7 +123,8 @@ const EditComp = (props) => {
         }
         axios.post(`${url}/page/updateStat`, data)
         .then((resp) => { 
-            console.log(resp);
+            setReload(!reload);
+            // console.log(resp);
         })
         .catch((e) => { console.log(e); })
         e.preventDefault();
@@ -132,7 +138,8 @@ const EditComp = (props) => {
             id,
         })
         .then((resp) => { 
-            console.log(resp.data);
+            setReload(!reload);
+            // console.log(resp.data);
         })
         .catch((e) => { console.log(e); })
     }
@@ -158,14 +165,15 @@ const EditComp = (props) => {
         if(!contentError) {
             axios.post(`${url}/page/update`, fd )
             .then((resp) => { 
-                console.log(resp);
-                // setComp(resp.data.resp[0]);
+                setReload(!reload);
+                // console.log(resp);
              })
             .catch((e) => { console.log(e); })
         }
     }
 
     useEffect(()=>{
+        // window.scrollTo(0,0);
         axios.post(`${url}/page/get`, { id })
         .then((resp) => { 
             console.log(resp.data.resp);
@@ -181,7 +189,7 @@ const EditComp = (props) => {
             setCardsArr(resp.data.resp.cards)
          })
         .catch((e) => { console.log(e); })
-    },[])
+    },[reload])
 
     const modules = {
         toolbar: [
