@@ -1,5 +1,3 @@
-/* temp max */
-
 .para23-short {display: none;}
 .donate-main {
     background:url('../../assets/about-sec-4.jpeg');
@@ -11,6 +9,7 @@
 }
 .d-subtitle{
     font-size:19px !important;
+    width:90% !important;
     color: #c4c0c0  !important;
     font-weight: lighter !important;
     margin-top: 1.5vh  !important;

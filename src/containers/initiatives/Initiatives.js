@@ -137,7 +137,11 @@ const Initiatives = () => {
             {red?<Redirect to="/donate" exact />:null}
             <div className='init-land'>
                     <h1><span className="green-home">Join Our</span> Initiative</h1>
-                    <p className='sp-left'>Do we have a moral obligation to help people we do not know? If so, why?</p>
+                    <p className='sp-left'>
+                        HEED India is on a mission to make this a better world. With multiple
+                        Education and Sports initiatives, we are constantly seeking help, both in kind and cash. Reach
+                        out to us and tell us how you can be a part of this philanthropic movement
+                    </p>
                     <h2 className="green-hashtag">
                         <Typewriter 
                             options={{

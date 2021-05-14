@@ -12,19 +12,75 @@ const Sports = () => {
   const data = [
     {
       heading: 'Athletics',
-      p1: 'In the year 2019-2020, HEED India touched the lives of 88 students, with 2 coaches training them across 2 centers.',
-      p2: 'Competitive running, jumping, throwing and walking are all grouped under Athletics. All these being outdoor sports, encourage the child to get outdoors, and stay physically active. It establishes a strong ground for the child to develop interest in other sports and even opens up newer avenues. Having realized the multiple benefits, HEED India decided to include Athletics in its mandate.',
-      p3: 'Athletic contests in running, walking, jumping and throwing are among the oldest of all sports and their roots are prehistoric. Athletics events were depicted in the Ancient Egyptian tombs in Saqqara, with illustrations of running at the Heb Sed festival and high jumping appearing in tombs from as early as  2250 BC.',
+      p1: `Athletics is an outdoor sport, and encourages children to get out and play, and stay physically active.
+      It establishes a strong ground for the child to develop interest in other sports and even opens up
+      newer avenues. The most common types of athletics competitions are track and field, road running,
+      cross country running, and race walking.`,
+      p2: `Important qualities include concentration, decision-making
+      skills, dedication, eye-hand coordination, stamina, and the ability to work well as a team player. We
+      have been training close to 100 kids and hoping to increase our athletics community in the coming
+      times. With HEED India trustees themselves running marathons and understanding the importance of
+      athletics, what can be a better way to introduce the same to children`,
+      p3: `“I know what I can do, so it doesn’t bother me what other people think, or their opinion on the
+      situation’ – Usain Bolt`,
       img: athletics,
       set: 1,
     },
     {
       heading: 'Taekwondo',
-      p1: 'In the year 2019-2020, HEED India touched the lives of 161 students, with one coach training them across 3 centers.',
-      p2: 'Thanks to the many atrocities meted out to women in India, safeguarding them has become a major priority. The privileged section of women feels safe, with a pepper spray tucked away in their bags. But how many women can really afford these? Training them in Taekwondo seems to be the perfect solution, as a means of self-defense. Being the need of the hour, this prompted HEED India to strategize and start training sessions across Mumbai.',
-      p3: 'This art of self-defense that originated in Korea is recognized as one of the oldest forms of martial arts in the world, going back over 2,000 years. The name was selected for its appropriate description of the art: Tae (foot), Kwon (hand), Do (art). One of the earliest clues of Taekwondo’s existence is a mural painted on the wall of a tomb that was built in the Korean kingdom of Koguryo, between 37 BC and 66 AD.',
+      p1: `Taekwondo is a Korean martial art characterized by punching and kicking techniques, with emphasis
+      on head-height kicks, jumping spinning kicks, and fast kicking techniques. Sounds interesting? This 
+      sport is not just about physical training but mind training as well. It allows to kick and punch under
+      controlled conditions.`,
+      p2: `Besides this, the sport teaches self-confidence and self-esteem, improves
+      flexibility, agility, reflexes, concentration, greater self-discipline, and leadership skills. At HEED India,
+      we believe that every girl child should take up a self-defence skill so that she can kick and punch if a
+      situation arises to protect herself. Being aware of your surroundings, blocking and staying balanced
+      and more importantly getting out of someone’s grip is an important skill for women to know. We at
+      HEED India are proud to have trained close to 161 kids and our numbers are only growing.
+      `,
+      p3: `“I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one
+      kick 10,000 times” – Bruce Lee`,
       img: taekwondo,
       set: 2,
+    },
+    {
+      heading: "Boxing",
+      p1: `Boxing is an art of attack and defence with the fists, and is practiced as a sport. Also known as “the
+      sweet science”, it utilizes head movements, footwork and punches, to form a very efficient striking
+      system and an effective method for self-defence. Benefits of boxing include an improved hand-eye
+      coordination, strengthening the upper body, boosting endurance, refining posture and enhancing
+      balance.`,
+      p2: `If one watches the game closely it’s all about the exact calculations behind every move that
+      a skilled boxer makes. The boxers seem more like they’re studying one another than fighting. In all
+      you get only three minutes each in a total of 12 rounds to perform. One of the best reasons to train in
+      boxing is that you will always be learning. The more you spar and train, the more you stand and fight.
+      Studies have shown that children from weaker economic backgrounds have high energy levels, but
+      unfortunately, tend to spend most of it in unproductive ways. They are either into drug addiction,
+      physical abuse or waste of energy. To give a direction and help channelize their energy in a positive
+      manner, HEED India chose to promote Boxing. HEED India has touched the lives of 179 students so far`,
+      p3: `After all, “To be a great champion, you must believe you are the best. If you’re not, pretend you are”
+      – Muhammad Ali`,
+      img: boxing,
+      set: 1,         
+    },
+    {
+      heading: "Kabaddi",
+      p1: `Kabaddi is a sport that requires one to run, kick and dodge the opponents. It also needs one to move
+      and think at the same time quickly. These skills help players enhance their proactiveness, presence of
+      mind, multi-tasking abilities, team spirit and crisis management capability. Kabaddi is one of the few
+      sports that combines elements of yoga with strenuous physical activity. The player has to enter the
+      opponent’s court chanting the word “Kabaddi” while holding his breath, till he/she doesn’t return to
+      the home court.`,
+      p2: `This is known as ‘Cant’, which is closely related to “Pranayama” of yoga. The game
+      calls for agility, good lung capacity, muscular co-ordination, presence of mind and quick responses.
+      HEED India wanted to include a team sport, and chose Kabaddi which requires a minimum of ten
+      players. HEED India has been training 470 students and hoping to reach out to many more children in
+      the coming years.`,
+      p3: `“I strongly believe that Kabaddi is the most athletic sport of all, for it requires all aspects of physical
+      and mental conditioning to get results” – Abhishek Bachchan`,
+      img: kabaddi,
+      set: 2,         
     },
     {
       heading: 'Wrestling',
@@ -34,23 +90,6 @@ const Sports = () => {
       img: wrestling,
       set: 1,
     },
-    {
-      heading: "Boxing",
-      p1: "In the year 2019-2020, HEED India touched the lives of 179 students, with 5 coaches training them across 7 centers.",
-      p2: "Studies have shown that children from weaker economic backgrounds have high energy levels, but unfortunately, tend to spend most of it in unproductive ways. To give a direction and help channelize their energy in a positive manner, HEED India chose to promote Boxing as yet another sport. Boxing being a high intensity activity, consumes a lot of excess energy that these kids possess.  It helps them steer their emotions, and focus on the sport, rather than any negative activity." ,
-      p3: "The earliest known depiction of boxing comes from a Sumerian relief in Iraq from the 3rd millennium BC. Various types of boxing existed in ancient India too. The earliest references to ‘musti-yuddha’ come from classic Vedic epics such as the Ramayana and Rig Veda. The Mahabharata describes two combatants boxing with clenched fists and fighting with kicks, finger strikes, knee strikes and headbutts.",
-      img: boxing,
-      set: 2,         
-    },
-    {
-      heading: "Kabaddi",
-      p1: "In the year 2019-2020, HEED India touched the lives of 470 students, with 3 coaches training them across 5 centers.",
-      p2: "Team spirit, speed, agility, multi-tasking and enhancing one’s presence of mind are some of the key benefits of ‘Kabaddi’. Although it is a gully sport, thanks to organizations like HEED India, Kabaddi has now become a competitive sport, with professional-level tournaments being held regularly. Children from challenging backgrounds are hand-picked and trained by HEED India’s coaches, readying them for professional participation.",
-      p3: "Although unverified, theories from various sources state that kabaddi originated from the ancient Indian Vedic period. India has been credited with having helped to popularize kabaddi as a competitive sport, with the first organized competitions occurring in the 1920s.",
-      img: kabaddi,
-      set: 1,
-                
-    }
   ]
     useEffect(() => {
         window.scrollTo(0, 0)

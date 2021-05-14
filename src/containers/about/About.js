@@ -21,16 +21,16 @@ const About = (props) => {
       
     const dataList = [
         {
-            number: 7500,
+            number: 8900,
+            label: 'Books Collected',
+        },
+        {
+            number: 4400,
             label: 'Books Donated',
         },
         {
-            number: 350,
-            label: 'Events',
-        },
-        {
-            number: 1325,
-            label: 'Lives Changed',
+            number: 3700,
+            label: 'Students Coached ',
         },
     ]
     return (
@@ -38,26 +38,36 @@ const About = (props) => {
             {red?<Redirect exact to = {path}/>:null}
            <div className="about-section">
                 <div className="abt-sec abt-dark-ov">
-                    <h1>Be a Part of</h1>
-                    <h1><span className="green-home">Something </span>Great</h1>
+                    <h1><span className="green-home">Who</span> We Are</h1>
+                    {/* <h1><span className="green-home">Something </span>Great</h1> */}
                 </div>
            </div>
 
            <div className="abt-sec abt-white">
                <div className="about-row-in">
-                <h3 data-aos='fade-up'>On a mission to provide and aid</h3>
-                <p data-aos='fade-up'>
-                In 2012 HEED India started as Samarpan Charitable Trust engaging in a number of philanthropic activities with 
-                the key philosophy of 'Responsible Living', i.e., responding to the immediate and essential needs of various 
-                communities. With these efforts HEED India has reached out to schools, urban and rural communities, especially 
-                students, women, SHG groups, elderly and disabled and others aiding them in areas of healthcare, education, 
-                livelihood, and more.
-                </p>
-                <p data-aos='fade-up'>
-                Through the years, HEED India programmes have matured and are moving to a more structured approach of community 
-                development. Moving from a need based philanthropic approach to the right mix of need-based & project-based 
-                approach, is what drives HEED India’s endeavours.
-                </p>
+                    <h3 data-aos='fade-up'>On a mission to provide and aid</h3>
+                    <p data-aos='fade-up'>
+                    A trademarked initiative of Samarpan Charitable Trust, HEED India was established as a registered
+                    non-profit organization in 2012.<br/>
+                    ‘You must be the change you want to see in the world’ – Mahatma Gandhi
+                    And this is precisely the path chosen by HEED India.<br/>
+                    Sports, Health and Education are the cornerstones of any progressive nation. And these very factors
+                    constitute the foundation of HEED India. Driven by passion are three dynamic people, who came
+                    together to be the change they wish to see in the world.
+                    </p>
+                    <p data-aos='fade-up'>
+                    Today, HEED India endeavours to touch as many lives as possible, through the medium of Sports,
+                    Health and Education. When children are offered basic education, coupled with lessons in sports, they
+                    are well-equipped to face life. With a myriad activities, professional coaches, and generous donors,
+                    HEED India is all set to change lives for the youth, especially from challenging backgrounds
+                    </p>
+                    <p>
+                    A child involved in Sports is likely to lead a healthy life. Lesser sick days mean more days at school.
+                    HEED India’s activities are thus inter-connected, and directed towards the well-being of the child.<br/>
+                    Be it the ‘1BookToRead’ initiative, or the unique sports the children are being trained in, HEED India
+                    has chosen the road less travelled. A holistically developed child, is a nation’s treasure. And, HEED
+                    India is gearing up to create a treasure trove of talented, confident and robust citizens of tomorrow.
+                    </p>
                </div>
                <div className="about-row-in">
                     <iframe
@@ -99,14 +109,14 @@ const About = (props) => {
                    </div>
                </div>
 
-               <div className="dark-abt-cover" >
+               {/* <div className="dark-abt-cover" >
                     <div className="dac-1">
                         <h2>Raise<br/>Money</h2>
                    </div>
                    <div className="dac-2">
                    Find out how you can support our work through fundraising activities and events. Be a part of the movement.
                    </div>
-               </div>
+               </div> */}
 
                <div className="dark-abt-cover" onClick={()=>{setRed(true);setPath('/initiatives#give-little-of-you')}}> 
                     <div className="dac-1">

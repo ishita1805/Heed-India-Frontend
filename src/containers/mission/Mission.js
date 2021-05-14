@@ -6,7 +6,6 @@ import Card from '../../components/cardMission/cardsMission'
 import sponsorAChild from '../../assets/sponsorAChild.png'
 import donate from '../../assets/donateIcon.png'
 import give from '../../assets/give.png'
-import volunteer from '../../assets/volunteer.png'
 import prog from '../../assets/sponsorAProg.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -15,7 +14,7 @@ const Mission = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         AOS.init({
-          duration: 800,
+          duration: 400,
           easing: 'ease-in-out-sine',
         });
       }, [])

@@ -21,7 +21,11 @@ const BackgroundVideo = () => {
                     <h1 className='mission-heading-txt'>Our Mission</h1>
                     <div className="mission-underline"></div>
                     
-                    <p className='mission-2liner sp-subtitle'>Sports is <span className="green-home">‘The Biggest Unifier’</span> in India, where region, religion, language and caste divide the people. Join us as we promote sports for</p>
+                    <p className='mission-2liner sp-subtitle'>
+                        To unify humanitythrough <span className="green-home">sports and education,</span> by making both
+                        accessible to one and all
+                        {/* Sports is <span className="green-home">‘The Biggest Unifier’</span> in India, where region, religion, language and caste divide the people. Join us as we promote sports for */}
+                    </p>
                     <h2 className="green-hashtag">
                         <Typewriter 
                             options={{

@@ -7,33 +7,44 @@ import url from '../../url'
 
 
 const ImageLink = props =>{
-
+	const deleteHandler = (id) => {
+		axios.post(url+'/blogs/delblog', { id })
+		  .then(response => {
+			console.log(response.data);
+		  })
+		  .catch((error) => {
+			console.log(error);
+		  })
+	}
 	return(
 		
-		<Link to={"/blog/"+props.img._id} >
 			<div className='event-card'>
+				{props.edit?<i className='fa fa-trash del-icon-event' onClick={()=>deleteHandler(props.img._id)}></i>:null}
 				<div className='gallery-image'>
 					<img src={props.img.thumbnail} alt=''/>
 				</div>
 				<div className='arrow-event-card'>
+				<Link to={"/blog/"+props.img._id} >
 					<i className='fa fa-chevron-right'></i>
+				</Link>
 				</div>
 				<div className='text-event-card'>
 					<h3>{props.img.heading}</h3>
 					<p>{props.img.subheading.substring(0,34)} {props.img.subheading.length>34?'...':null}</p>
 				</div>
 			</div>
-		</Link>
+		
 	)
 }
 
-export default function Posts() {
+export default function Posts(props) {
 	
 	const [image, setimage] = useState([]);
 
 	useEffect(() => {
 		axios.get(url+'/blogs/getblog')
 		  .then(response => {
+			//   console.log(response.data);
 			setimage(response.data);
 		  })
 		  .catch((error) => {
@@ -42,16 +53,16 @@ export default function Posts() {
 	  },[])
 
 	if (image.length === 0) return (
-		<div className="gallery">
+		<div className={props.color?"gallery-white":"gallery"}>
 			<h3>Oops no events to show ... :(</h3>
 		</div>
 	)
     else return (
-		<div className="gallery">
+		<div className={props.color?"gallery-white":"gallery"}>
 			
 			{
 				image.map((item)=>(
-				<ImageLink img={item}/>
+				<ImageLink edit={props.mode} img={item}/>
 				))
 			}			
 

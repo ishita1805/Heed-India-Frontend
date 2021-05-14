@@ -77,9 +77,13 @@ const Donate = () => {
             <div className="donate-content">
                 <h1><span className = "donate-header-1">Donate</span> and help a child</h1>         
                 <div className="donate-text">
-                    <p className = "d-subtitle">No amount is small. 
-                    Let us show you how we can make every rupee 
-                    count and help you be a part of this revolution.</p>
+                    <p className = "d-subtitle">
+                        Philanthropy is about ‘giving’ – not just in monetary terms but also in non- monetary aspects, like
+                        time, ideas, or even being a volunteer. Additionally, did you know that when you give, you actually
+                        gain?<br/>
+                        HEED India’s plethora of initiatives, offers you, the privileged one, ample opportunities to partake and
+                        be a valuable ‘Giver’.
+                    </p>
                     <h2 className="green-hashtag">
                         <Typewriter 
                             options={{
