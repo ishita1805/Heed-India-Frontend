@@ -1,0 +1,30 @@
+.broken{
+    height:100vh;
+    width:100vw;
+    background:url('../../assets/404.jpg');
+    background-size:cover;
+}
+.broken-cont{
+    width:100%;
+    height:100vh;
+    display:flex;
+    color:rgb(235, 235, 235);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0, 0, 0, 0.39);
+}
+.broken-cont h1{
+    text-align:center;
+    margin:0 2vw;
+    font-family:'Lora';
+    font-size:60px;
+}
+@media screen and (max-width:500px){
+    .broken-cont h1{
+        text-align:center;
+        margin:0 2vw;
+        font-family:'Lora';
+        font-size:50px;
+    }
+}

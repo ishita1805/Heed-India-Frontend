@@ -5,29 +5,23 @@ import VisibilitySensor from 'react-visibility-sensor'
 import CountUp from 'react-countup'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ReactHtmlParser from 'react-html-parser';
 import axios from 'axios'
 import url from '../../url'
-import ReactHtmlParser from 'react-html-parser';
 
 
 const About = (props) => {
     const [red,setRed] = useState(false);
     const [path,setPath] = useState('');
-    const [content,setContent] = useState({
-        title:'',
-        para:'',
-        media:'',
-        hashtag:'',
-        cards:[],
-        stats:[],
-    });
+    const [content,setContent] = useState(props.content);
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
         axios.post(`${url}/page/get`, { id: '609c2b89a0996a0bec3f4a45' })
         .then((resp) => { 
             console.log(resp.data.resp);
             setContent(resp.data.resp);
+            window.scrollTo(0, 0);
          })
         .catch((e) => { console.log(e); })
         AOS.init({

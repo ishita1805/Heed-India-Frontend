@@ -27,6 +27,7 @@ const Mission = () => {
         .then((resp) => { 
             console.log(resp.data.resp);
             setContent(resp.data.resp);
+            
          })
         .catch((e) => { console.log(e); })
         AOS.init({

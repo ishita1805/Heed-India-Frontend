@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
 import React,{ useState } from 'react'
+import icon from '../../assets/icon_cdown.png'
 import './dropDown.css'
 
 const Dropdown = ({value,values,returnVal,...props}) => {
@@ -14,7 +15,7 @@ const Dropdown = ({value,values,returnVal,...props}) => {
     return (
         <>
             <div className='dropdown' onClick={openCloseHandler}>
-               <div className='dropdown-head'> {val} &nbsp;&nbsp;<i class="fa fa-chevron-down"></i></div>
+               <div className='dropdown-head'> {val} &nbsp;&nbsp;<i><img alt="icon" src={icon}/></i></div>
                 {switchh?
                     <div className='dropdown-table'>
                         {values.map((item)=>(

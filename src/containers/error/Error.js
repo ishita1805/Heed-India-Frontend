@@ -1,9 +1,12 @@
 import React from 'react'
+import './error.css'
 
 const Error = () => {
     return (
-        <div className="in-body padding-t-12">
-            Error wrong link
+        <div className="broken">
+            <div className='broken-cont'>
+                <h1>Page Not Found</h1>
+            </div>
         </div>
     )
 }

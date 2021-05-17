@@ -15,7 +15,8 @@ const Donate = () => {
     const [amt,setAmt] = useState(10000)
     const [red,setRed] = useState(false);
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        
       }, [])
 
 

@@ -1,9 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import './galleryMedia.css'
+import delIcon from '../../assets/icon_del.png'
+import chevronIcon from '../../assets/icon_chevron.png'
 import {NavLink as Link} from 'react-router-dom'
 import axios from 'axios'
 import url from '../../url'
-// import placeholder from '../../assets/placeholder.jpg'
 
 
 const ImageLink = props =>{
@@ -19,13 +20,13 @@ const ImageLink = props =>{
 	return(
 		
 			<div className='event-card'>
-				{props.edit?<i className='fa fa-trash del-icon-event' onClick={()=>deleteHandler(props.img._id)}></i>:null}
+				{props.edit?<i className='del-icon-event' onClick={()=>deleteHandler(props.img._id)}><img alt='icon' src={delIcon}/></i>:null}
 				<div className='gallery-image'>
 					<img src={props.img.thumbnail} alt=''/>
 				</div>
 				<div className='arrow-event-card'>
-				<Link to={"/blog/"+props.img._id} >
-					<i className='fa fa-chevron-right'></i>
+				<Link to={"/blog/"+props.img._id} target="__blank" >
+					<i><img alt='icon' src={chevronIcon}/></i>
 				</Link>
 				</div>
 				<div className='text-event-card'>
@@ -55,7 +56,7 @@ export default function Posts(props) {
 
 	if (image.length === 0) return (
 		<div className={props.color?"gallery-white":"gallery"}>
-			<h3>Oops no events to show ... :(</h3>
+			<h3>Loading ...</h3>
 		</div>
 	)
     else return (

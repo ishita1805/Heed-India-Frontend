@@ -6,13 +6,13 @@ import imgdark from '../../assets/logo.png'
 
 const Navigation = ({loc,...props}) => {
   const [nav,setNav] =useState(false);
-  const dark = ["/blog","/privacy-policy","/terms&conditions","/refunds&cancellations"]
+  const dark = ["/privacy-policy","/terms&conditions","/refunds&cancellations"]
   const navHandler = ()=>{
       setNav(!nav);
   }
   // console.log(loc)
   // console.log(props.loc);
-    if(loc !=="/admin" || (loc.includes("/admin") && localStorage.getItem('pass')) ) return (
+    if((loc !=="/admin" || (loc.includes("/admin") && localStorage.getItem('pass'))) && !loc.includes('/blog')) return (
         <>
         {/* for small screen nav header */}
         <div className="small-nav">

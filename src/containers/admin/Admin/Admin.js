@@ -10,6 +10,7 @@ const Admin = () => {
 
     useEffect(() => {
         if(localStorage.getItem('pass')) setRed(true);
+        
     }, [change])
 
     const onSubmit =(data)=>{

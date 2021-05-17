@@ -44,6 +44,28 @@
     font-weight:700;
     z-index:1000;
 }
+.Navigation2-blog{
+    position:fixed;
+    top:0;
+    height:12vh;
+    width:96%;
+    display:flex;
+    backdrop-filter: blur(7px);
+    padding:0 2vw;
+    flex-direction:row;
+    padding-top:0.5vh;
+    align-items:center;
+    background:rgba(240, 240, 240, 0.192);
+    justify-content:flex-start;
+    font-weight:700;
+    z-index:1000;
+}
+.Navigation2-blog .nav-item{
+    font-size:16px;
+    margin-right:5vw;
+    color:rgb(65, 65, 65);
+    font-weight:500;
+}
 .small-nav{
     position:fixed;
     display:none;
@@ -92,7 +114,7 @@ a{
         color:#8CC634;
         font-weight:700;
     }
-    .Navigation2, .Navigation2-white{
+    .Navigation2, .Navigation2-white, .Navigation2-blog{
         display:none;
         height:90vh;
         width:46vw;

@@ -3,10 +3,32 @@
     flex-direction:column;
     width:70vw;
     min-width:600px;
-    margin:5vh 15vw;
+    margin:10vh 15vw 5vh 15vw;
     align-self:center;
     align-items:fle-start;
     justify-content:flex-start;
+}
+.blog-topnav{
+    width:90vw;
+    top:0;
+    color:white;
+    position:fixed;
+    padding:3vh 5vw;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    background:rgb(36, 36, 36);
+}
+.blog-topnav span{
+    color:rgb(212, 212, 212);
+    cursor:pointer;
+    font-weight:500;
+}
+.blog-topnav .row span{
+    color:grey;
+    cursor:pointer;
+    font-weight:500;
 }
 .blog h1{
     margin-bottom:1vh;

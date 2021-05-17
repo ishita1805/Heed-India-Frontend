@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, {useEffect} from 'react'
 import '../../containers/sports/sports.css'
-import vid from '../../assets/SportsBGVid.mp4'
 import Typewriter from 'typewriter-effect'
 import sport from '../../assets/sport.mp3'
 
@@ -12,7 +11,7 @@ const SportsBackgroundVid = (props) => {
     return (
         <div className = "sports-vid-main">
             <video autoPlay muted loop id = "SpVid">
-                <source src = {vid} type = "video/mp4"/>
+                <source src ='https://res.cloudinary.com/dtmhqs3e0/video/upload/v1621233630/SportsBGVid_vx3zy0.mp4' type = "video/mp4"/>
             </video>
             <audio autoPlay loop className="audio-story">
                 <source src={sport} type="audio/mpeg"/>  

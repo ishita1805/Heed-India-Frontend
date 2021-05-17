@@ -5,6 +5,7 @@ import './blog.css'
 import axios from 'axios';
 import url from '../../url'
 import ReactHtmlParser from 'react-html-parser';
+import {NavLink} from 'react-router-dom'
 
 const Blog = (props) => {
   const [liked,setLiked]=useState(false);
@@ -38,7 +39,17 @@ const Blog = (props) => {
   const date = String(blogData.date);
 
   return (
-    <div className="blog padding-t-5">
+    <>
+    <div className='blog-topnav'>
+      <NavLink exact to="/" target="__blank"><span>HEED India | Sports and Education</span></NavLink>
+      <div className='row'>
+        <NavLink exact to="/" target="__blank"><span>Home</span></NavLink>
+        &emsp; &emsp;
+        <NavLink exact to="/events" target="__blank"><span>More Blogs</span></NavLink>
+      </div>
+    </div>
+    <div className="blog">
+     
       <h1>{blogData.heading}</h1>
       <h3>{blogData.subheading}</h3>
 
@@ -77,6 +88,7 @@ const Blog = (props) => {
       </div>
 
     </div>
+    </>
   )
 }
 

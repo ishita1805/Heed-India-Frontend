@@ -48,10 +48,10 @@
     width:5px;
 }
 ::-webkit-scrollbar-track {
-    background: #c5c5c5;
+    background: #1b1b1b;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(61, 61, 61);
+    background: rgb(41, 41, 41);
     border-radius: 4px;
 }
 .input,.select{

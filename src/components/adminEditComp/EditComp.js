@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 import React,{ useEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form';
-import placeholder from '../../assets/about-bg-1.jpeg'
 import 'react-quill/dist/quill.snow.css';
 import ReactQuill from 'react-quill';
 import axios from 'axios'

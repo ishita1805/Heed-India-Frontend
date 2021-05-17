@@ -45,14 +45,16 @@
  }
 .del-icon-event{
    margin-top:2vh;
-   font-size:20px;
    margin-left:2vh;
-   padding:1.2vh 1.4vh;
+   height:20px;
+   padding:1.2vh 1.2vh;
    border-radius:5vh;
    background:rgb(255, 80, 80);
    cursor:pointer;
-   color:white;
    position:absolute;
+}
+.del-icon-event img{
+   height:20px;
 }
 .gallery-image{
    width:100%;
@@ -101,9 +103,10 @@
    background:rgb(57, 159, 255);
    position:absolute;
 }
-.arrow-event-card i{
-   color:white;
+.arrow-event-card img{
+   height:50px;
 }
+
 @media screen and (max-width:900px){
    .gallery{
       width:90vw;

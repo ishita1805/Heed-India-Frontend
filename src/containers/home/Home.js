@@ -7,25 +7,30 @@ import Typewriter from 'typewriter-effect'
 import axios from 'axios'
 import url from '../../url'
 
+
 const Home = ({state,...props}) => {
     const [red,setRed] = useState(false);
     const [content,setContent] = useState({
-        title:'',
-        subtitle:'',
-        media:'',
+        title:'HEED India',
+        subtitle:'Facilitating health and education for children across the globe',
+        media:localStorage.getItem('heed-india-media'),
         hashtag:''
     });
     useEffect(() => {
-        window.scrollTo(0, 0)
         axios.post(`${url}/page/get`, { id: '609c2a8b05752e403ccd44ef' })
         .then((resp) => { 
             console.log(resp.data.resp);
+            localStorage.setItem('heed-india-media',resp.data.resp.media);
             setContent(resp.data.resp);
+            props.loaded(true);
+            window.scrollTo(0, 0);
          })
         .catch((e) => { console.log(e); })
-      }, [])
+    }, [])
 
-    return (
+
+
+  return (
     <div style={{
         backgroundImage:`url(${content.media})`,
     }} className="col in-body-2">

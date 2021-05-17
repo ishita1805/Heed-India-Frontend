@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, {useEffect, useState, useRef} from 'react'
 import './initiatives.css'
@@ -10,41 +11,23 @@ import Typewriter from 'typewriter-effect'
 import axios from 'axios'
 import url from '../../url'
 
-const Initiatives = () => {
+const Initiatives = (props) => {
     const { register, handleSubmit, errors } = useForm();
     const [val,setVal] = useState('One Book To Read')
     const [red,setRed] = useState(false);
     const [click,setClick] = useState(false);
     const butonRef = useRef();
     const intoViewRef = useRef();
-    const [content,setContent] = useState({
-        cards:[{
-            title:'',
-            description:'',
-            media:'',
-        },
-        {
-            title:'',
-            description:'',
-            media:'',
-        },
-        {
-            title:'',
-            description:'',
-            media:'',
-        }],
-        title:'',
-        subtitle:'',
-        hashtag:'',
-        media:'',
-    });
+    const [content,setContent] = useState(props.content);
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
         axios.post(`${url}/page/get`, { id: '609c2c12a0996a0bec3f4a48' })
         .then((resp) => { 
             console.log(resp.data.resp);
             setContent(resp.data.resp);
+            window.scrollTo(0, 0);
+            props.loaded(true);
          })
         .catch((e) => { console.log(e); })
       }, [])

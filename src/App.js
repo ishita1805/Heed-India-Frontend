@@ -1,7 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState, useEffect } from "react";
 import './App.css'
 import { Switch, Route, __RouterContext } from "react-router-dom";
+import {LoadContext} from './context/load'
 import ProtectedRoute from './protectedRoute/ProtectedRoute'
 import Nav from './components/navigation/Navigation'
 import Home from './containers/home/Home'
@@ -24,22 +26,92 @@ import Content from './containers/admin/ChangeContent/Content'
 import Donations from './containers/admin/Donations/Donate'
 import Privacy from './containers/footerLinks/PrivacyPolicy'
 import Terms from './containers/footerLinks/TermsConditions'
+import Loader from './components/loader/Loader'
+import axios from 'axios'
+import url from './url'
 
 const App = () => {
   const state='Mumbai'
-  const { location } = useContext(__RouterContext);
+  // const [load,setLoad]=useState(true);
+  const {load, setLoad} = useContext(LoadContext);
+  const [ab,setAb] = useState({
+      title:'',
+      para:'',
+      media:'',
+      hashtag:'',
+      cards:[],
+      stats:[],
+  });
+  const [event,setEvent] = useState({
+      title:'',
+      subtitle:'',
+      media:'',
+  });
+  const [initiatives,setInitiatives] = useState({
+    cards:[{
+        title:'',
+        description:'',
+        media:'',
+    },
+    {
+        title:'',
+        description:'',
+        media:'',
+    },
+    {
+        title:'',
+        description:'',
+        media:'',
+    }],
+    title:'',
+    subtitle:'',
+    hashtag:'',
+    media:'',
+});
 
-  return (
+  useEffect(() => {
+    axios.post(`${url}/page/get`, { id: '609c2b89a0996a0bec3f4a45' })
+        .then((resp) => { 
+            console.log(resp.data.resp);
+            setAb(resp.data.resp);
+         })
+        .catch((e) => { console.log(e); })
+
+    axios.post(`${url}/page/get`, { id: '609c2be2a0996a0bec3f4a47' })
+    .then((resp) => { 
+        console.log(resp.data.resp);
+        setEvent(resp.data.resp);
+      })
+    .catch((e) => { console.log(e); })
+
+    axios.post(`${url}/page/get`, { id: '609c2c12a0996a0bec3f4a48' })
+    .then((resp) => { 
+        console.log(resp.data.resp);
+        setInitiatives(resp.data.resp);
+     })
+    .catch((e) => { console.log(e); })
+
+  }, [])
+
+  window.onload = () => {
+    if(window.location.pathname !== '/' || window.location.pathname !== '/initiatives'){
+      setLoad(false);
+    } 
+  }
+
+
+ return (
     <div>
-      <Nav loc={location.pathname}/>
+      { load?<Loader/>:null }
+      <Nav loc={window.location.pathname}/>
       <Switch>
 
         <Route path="/" exact >
-          <Home state={state}/>
+          <Home loaded={()=>setLoad(false)}  state={state}/>
         </Route>
 
         <Route path="/about-us" exact >
-          <About state={state}/>
+          <About  content={ab} state={state}/>
         </Route>
 
         <Route path="/sports" exact >
@@ -47,11 +119,11 @@ const App = () => {
         </Route>
 
         <Route path="/events" exact >
-          <Events state={state}/>
+          <Events content={event} state={state}/>
         </Route>
 
         <Route path="/initiatives" exact >
-          <Initiatives state={state}/>
+          <Initiatives loaded={()=>setLoad(false)}  content={initiatives} state={state}/>
         </Route>
 
         <Route path="/donate" exact >
@@ -97,6 +169,7 @@ const App = () => {
       <ConactUs loc={window.location.pathname}/>
     </div>
   )
+ 
 }
 
 export default App

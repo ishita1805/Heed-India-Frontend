@@ -3,11 +3,19 @@
     margin:2vh 0;
     color:rgb(67, 155, 255);
 }
+.dropdown-head img{
+    height:30px;
+    margin-top:0.5vh;
+}
 .dropdown-head{
     padding:2vh 5vh;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
     border-radius: 5px;
     box-shadow:0 0 6px rgba(122, 184, 255, 0.37);
     background:white;
+    color:black;
 }
 .dropdown-table{
     min-width:10vw;
@@ -23,7 +31,8 @@
     min-width:10vw;
     padding:1vh;
     background:white;
-    color:black;
+    /* color:black; */
+    color:rgb(67, 155, 255);
 }
 .db-tbl-opt:hover{
   background:rgb(67, 155, 255);

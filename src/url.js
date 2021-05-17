@@ -1,3 +1,3 @@
-// const url = "https://heed-india-backend.herokuapp.com"
+// const url = "http://localhost:3001"
 const url = 'https://api.heedindia.org'
 export default url;

@@ -6,7 +6,6 @@ import EditComp from '../../../components/adminEditComp/EditComp'
 
 
 const Content = () => {
-
     return (
         <div className="arrange-left">
            <h1>Edit Website Content</h1>
