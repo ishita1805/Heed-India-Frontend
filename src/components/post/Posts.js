@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import './galleryMedia.css'
 import delIcon from '../../assets/icon_del.png'
 import chevronIcon from '../../assets/icon_chevron.png'
-import {NavLink as Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 import url from '../../url'
 
@@ -70,4 +70,5 @@ export default function Posts(props) {
 
 		</div>
     )
+
 }
