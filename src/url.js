@@ -1,3 +1,3 @@
 // const url = "http://localhost:3001"
-const url = 'https://api.heedindia.org'
+const url = 'http://52.66.27.44:3001/'
 export default url;
