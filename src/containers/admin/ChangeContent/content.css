@@ -109,6 +109,33 @@
   background:none;
   border-radius:5px;
 }
+.logos-gr{
+    display:flex;
+    flex-direction:row;
+    flex-grow:1;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+.logo-display{
+    margin:2vh;
+    display:flex;
+    flex-direction:column;
+    width:auto;
+    background:rgb(214, 214, 214);
+    padding:1vh;
+    border-radius:5px;
+}
+.logo-display i{
+    color:rgb(255, 126, 126);
+    cursor:pointer;
+}
+.logo-display img{
+    height:14vh;
+    width:auto;
+    margin-top:0.5vh;
+    border-radius:3px;
+}
 @media screen and (max-width:800px){
     .stats-ce{
         flex-direction:column;

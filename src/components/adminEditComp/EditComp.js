@@ -6,6 +6,7 @@ import 'react-quill/dist/quill.snow.css';
 import ReactQuill from 'react-quill';
 import axios from 'axios'
 import url from '../../url'
+import placeholder from '../../assets/missionimg.jpg'
 
 const EditComp = (props) => {
     const fileRef = useRef();
@@ -33,6 +34,8 @@ const EditComp = (props) => {
     const [statsLabel, setStatsLabel] = useState('')
     const [statsNum, setStatsNum] = useState('')
     const [updateStats, setUpdateStats] = useState('');
+    const [logoArr, setLogoArr] = useState(['','','','','','']);
+    const logoRef = useRef(null)
 
 
     const handleChange = (value)=>{
@@ -186,9 +189,18 @@ const EditComp = (props) => {
             setAddData(resp.data.resp.para)
             setStatsArr(resp.data.resp.stats)
             setCardsArr(resp.data.resp.cards)
+            if(resp.data.resp.donors)
+            setLogoArr(resp.data.resp.donors)
          })
         .catch((e) => { console.log(e); })
     },[reload])
+
+    const createDonor = (e) => {
+        console.log(e.target.files[0]);
+    }
+    const deleteDonor = (e) => {
+        console.log(e);
+    }
 
     const modules = {
         toolbar: [
@@ -398,6 +410,31 @@ const EditComp = (props) => {
                         
                     </div>
 
+                </div>
+                </>:null
+            }
+
+
+            {
+                props.logos?
+                <>
+                <br/>
+                <label>Donor Logos:</label>
+                <div className='stats-ce'>
+                    <div className='add-to-queue'>
+                        <input ref={logoRef} type='file' accept='image/*' onChange={(e)=>{createDonor(e)}} style={{ display: 'none' }}/>
+                        <i className='fa fa-plus' onClick={()=>{logoRef.current.click()}} ></i>
+                    </div>
+                    <div className='logos-gr'>
+                        {
+                            logoArr.map((item) =>(
+                               <div className='logo-display'>
+                                   <i className='fa fa-trash' onClick={()=>deleteDonor(item)}></i>
+                                   <img src={placeholder} alt='logo'/>
+                               </div>
+                            ))
+                        }
+                    </div>
                 </div>
                 </>:null
             }

@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import ReactHtmlParser from 'react-html-parser';
 import axios from 'axios'
 import url from '../../url'
+import placeholder from '../../assets/missionimg.jpg'
 
 
 const About = (props) => {
@@ -100,6 +101,26 @@ const About = (props) => {
                     </div>
                    ))
                }
+           </div>
+
+           <div className='ann-report'>
+               <a href='https://drive.google.com/drive/folders/1k1xggbyHhht965YqZu0vTEpLKjXjrBiR?usp=sharing' target='__blank'>
+                   View Our Annual Reports
+                   &ensp;
+                   <i className='fa fa-arrow-right'></i>
+                </a>
+           </div>
+
+           <div className='dark-abt-2'>
+              <h2>Our Well Wishers</h2>
+              <div className='logo-grid'>
+                  <img src={placeholder} alt='well-wishers'/>
+                  <img src={placeholder} alt='well-wishers'/>
+                  <img src={placeholder} alt='well-wishers'/>
+                  <img src={placeholder} alt='well-wishers'/>
+                  <img src={placeholder} alt='well-wishers'/>
+                  <img src={placeholder} alt='well-wishers'/>
+              </div>
            </div>
             
            
