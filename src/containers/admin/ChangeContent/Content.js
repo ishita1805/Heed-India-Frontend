@@ -130,6 +130,21 @@ const Content = () => {
            stats={false}
           id='60b33ebf71eae12e80e12768'
           />
+
+          <EditComp 
+           heading='Donate'
+           title={true}
+           alert={false}
+           img={true}
+           subtitle={false}
+           hashtag={true}
+           paras={false}
+           cards={true}
+           logos={false}
+           editor={false}
+           stats={false}
+          id='60b37de928d8fb7a24fb8e39'
+          />
         </div>
     )
 }

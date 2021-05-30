@@ -1,20 +1,46 @@
-// import Header from '../../components/header/Header'
-import { Redirect } from 'react-router-dom'
-import Typewriter from 'typewriter-effect'
-import P from '../../components/paragraph/Paragraph'
-import Button from '../../components/button/Button'
-import './donate.css'
 import React, {useState,useEffect} from 'react'
+import { useForm } from 'react-hook-form';
+import Typewriter from 'typewriter-effect'
+import './donate.css'
 import url from '../../url'
 import logo from "../../assets/logo.png"
 const axios = require('axios');
 
 const Donate = () => {
-    const [amt,setAmt] = useState(10000)
-    const [red,setRed] = useState(false);
+    const { register, handleSubmit, errors  } = useForm();
+    const [content,setContent] = useState({
+        title:'',
+        media:'',
+        hashtag:'',
+        cards:[{
+            title:'',
+            description:''
+        }]
+    });
+
+    const colours = [
+        {
+            bg:'rgba(0, 0, 0, 0.507)',
+            col:'#FF3880'
+        },
+        {
+            bg:'rgba(0, 0, 0, 0.1)',
+            col:'#FFC961'
+        },
+        {
+            bg:'rgba(0, 0, 0, 0.907)',
+            col:'#54ADFF'
+        }
+    ]
+
     useEffect(() => {
         window.scrollTo(0, 0);
-        
+        axios.post(`${url}/page/get`, { id: '60b37de928d8fb7a24fb8e39' })
+        .then((resp) => { 
+            console.log(resp.data.resp);
+            setContent(resp.data.resp);
+         })
+        .catch((e) => { console.log(e); })
       }, [])
 
 
@@ -32,110 +58,112 @@ const Donate = () => {
         })
     }
     
-    const displayRazorpay = async (amt)=>{
-        const res = await loadScript()
-        if(!res){
-            alert('An error occured!')
-            return
-        }
-        const data = axios.post(`${url}/payments/make-payment`,{
-            amount:amt
-        })
-        .then(resp => {
-            //console.log(resp)
-        })
-        .catch(e=>{
-            // console.log(e)
-        })
+    const onSubmit = async (data)=>{
 
-        const options = {
-            "key": "rzp_test_PsxGKItWtb7jwL",
-            "amount": amt, 
-            "currency": data.currency,
-            "name": "Heed India",
-            "description": "Test Transaction",
-            "image": {logo},
-            "order_id": data.id, 
-            "handler": function (){
-                alert("Payment successful");
-            },
-            "theme": {
-                "color": "#80ffaa"
+        try{
+            data.amt = parseInt(data.amt)*100
+            console.log(data.amt);
+            const res = await loadScript();
+            if(!res){
+                alert('An error occured!')
+                return
             }
-        };
-
-        const paymentObject = new window.Razorpay(options)
-        paymentObject.open();
+            const dta = await axios.post(`${url}/payments/make-payment`,{
+                data
+            })
+            
+            const options = {
+                "key": "rzp_test_PsxGKItWtb7jwL",
+                "amount": dta.data.response.amount*100, 
+                "currency": dta.data.response.currency,
+                "name": "Heed India",
+                "description": "Test Transaction",
+                "image": {logo},
+                "order_id": dta.data.response.id, 
+                "handler": function (){
+                    // Add verification endpoint here
+                    alert("Thankyou!");
+                },
+                "theme": {
+                    "color": "#80ffaa"
+                }
+            };
+            const paymentObject = new window.Razorpay(options)
+            paymentObject.open();
+        } catch(e) {
+            console.log(e)
+        }
+        
     }
     
 
     return (
-        <div className = "donate-main">
-             {red?<Redirect to="/initiatives" exact />:null}
-        <div className="in-body donate-container">
-            <div className="donate-content">
-                <h1><span className = "donate-header-1">Donate</span> and help a child</h1>         
-                <div className="donate-text">
-                    <p className = "d-subtitle">
-                        Philanthropy is about ‘giving’ – not just in monetary terms but also in non- monetary aspects, like
-                        time, ideas, or even being a volunteer. Additionally, did you know that when you give, you actually
-                        gain?<br/>
-                        HEED India’s plethora of initiatives, offers you, the privileged one, ample opportunities to partake and
-                        be a valuable ‘Giver’.
-                    </p>
-                    <h2 className="green-hashtag">
-                        <Typewriter 
-                            options={{
-                                strings: ['#ResponsibleLiving'],
-                                autoStart: true,
-                                loop: true,
-                                delay: 100,
-                                deleteSpeed: 50
-                            }}
-                        />
-                    </h2>
-                    <div className="hbut"><Button className="success" label="Support Our Initiatives" onClick={()=>setRed(true)}/></div>
-                </div>
-            </div>
+        <>
+        <div className="donate-main" style={{ backgroundImage:`url("${content.media}")`}}>
+             <div className='donate-cont'>
+                <h1>
+                    <span className="green-home">
+                        {content.title.substring(0,content.title.indexOf(' '))}
+                    </span>
+                    {` ${content.title.substring(content.title.indexOf(' ')+1)}`}   
+                </h1>
+                <h2 className="green-home">
+                    <Typewriter 
+                        options={{
+                            strings: content.hashtag.split(' '),
+                            autoStart: true,
+                            loop: true,
+                            delay: 100,
+                            deleteSpeed: 50
+                        }}
+                    />
+                </h2>
+                <form className='donate-form' onSubmit={handleSubmit(onSubmit)}>
+                    <div className='form-inputs'>
+                        <input type='text' placeholder='Enter Name' name='name'  ref={register({ required: true })}/>
+                        <input type='text' placeholder='Enter PAN Number' name='pan'  ref={register({ required: true })}/>
+                        <input type='number' placeholder='Enter Contact Number' name='contact'  ref={register({ required: true })}/>
+                        <input type='number' placeholder='Enter Amount' name='amt'  ref={register({ required: true })}/>
+                        <textarea type='text' placeholder='Enter Address' name='address'  ref={register({ required: true })}/>
+                    </div> 
+                    
+                    {
+                        errors.name ||
+                        errors.pan || 
+                        errors.contact ||
+                        errors.amt ||
+                        errors.address
+                        ?<p className='e-t-admin'>Please fill all fields</p>:null
+                    }
+        
+                    <button>Donate Now</button>
+                </form>
 
-            <div className = "donate-box">
-                <div className="col-bottom">
-                    <input type="number" placeholder="PAN Address" className="amt-donate-custom" onChange={e=>setAmt((e.target.value)*100)}/>
-                    <input type="number" placeholder="Enter amount in ₹" className="amt-donate-custom" onChange={e=>setAmt((e.target.value)*100)}/>
-                    <button 
-                    onClick={()=>{displayRazorpay(amt)}}
-                    className="button-donate">
-                        Donate
-                    </button>
-                </div>
-            </div>
+             </div>
         </div>
 
-        <div className = "donate-info">
-                <div className = "d-header"><h2>A small act of kindness can go a long way</h2></div>
-                <div className = "donate-infobox">
-                    <div className = "d-info">
-                        <P className = "infobox-headings" text = "Help a child"/>
-                        <P text = "Our child focus programmes have thrust areas like Education, Health, Youth and Sports. Your donation will help provide critical support to children living in dire poverty through programmes, such as:"/>
-                        <P text = "​Education: Scholarships for vocational training and college for qualified youth, as well as supplies, books and tuition to help support secondary school students."/>
+        <div className='donate-tags'>
+            {
+                content.cards.map((item,index) => {
+                let col;
+                if(colours[index]) col=colours[index];
+                else col=colours[index%colours.length];
+                   return <div className='donate-card' style={{ backgroundColor:`${col.bg}`}}>
+                        <div className='donate-card-header' style={{ backgroundColor:`${col.col}`}}></div>
+                        <div className='donate-card-cont'>
+                            <h3>{item.title}</h3>
+                            <div className='underline-donate' style={{backgroundColor:`${col.col}`}}></div>
+                            <p>
+                                {item.description}
+                            </p>
+                        </div>
                     </div>
-                    <div className = "d-info">
-                        <P className = "infobox-headings" text = "Make the planet green"/>
-                        <P text = "Your donation will help us plant more and more trees. For every donation you make, our CSR partners will contribute exactly the same amount towards the Planet Green project."/>
-                        <P className = "para23" text = "We would also love to have you as a volunteer for our tree plantation drive where you can experience the satisfaction of engaging with the project, on ground. For plantation drive schedules please drop us an email at info@heedindia.org"/>
-                        <P className = "para23-short" text = "We would also love to have you as a volunteer for our tree plantation drive where you can experience the satisfaction of engaging with the project, on ground." />    
-                    </div>
-                    <div className = "d-info">
-                        <P className = "infobox-headings" text = "Help a community" />
-                        <P text = "One of the most effective ways to help children is to improve the communities in which they live. You contributions will help us with:"/> 
-                        <P className = "para32" text = "Community Centre Campaign: Our community centres, medical and dental clinics, playgrounds and sports fields are built right in the communities we serve."/>
-                        <P className = "para33" text = "Building clean-water sources in impoverished communities is one of the surest ways to change lives dramatically"/>
-                    </div>
-                </div>
-            </div>
+                })
+            }
+            
         </div>
+        </>
     )
 }
 
 export default Donate
-

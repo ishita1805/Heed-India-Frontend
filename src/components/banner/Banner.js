@@ -10,7 +10,8 @@ const Banner = () => {
     useEffect(() => {
        axios.get(`${url}/page/getAlert`)
        .then((resp) => {
-        setData(resp.data.resp.text);
+        //    console.log(resp);
+            setData(resp.data.resp.text);
        })
        .catch((e) => {
            console.log(e);

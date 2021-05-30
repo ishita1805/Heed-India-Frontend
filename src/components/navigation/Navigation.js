@@ -26,7 +26,7 @@ const Navigation = ({loc,children,...props}) => {
 
         {loc.includes("/admin")?
         // for admin portal
-        <div className='nav-holder'>
+        <>
         <div className={nav?"Nav2":"Navigation"}>
           <NavLink exact to="/admin/createBlog" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Create Blog</NavLink>
           <NavLink exact to="/admin/view" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">My Blogs</NavLink>
@@ -52,9 +52,9 @@ const Navigation = ({loc,children,...props}) => {
           </NavLink>
           </div>
         </div> 
-        </div>:
+        </>:
         // for the client side
-        <div className='nav-holder'>
+        <>
         {children}
         <div className={nav?"Nav2":"Navigation"}>
           <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Home</NavLink>
@@ -86,7 +86,7 @@ const Navigation = ({loc,children,...props}) => {
           </NavLink>
           </div>
         </div> 
-        </div>
+        </>
         }
     </>
     )

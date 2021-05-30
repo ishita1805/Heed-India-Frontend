@@ -199,9 +199,9 @@ const EditComp = (props) => {
         axios.get(`${url}/page/getAlert`)
        .then((resp) => {
            if(resp.data.resp){
-            setAlertData(resp.data.resp.text);
-            setAlertId(resp.data.resp._id);
-            setAlert(false);
+                setAlertData(resp.data.resp.text);
+                setAlertId(resp.data.resp._id);
+                setAlert(false);
            }
        })
        .catch((e) => {
