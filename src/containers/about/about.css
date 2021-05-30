@@ -194,14 +194,14 @@
     display:flex;
     flex-direction:column;
     width:90vw;
-    background:rgb(20, 20, 20);
+    background:rgb(255, 255, 255);
     align-items: center;
     justify-content: flex-start;
     flex-wrap:wrap;
     padding:8vh 5vw;
 }
 .dark-abt-2 h2{
-    color:rgb(224, 224, 224);
+    color:rgb(26, 26, 26);
     margin:3vh 0;
 }
 .logo-grid{
@@ -214,9 +214,10 @@
     flex-wrap:wrap;
 }
 .logo-grid img{
-    height:15vh;
+    max-height:15vh;
     width:auto;
     margin:2vh 5vw;
+    max-width:60vh;
 }
 @media screen and (max-width:1200px){
     .iframe-abt{

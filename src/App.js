@@ -26,9 +26,12 @@ import Content from './containers/admin/ChangeContent/Content'
 import Donations from './containers/admin/Donations/Donate'
 import Privacy from './containers/footerLinks/PrivacyPolicy'
 import Terms from './containers/footerLinks/TermsConditions'
+import People from './containers/people/People'
 import Loader from './components/loader/Loader'
 import axios from 'axios'
 import url from './url'
+import Banner from "./components/banner/Banner";
+import Tournaments from './containers/tournaments/Tournaments'
 
 const App = () => {
   const state='Mumbai'
@@ -41,6 +44,7 @@ const App = () => {
       hashtag:'',
       cards:[],
       stats:[],
+      donors:[],
   });
   const [event,setEvent] = useState({
       title:'',
@@ -72,21 +76,18 @@ const App = () => {
   useEffect(() => {
     axios.post(`${url}/page/get`, { id: '609c2b89a0996a0bec3f4a45' })
         .then((resp) => { 
-            console.log(resp.data.resp);
             setAb(resp.data.resp);
          })
         .catch((e) => { console.log(e); })
 
     axios.post(`${url}/page/get`, { id: '609c2be2a0996a0bec3f4a47' })
     .then((resp) => { 
-        console.log(resp.data.resp);
         setEvent(resp.data.resp);
       })
     .catch((e) => { console.log(e); })
 
     axios.post(`${url}/page/get`, { id: '609c2c12a0996a0bec3f4a48' })
     .then((resp) => { 
-        console.log(resp.data.resp);
         setInitiatives(resp.data.resp);
      })
     .catch((e) => { console.log(e); })
@@ -103,9 +104,9 @@ const App = () => {
  return (
     <div>
       { load?<Loader/>:null }
+      {window.location.pathname==='/'?<Banner/>:null}
       <Nav loc={window.location.pathname}/>
       <Switch>
-
         <Route path="/" exact >
           <Home loaded={()=>setLoad(false)}  state={state}/>
         </Route>
@@ -132,6 +133,14 @@ const App = () => {
 
         <Route path="/our-mission" exact >
           <Mission state={state}/>
+        </Route>
+
+        <Route path="/people-behind" exact >
+          <People state={state}/>
+        </Route>
+        
+        <Route path="/tournaments" exact >
+          <Tournaments state={state}/>
         </Route>
 
         <Route 

@@ -6,7 +6,6 @@ import 'react-quill/dist/quill.snow.css';
 import ReactQuill from 'react-quill';
 import axios from 'axios'
 import url from '../../url'
-import placeholder from '../../assets/missionimg.jpg'
 
 const EditComp = (props) => {
     const fileRef = useRef();
@@ -15,6 +14,9 @@ const EditComp = (props) => {
     const [contentError,setContentError] = useState(false);
     const [contentError2,setContentError2] = useState(false);
     const [reload,setReload] = useState(false);
+    const [alert,setAlert] = useState(true);
+    const [alertData,setAlertData] = useState('');
+    const [alertId,setAlertId] = useState('');
     const [comp, setComp] = useState({
         media:'',
         pid:'',
@@ -34,7 +36,7 @@ const EditComp = (props) => {
     const [statsLabel, setStatsLabel] = useState('')
     const [statsNum, setStatsNum] = useState('')
     const [updateStats, setUpdateStats] = useState('');
-    const [logoArr, setLogoArr] = useState(['','','','','','']);
+    const [logoArr, setLogoArr] = useState([]);
     const logoRef = useRef(null)
 
 
@@ -178,7 +180,7 @@ const EditComp = (props) => {
         // window.scrollTo(0,0);
         axios.post(`${url}/page/get`, { id })
         .then((resp) => { 
-            console.log(resp.data.resp);
+            // console.log(resp.data.resp);
             setComp({
                 media: resp.data.resp.media,
                 pid: resp.data.resp.pid,
@@ -193,13 +195,65 @@ const EditComp = (props) => {
             setLogoArr(resp.data.resp.donors)
          })
         .catch((e) => { console.log(e); })
+
+        axios.get(`${url}/page/getAlert`)
+       .then((resp) => {
+           if(resp.data.resp){
+            setAlertData(resp.data.resp.text);
+            setAlertId(resp.data.resp._id);
+            setAlert(false);
+           }
+       })
+       .catch((e) => {
+           console.log(e);
+       })
+
     },[reload])
 
-    const createDonor = (e) => {
-        console.log(e.target.files[0]);
+    const createAlert = () => {
+        axios.post(`${url}/page/createAlert`, { text: alertData })
+        .then((resp) => {
+            setAlertData(resp.data.resp.text);
+            setAlertId(resp.data.resp._id)
+            setAlert(false);
+        })
+        .catch((e) => {
+            console.log(e);
+        })
     }
-    const deleteDonor = (e) => {
-        console.log(e);
+
+    const deleteAlert = () => {
+        axios.post(`${url}/page/deleteAlert`, { id: alertId })
+        .then((resp) => {
+            setAlertData('');
+            setAlertId('')
+            setAlert(true);
+        })
+        .catch((e) => {
+            console.log(e);
+        })
+    }
+
+    const createDonor = (e) => {
+        e.preventDefault()
+        const fd = new FormData();
+        fd.append('id', id);
+        fd.append('file', e.target.files[0]);
+
+        axios.post(`${url}/page/createDonor`, fd )
+        .then((resp) => { 
+            setLogoArr([...logoArr,resp.data.resp]);
+        })
+        .catch((e) => { console.log(e); })
+       
+    }
+    const deleteDonor = (item) => {
+        axios.post(`${url}/page/deleteDonor`, { _id: item._id,  pid: item.pid } )
+        .then((resp) => { 
+            console.log(resp);
+            setReload(!reload);
+        })
+        .catch((e) => { console.log(e); })
     }
 
     const modules = {
@@ -300,6 +354,18 @@ const EditComp = (props) => {
             }
 
             <button type="submit" className='button-style primary'>Update Content</button>
+
+            {
+                props.alert?
+                <div className='alert-admin'>
+                <textarea value={alertData} onChange={(e)=>setAlertData(e.target.value)} type='text' placeholder='Alert data'/>
+                <br/>
+               { alert?
+                    <button onClick={createAlert} className='button-style primary rm-margin-top'>Create Alert</button>:
+                    <button  onClick={deleteAlert} className='button-style primary rm-margin-top'>Delete Alert</button>
+                }
+                </div>:null
+            }
 
             {
                 props.stats?
@@ -430,7 +496,7 @@ const EditComp = (props) => {
                             logoArr.map((item) =>(
                                <div className='logo-display'>
                                    <i className='fa fa-trash' onClick={()=>deleteDonor(item)}></i>
-                                   <img src={placeholder} alt='logo'/>
+                                   <img src={item.url} alt='logo'/>
                                </div>
                             ))
                         }

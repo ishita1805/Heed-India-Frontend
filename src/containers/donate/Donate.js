@@ -5,11 +5,9 @@ import P from '../../components/paragraph/Paragraph'
 import Button from '../../components/button/Button'
 import './donate.css'
 import React, {useState,useEffect} from 'react'
+import url from '../../url'
 import logo from "../../assets/logo.png"
 const axios = require('axios');
-
-
-
 
 const Donate = () => {
     const [amt,setAmt] = useState(10000)
@@ -40,7 +38,7 @@ const Donate = () => {
             alert('An error occured!')
             return
         }
-        const data = axios.post('https://heed-india-backend.herokuapp.com/payments/make-payment',{
+        const data = axios.post(`${url}/payments/make-payment`,{
             amount:amt
         })
         .then(resp => {
@@ -58,7 +56,7 @@ const Donate = () => {
             "description": "Test Transaction",
             "image": {logo},
             "order_id": data.id, 
-            "handler": function (response){
+            "handler": function (){
                 alert("Payment successful");
             },
             "theme": {
@@ -100,14 +98,9 @@ const Donate = () => {
                 </div>
             </div>
 
-        <div className = "donate-box">
-                <div className="amount-donate">
-                    <button  onClick={()=>{displayRazorpay(10000)}}  className="amt-donate">₹ 100 <br/><span className="donate-button-text">feed a child</span> </button>
-                    <button  onClick={()=>{displayRazorpay(40000)}}  className="amt-donate">₹ 400 <br/><span className="donate-button-text">feed a child</span> </button>
-                    <button  onClick={()=>{displayRazorpay(60000)}}  className="amt-donate">₹ 600 <br/><span className="donate-button-text">feed a child</span> </button>
-                    <button  onClick={()=>{displayRazorpay(100000)}} className="amt-donate">₹ 1000 <br/><span className="donate-button-text">feed a child</span> </button>
-                </div>
+            <div className = "donate-box">
                 <div className="col-bottom">
+                    <input type="number" placeholder="PAN Address" className="amt-donate-custom" onChange={e=>setAmt((e.target.value)*100)}/>
                     <input type="number" placeholder="Enter amount in ₹" className="amt-donate-custom" onChange={e=>setAmt((e.target.value)*100)}/>
                     <button 
                     onClick={()=>{displayRazorpay(amt)}}

@@ -8,7 +8,6 @@ import 'aos/dist/aos.css';
 import ReactHtmlParser from 'react-html-parser';
 import axios from 'axios'
 import url from '../../url'
-import placeholder from '../../assets/missionimg.jpg'
 
 
 const About = (props) => {
@@ -114,12 +113,11 @@ const About = (props) => {
            <div className='dark-abt-2'>
               <h2>Our Well Wishers</h2>
               <div className='logo-grid'>
-                  <img src={placeholder} alt='well-wishers'/>
-                  <img src={placeholder} alt='well-wishers'/>
-                  <img src={placeholder} alt='well-wishers'/>
-                  <img src={placeholder} alt='well-wishers'/>
-                  <img src={placeholder} alt='well-wishers'/>
-                  <img src={placeholder} alt='well-wishers'/>
+                  {
+                      content.donors.map((item) => (
+                        <img src={item.url} alt='well-wishers'/>
+                      ))
+                  }
               </div>
            </div>
             

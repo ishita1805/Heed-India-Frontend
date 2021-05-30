@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import img from '../../assets/logo_footer.png'
 import imgdark from '../../assets/logo.png'
 
-const Navigation = ({loc,...props}) => {
+const Navigation = ({loc,children,...props}) => {
   const [nav,setNav] =useState(false);
   const dark = ["/privacy-policy","/terms&conditions","/refunds&cancellations"]
   const navHandler = ()=>{
@@ -26,7 +26,7 @@ const Navigation = ({loc,...props}) => {
 
         {loc.includes("/admin")?
         // for admin portal
-        <>
+        <div className='nav-holder'>
         <div className={nav?"Nav2":"Navigation"}>
           <NavLink exact to="/admin/createBlog" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Create Blog</NavLink>
           <NavLink exact to="/admin/view" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">My Blogs</NavLink>
@@ -52,16 +52,17 @@ const Navigation = ({loc,...props}) => {
           </NavLink>
           </div>
         </div> 
-        </>:
+        </div>:
         // for the client side
-        <>
+        <div className='nav-holder'>
+        {children}
         <div className={nav?"Nav2":"Navigation"}>
           <NavLink exact to="/" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Home</NavLink>
           <NavLink exact to="/about-us" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Who We Are</NavLink>
           <NavLink exact to="/sports" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Sports</NavLink>
           <NavLink exact to="/events" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Events</NavLink>
           <NavLink exact to="/initiatives" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Initiatives</NavLink>
-          {/* <NavLink exact to="/our-branches" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Branches</NavLink> */}
+          <NavLink exact to="/tournaments" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Tournaments</NavLink>
           <NavLink exact to="/donate" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Donate Now</NavLink>
           {/* <NavLink exact to="/raise-money" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Raise Money</NavLink> */}
           <NavLink exact to="/our-mission" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Mission</NavLink>
@@ -78,14 +79,14 @@ const Navigation = ({loc,...props}) => {
           <NavLink exact to="/sports" className="nav-item" activeClassName="nav-item-active">Sports</NavLink>
           <NavLink exact to="/events" className="nav-item" activeClassName="nav-item-active">Events</NavLink>
           <NavLink exact to="/initiatives" className="nav-item" activeClassName="nav-item-active">Initiatives</NavLink>
-          {/* <NavLink exact to="/our-branches" className="nav-item" activeClassName="nav-item-active">Our Branches</NavLink> */}
+          <NavLink exact to="/tournaments" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Tournaments</NavLink>
           <div className="logo-nav">
           <NavLink exact to="/" onClick={navHandler} activeClassName="nav-item-active">
             <img alt="" src={(dark.includes(loc) || loc.includes("/blog"))?imgdark:img} className="logo" />
           </NavLink>
           </div>
         </div> 
-        </>
+        </div>
         }
     </>
     )

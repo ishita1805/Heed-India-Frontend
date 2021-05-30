@@ -1,0 +1,14 @@
+.people-data a{
+    padding:2vh 4vh;
+    background:rgb(97, 148, 67);
+    font-weight:500;
+    transition: 0.3s;
+    color:white;
+}
+.people-data a:hover{
+    padding:2vh 4vh;
+    color:rgb(97, 148, 67);
+    background:none;
+    transition: 0.3s;
+    border:solid 2px rgb(97, 148, 67);
+}

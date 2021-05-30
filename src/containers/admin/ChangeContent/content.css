@@ -136,6 +136,14 @@
     margin-top:0.5vh;
     border-radius:3px;
 }
+.alert-admin{
+    display:flex;
+    flex-direction:column;
+}
+.alert-admin button{
+   width:fit-content;
+   margin:1vh 0;
+}
 @media screen and (max-width:800px){
     .stats-ce{
         flex-direction:column;
