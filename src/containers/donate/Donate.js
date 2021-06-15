@@ -76,7 +76,7 @@ const Donate = () => {
                 "amount": dta.data.response.amount*100, 
                 "currency": dta.data.response.currency,
                 "name": "Heed India",
-                "description": "Test Transaction",
+                "description": "Donate for a cause",
                 "image": {logo},
                 "order_id": dta.data.response.offerId, 
                 "theme": {
