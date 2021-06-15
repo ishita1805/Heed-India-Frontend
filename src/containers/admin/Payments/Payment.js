@@ -6,11 +6,13 @@ import './payment.css'
 
 const Payment = () => {
     const [payments,setPayments] = useState([]);
-   
+    const [loading,setLoading] = useState(true);
+
     useEffect(() => {
        axios.get(`${url}/payments/get-payments`)
        .then((resp) => {
-         setPayments(resp.data)
+         setPayments(resp.data);
+         setLoading(false);
        })
        .catch((e) => {
            console.log(e)
@@ -21,7 +23,7 @@ const Payment = () => {
         <div className="in-body padding-t-12 arrange-center-blogs">
             <h1>Payments Dashboard</h1>
             {
-                payments.length === 0?
+                loading?
                 <h3>Loading ....</h3>:
                 payments.map((item) => (
                    <PaymentCard
@@ -34,6 +36,11 @@ const Payment = () => {
                    status={item.status}
                    createdAt={item.createdAt}/>
                 ))
+            }
+            {
+                !loading && payments.length === 0?
+                <h3>No payments to show</h3>:
+                null
             }
         </div>
     )
