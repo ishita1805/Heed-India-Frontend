@@ -59,10 +59,9 @@ const Donate = () => {
     }
     
     const onSubmit = async (data)=>{
-
         try{
             data.amt = parseInt(data.amt)*100
-            console.log(data.amt);
+
             const res = await loadScript();
             if(!res){
                 alert('An error occured!')
@@ -71,19 +70,15 @@ const Donate = () => {
             const dta = await axios.post(`${url}/payments/make-payment`,{
                 data
             })
-            
+            console.log(dta.data.key)
             const options = {
-                "key": "rzp_test_PsxGKItWtb7jwL",
+                "key": dta.data.key,
                 "amount": dta.data.response.amount*100, 
                 "currency": dta.data.response.currency,
                 "name": "Heed India",
                 "description": "Test Transaction",
                 "image": {logo},
-                "order_id": dta.data.response.id, 
-                "handler": function (){
-                    // Add verification endpoint here
-                    alert("Thankyou!");
-                },
+                "order_id": dta.data.response.offerId, 
                 "theme": {
                     "color": "#80ffaa"
                 }
@@ -93,7 +88,6 @@ const Donate = () => {
         } catch(e) {
             console.log(e)
         }
-        
     }
     
 

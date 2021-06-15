@@ -32,6 +32,7 @@ const Navigation = ({loc,children,...props}) => {
           <NavLink exact to="/admin/view" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">My Blogs</NavLink>
           <NavLink exact to="/admin/messages" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Messages</NavLink>
           <NavLink exact to="/admin/support" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Supports</NavLink>
+          <NavLink exact to="/admin/payments" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Payments</NavLink>
           <NavLink exact to="/admin/change-content" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Edit Content</NavLink>
           <div className="logo-nav">
           <NavLink exact to="/" onClick={navHandler} activeClassName="nav-item-active">
@@ -41,10 +42,11 @@ const Navigation = ({loc,children,...props}) => {
         </div> 
 
         <div className="Navigation2-white">
-          <NavLink exact to="/admin/createBlog" className="nav-item-white" activeClassName="nav-item-active">New Blog</NavLink>
+          <NavLink exact to="/admin/createBlog" className="nav-item-white" activeClassName="nav-item-active">Create Blog</NavLink>
           <NavLink exact to="/admin/view" className="nav-item-white" activeClassName="nav-item-active">My Blogs</NavLink>
           <NavLink exact to="/admin/messages" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Messages</NavLink>
           <NavLink exact to="/admin/support" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Supports</NavLink>
+          <NavLink exact to="/admin/payments" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Payments</NavLink>
           <NavLink exact to="/admin/change-content" className="nav-item-white" onClick={navHandler} activeClassName="nav-item-active">Edit Site</NavLink>
           <div className="logo-nav">
           <NavLink exact to="/" onClick={navHandler} activeClassName="nav-item-active">
@@ -64,7 +66,6 @@ const Navigation = ({loc,children,...props}) => {
           <NavLink exact to="/initiatives" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Initiatives</NavLink>
           <NavLink exact to="/tournaments" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Tournaments</NavLink>
           <NavLink exact to="/donate" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Donate Now</NavLink>
-          {/* <NavLink exact to="/raise-money" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Raise Money</NavLink> */}
           <NavLink exact to="/our-mission" className="nav-item" onClick={navHandler} activeClassName="nav-item-active">Our Mission</NavLink>
           <div className="logo-nav">
           <NavLink exact to="/" onClick={navHandler} activeClassName="nav-item-active">

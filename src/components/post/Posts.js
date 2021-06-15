@@ -32,7 +32,7 @@ const ImageLink = props =>{
 				<div className='text-event-card'>
 					<h3>{props.img.heading}</h3>
 					<p className='event-text-toggle-1'>{props.img.subheading.substring(0,34)} {props.img.subheading.length>34?'...':null}</p>
-					<p className='event-text-toggle-2'>{props.img.subheading.substring(0,200)} {props.img.subheading.length>200?'...':null}</p>
+					<p className='event-text-toggle-2'>{props.img.subheading.substring(0,240)} {props.img.subheading.length>240?'...':null}</p>
 				</div>
 			</div>
 		
