@@ -49,6 +49,10 @@
     border-radius:5px !important;
     width:43% !important;
 }
+
+.width-input{
+    width:43%;
+}
 .form-inputs input::placeholder{
     color:rgb(182, 182, 182);
 }
@@ -142,7 +146,11 @@
 @media screen and (max-width:730px){
     .form-inputs input{
         width:90% !important;
+        padding:1vh 2%!important;
     }
+    .width-input{
+        width:43%;
+    }zzzzz
     .form-inputs textarea{
         width:90% !important;
         max-height:10vh;
@@ -156,7 +164,7 @@
 }
 @media screen and (max-width:700px){
     .donate-form{
-        height:65vh;
+        height:68vh;
         width:100vw;
         padding-right:0;
     }
@@ -176,6 +184,9 @@
     }
     .donate-card{
         width:100%;
+      }
+      .donate-form button{
+        padding:1vh 2%!important;
       }
 }
 
