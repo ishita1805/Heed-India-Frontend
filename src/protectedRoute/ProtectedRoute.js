@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import {
     Route
 } from "react-router-dom";
@@ -10,7 +10,7 @@ const ProtectedRoute = ({Component,path,...props}) => {
         path={path} 
         exact
         render={
-            (props) => localStorage.getItem("pass")?<Component path={path} {...props}/>:<Admin/> 
+            (props) => localStorage.getItem("pass")?<Suspense fallback={<></>}><Component path={path} {...props}/></Suspense>:<Admin/> 
         }/>
         
     )

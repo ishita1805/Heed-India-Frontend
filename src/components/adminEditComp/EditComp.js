@@ -50,6 +50,11 @@ const EditComp = (props) => {
         setCardData(value);
     }
 
+    const handleAlertChange = (value)=>{
+        if(value !== '' || value !== '<p><br></p>') setContentError(false);
+        setAlertData(value);
+    }
+
     const deleteCardHandler = (card_id,card_pid) => {
         let data = {
             _id: card_id,
@@ -258,7 +263,7 @@ const EditComp = (props) => {
 
     const modules = {
         toolbar: [
-          ['bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block'],
+          ['bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block', 'link'],
         ],
         clipboard: {
           matchVisual: true,
@@ -266,7 +271,7 @@ const EditComp = (props) => {
       }
 
     const formats = [
-        'bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block',
+        'bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block', 'link'
       ]
 
     return (
@@ -358,12 +363,22 @@ const EditComp = (props) => {
             {
                 props.alert?
                 <div className='alert-admin'>
-                <textarea value={alertData} onChange={(e)=>setAlertData(e.target.value)} type='text' placeholder='Alert data'/>
-                <br/>
-               { alert?
-                    <button onClick={createAlert} className='button-style primary rm-margin-top'>Create Alert</button>:
-                    <button  onClick={deleteAlert} className='button-style primary rm-margin-top'>Delete Alert</button>
-                }
+                    <label>Alert:</label>
+                        {!alert?
+                            <textarea value={alertData} disabled/>:
+                            <ReactQuill 
+                                theme="snow"
+                                value={alertData}
+                                onChange={handleAlertChange} 
+                                modules={modules}
+                                formats={formats}
+                            />
+                        }
+                    <br/>
+                { alert?
+                        <button onClick={createAlert} className='button-style primary rm-margin-top'>Create Alert</button>:
+                        <button  onClick={deleteAlert} className='button-style primary rm-margin-top'>Delete Alert</button>
+                    }
                 </div>:null
             }
 

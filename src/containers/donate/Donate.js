@@ -61,7 +61,6 @@ const Donate = () => {
     const onSubmit = async (data)=>{
         try{
             data.amt = parseInt(data.amt)*100
-
             const res = await loadScript();
             if(!res){
                 alert('An error occured!')
@@ -70,7 +69,7 @@ const Donate = () => {
             const dta = await axios.post(`${url}/payments/make-payment`,{
                 data
             })
-            console.log(dta.data.key)
+            console.log(dta.data)
             const options = {
                 "key": dta.data.key,
                 "amount": dta.data.response.amount*100, 
@@ -117,12 +116,15 @@ const Donate = () => {
                         <input type='text' placeholder='Enter Name' name='name'  ref={register({ required: true })}/>
                         <input type='text' maxLength='10' placeholder='Enter PAN Number' name='pan'  ref={register({ required: true,maxLength:10 })}/>
                         <input type='number' maxLength='10' placeholder='Enter Contact Number' name='contact'  ref={register({ required: true ,maxLength:10})}/>
-                        <input className='width-input'  type='number' placeholder='Enter Amount' name='amt'  ref={register({ required: true })}/>
                         <input type='text' placeholder='Enter Address' name='address'  ref={register({ required: true })}/>
-                        <input type='email' placeholder='Enter email' name='email'  ref={register({ required: true })}/>
+                        <input type='text' placeholder='Email' name='email'  ref={register({ required: true })}/>
+                        
                         <input type='text' placeholder='Enter State' name='state'  ref={register({ required: true })}/>
                         <input type='text' placeholder='Enter City' name='city'  ref={register({ required: true })}/>
+                        
+                        
                         <input type='number' placeholder='Enter Pin Code' name='pincode'  ref={register({ required: true })}/>
+                        <input className='width-input'  type='number' placeholder='Enter Amount' name='amt'  ref={register({ required: true })}/>
                         <input type='text' placeholder='Remarks' name='remarks'  ref={register({ required: true })}/>
                     </div> 
                     
@@ -132,11 +134,12 @@ const Donate = () => {
                         errors.address||
                         errors.city||
                         errors.state||
-                        errors.pincode
-                        ?<p className='e-t-admin'>Please fill all fields</p>:null
+                        errors.pincode||
+                        errors.email
+                        ?<p className='e-t-donate'>Please fill all fields</p>:null
                     }
-                    {errors.contact && errors.contact.type === "maxLength" ?<p className='e-t-admin'>max length 10 digits</p>:null }
-                    {errors.pan && errors.pan.type === "maxLength" ?<p className='e-t-admin'>max length 10 alphanumeric</p>:null }
+                    {errors.contact && errors.contact.type === "maxLength" ?<p className='e-t-donate'>max length 10 digits</p>:null }
+                    {errors.pan && errors.pan.type === "maxLength" ?<p className='e-t-donate'>max length 10 alphanumeric</p>:null }
         
                     <button>Donate Now</button>
                 </form>
