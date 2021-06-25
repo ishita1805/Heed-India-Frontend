@@ -119,6 +119,7 @@ const Donate = () => {
                         <input type='number' maxLength='10' placeholder='Enter Contact Number' name='contact'  ref={register({ required: true ,maxLength:10})}/>
                         <input className='width-input'  type='number' placeholder='Enter Amount' name='amt'  ref={register({ required: true })}/>
                         <input type='text' placeholder='Enter Address' name='address'  ref={register({ required: true })}/>
+                        <input type='email' placeholder='Enter email' name='email'  ref={register({ required: true })}/>
                         <input type='text' placeholder='Enter State' name='state'  ref={register({ required: true })}/>
                         <input type='text' placeholder='Enter City' name='city'  ref={register({ required: true })}/>
                         <input type='number' placeholder='Enter Pin Code' name='pincode'  ref={register({ required: true })}/>
