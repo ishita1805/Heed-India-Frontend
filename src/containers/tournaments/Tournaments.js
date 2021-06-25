@@ -1,5 +1,6 @@
 import React,{ useState, useEffect } from 'react'
 import './tournaments.css'
+import '../people/people.css'
 import axios from 'axios'
 import url from '../../url'
 import AOS from 'aos';

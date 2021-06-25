@@ -4,6 +4,11 @@
     background-size:100%;
     background-position:cover;
 }
+.e-t-donate{
+    margin:0 1vh;
+    font-size:12px;
+    color:red;
+}
 .donate-cont{
     height:100vh;
     width:100vw;
@@ -129,6 +134,7 @@
         min-height:46vh;
         padding:3vh 3vw;
         margin-top:5vh;
+        height:fit-content !important;
         border-radius:20px 20px 0 0;
         background: white;
     }
@@ -146,7 +152,11 @@
 @media screen and (max-width:730px){
     .form-inputs input{
         width:90% !important;
-        padding:1vh 2%!important;
+        padding:1.3vh 2%!important;
+    }
+    .form-inputs input:nth-child(2), .form-inputs input:nth-child(3), .form-inputs input:nth-child(7), .form-inputs input:nth-child(6), .form-inputs input:nth-child(8), .form-inputs input:nth-child(9){
+        width:42% !important;
+        padding:1.3vh 2%!important;
     }
     .width-input{
         width:43%;
@@ -164,7 +174,7 @@
 }
 @media screen and (max-width:700px){
     .donate-form{
-        height:68vh;
+        max-height:68vh;
         width:100vw;
         padding-right:0;
     }
@@ -176,7 +186,7 @@
         text-align:center;
     }
     .donate-form{
-        width:84vw;
+        width:89vw;
     }
     .donate-main, .donate-cont{
         height:auto;
@@ -186,7 +196,7 @@
         width:100%;
       }
       .donate-form button{
-        padding:1vh 2%!important;
+        padding: 1.5vh 2%!important;
       }
 }
 

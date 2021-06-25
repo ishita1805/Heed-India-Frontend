@@ -140,6 +140,12 @@
     display:flex;
     flex-direction:column;
 }
+.alert-admin textarea{
+   background:white;
+   color:black !important;
+   font-weight:400;
+   font-family: 'Quicksand', sans-serif;
+}
 .alert-admin button{
    width:fit-content;
    margin:1vh 0;

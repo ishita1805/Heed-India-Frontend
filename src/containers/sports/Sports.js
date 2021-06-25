@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import './sports.css'
+import '../mission/mission.css'
 import Background from '../../components/bgVid/SportsBackgroundVid'
 import Card from '../../components/cardSports/cardSports'
 import axios from 'axios'
