@@ -7,6 +7,7 @@ import { LoadContext } from './context/load'
 import ProtectedRoute from './protectedRoute/ProtectedRoute'
 import Nav from './components/navigation/Navigation'
 import Home from './containers/home/Home'
+import About from './containers/about/About'
 import ConactUs from './components/contactUs/Contact'
 import axios from 'axios';
 import url from './url';
@@ -22,7 +23,6 @@ const Privacy = React.lazy(()=> import('./containers/footerLinks/PrivacyPolicy')
 const Terms = React.lazy(()=> import('./containers/footerLinks/TermsConditions'));
 const People = React.lazy(()=> import('./containers/people/People'));
 const Tournaments = React.lazy(()=> import('./containers/tournaments/Tournaments'));
-const About = React.lazy(() => import('./containers/about/About'));
 const Mission = React.lazy(() => import('./containers/mission/Mission'));
 const Events = React.lazy(() => import('./containers/events/Events'));
 const Initiatives = React.lazy(() => import('./containers/initiatives/Initiatives'));
@@ -114,9 +114,7 @@ const App = () => {
         </Route>
 
         <Route path="/about-us" exact >
-          <Suspense fallback={ <Loader /> }>
             <About content={ab} state={state} />
-          </Suspense>
         </Route>
 
         <Route path="/sports" exact >
