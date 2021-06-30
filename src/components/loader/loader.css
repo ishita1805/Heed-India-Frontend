@@ -28,7 +28,7 @@
     font-size:20px;
     margin:0 2vw;
     text-align:center;
-    font-family:'Quicksand';
+    font-family:'Montserrat';
 }
 @media screen and (max-width:500px){
     .loading-screen h1{

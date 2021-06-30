@@ -31,7 +31,7 @@
     cursor:pointer;
     border-radius:5vh;
     color:white;
-    font-weight:600;
+    font-weight:400;
 }
 .contact-icon:hover{
     transition:0.6s;
@@ -88,10 +88,10 @@
     background:rgb(245, 245, 245);
     padding:1vh;
     margin-bottom:1vh;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     border-radius:3px;
     color:rgb(102, 102, 102);
-    font-weight: 500;
+    font-weight: 300;
 }
 .contact-form input::placeholder {
     color:rgb(206, 206, 206);
@@ -102,11 +102,11 @@
     background:rgb(245, 245, 245);
     padding:1vh;
     resize: none;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     height:80px;
     border-radius:3px;
     color:rgb(102, 102, 102);
-    font-weight: 500;
+    font-weight: 400;
 }
 .contact-form textarea::placeholder {
     color:rgb(206, 206, 206);

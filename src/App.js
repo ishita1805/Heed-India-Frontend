@@ -14,8 +14,10 @@ import url from './url';
 import Loader from './components/loader/Loader';
 import Banner from "./components/banner/Banner";
 import Footer  from './components/footer/Footer';
+import Sports from './containers/sports/Sports'
 
 const Contacts = React.lazy(()=> import('./containers/admin/Contacts/Contacts'));
+const DonationReciept = React.lazy(()=> import('./containers/reciept/Reciept'));
 const Support = React.lazy(()=> import('./containers/admin/Support/Support'));
 const Payment = React.lazy(()=> import('./containers/admin/Payments/Payment'));
 const Content = React.lazy(()=> import('./containers/admin/ChangeContent/Content'));
@@ -27,7 +29,6 @@ const Mission = React.lazy(() => import('./containers/mission/Mission'));
 const Events = React.lazy(() => import('./containers/events/Events'));
 const Initiatives = React.lazy(() => import('./containers/initiatives/Initiatives'));
 const Donate = React.lazy(() => import('./containers/donate/Donate'));
-const Sports = React.lazy(() => import('./containers/sports/Sports'));
 const Error = React.lazy(() => import('./containers/error/Error'));
 const Admin = React.lazy(() => import('./containers/admin/Admin/Admin'));
 const CreatedBlog = React.lazy(() => import('./containers/admin/CreateBlog/CreateBlog'));
@@ -182,6 +183,12 @@ const App = () => {
         <Route path="/refunds&cancellations" exact >
         <Suspense fallback={ <Loader /> }>
           <Terms />
+          </Suspense>
+        </Route>
+
+        <Route path="/donation-receipt" exact >
+          <Suspense fallback={ <Loader /> }>
+            <DonationReciept />
           </Suspense>
         </Route>
 

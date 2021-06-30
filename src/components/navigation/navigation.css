@@ -25,7 +25,7 @@
     align-items:center;
     background:rgba(10, 10, 10, 0.601);
     justify-content:flex-start;
-    font-weight:700;
+    font-weight:300;
     left:0;
     z-index:1000;
 }
@@ -42,7 +42,7 @@
     align-items:center;
     background:rgba(223, 223, 223, 0.192);
     justify-content:flex-start;
-    font-weight:700;
+    font-weight:300;
     z-index:1000;
 }
 .Navigation2-blog{
@@ -58,14 +58,14 @@
     align-items:center;
     background:rgba(240, 240, 240, 0.192);
     justify-content:flex-start;
-    font-weight:700;
+    font-weight:300;
     z-index:1000;
 }
 .Navigation2-blog .nav-item{
     font-size:16px;
     margin-right:5vw;
-    color:rgb(65, 65, 65);
-    font-weight:500;
+    color:rgb(121, 121, 121);
+    font-weight:300;
 }
 .small-nav{
     position:fixed;
@@ -77,8 +77,8 @@ a{
 .nav-item{
     font-size:16px;
     margin-right:5vw;
-    color:rgb(226, 226, 226);
-    font-weight:300;
+    color:rgb(167, 167, 167);
+    font-weight:100;
 }
 .nav-item-white{
     font-size:16px;
@@ -91,7 +91,7 @@ a{
 }
 .nav-item-active{
     color:#8CC634;
-    font-weight:700;
+    font-weight:500;
 }
 .logo-nav{
     display:flex;
@@ -113,7 +113,7 @@ a{
     }
     .nav-item-active{
         color:#8CC634;
-        font-weight:700;
+        font-weight:500;
     }
     .Navigation2, .Navigation2-white, .Navigation2-blog{
         display:none;

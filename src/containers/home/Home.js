@@ -43,7 +43,7 @@ const Home = ({state,...props}) => {
                 </span>
                  {` ${content.title.substring(content.title.indexOf(' ')+1)}`}   
             </h1>
-            <p className='sp-left'>{content.subtitle}</p>
+            <p className='sb-left'>{content.subtitle}</p>
             <h2 className="green-home">
                 <Typewriter 
                     options={{
