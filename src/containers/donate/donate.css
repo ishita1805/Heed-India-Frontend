@@ -175,7 +175,8 @@
 @media screen and (max-width:700px){
     .donate-form{
         max-height:68vh;
-        width:100vw;
+        width:90vw;
+        margin-left:1vh;
         padding-right:0;
     }
     .donate-cont h1{
@@ -184,9 +185,6 @@
     .donate-cont h2{
         font-size:20px;
         text-align:center;
-    }
-    .donate-form{
-        width:89vw;
     }
     .donate-main, .donate-cont{
         height:auto;
