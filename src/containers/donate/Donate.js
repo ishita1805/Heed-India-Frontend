@@ -59,6 +59,7 @@ const Donate = () => {
     }
     
     const onSubmit = async (data)=>{
+        console.log("hello")
         try{
             data.amt = parseInt(data.amt)*100
             const res = await loadScript();
