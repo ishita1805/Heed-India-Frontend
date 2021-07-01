@@ -13,26 +13,46 @@ const Blog = (props) => {
       
 
   useEffect(() => {
-//FETCHING BLOG FROM DATA_BASE
+    //FETCHING BLOG FROM DATABASE
     axios.get(`${url}/blogs/blog/${props.match.params.id}`)
       .then(res => {
-        console.log(res.data.banner);
-        setBlogData(res.data)
-        // console.log(res.data)
+        setBlogData(res.data);
+        const arr = JSON.parse(localStorage.getItem('HI-Likes'))
+        if(arr.find((el) => el._id ===res.data._id)) {
+          console.log('found')
+          setLiked(true)
+        }
+      
       })
-      .catch((error) => {
-      // console.log('error');
-      })
+      .catch(() => {})
+     
   }, [])
 
+
+
   const likeHandler = () => {
-    setLiked(!liked);
-    axios.post(url+'/blogs/likeStatus', {
-      blogId:props.match.params.id
-    })
-    .then((res) => console.log(res))
-    .catch(e=>console.log(e))
-   
+    
+    if(!localStorage.getItem('HI-Likes')) {
+      let arr = []
+      arr.push({ _id: blogData._id})
+      console.log('added 1')
+      localStorage.setItem('HI-Likes', JSON.stringify(arr));
+      setLiked(true);
+    }
+    else if(!JSON.parse(localStorage.getItem('HI-Likes')).find((el) => el._id === blogData._id)) {
+      let arr = JSON.parse(localStorage.getItem('HI-Likes'))
+      arr.push({ _id: blogData._id});
+      localStorage.setItem('HI-Likes', JSON.stringify(arr));
+      console.log('added 2')
+      setLiked(true);
+    }
+    else { 
+      const newArr = JSON.parse(localStorage.getItem('HI-Likes')).filter((el) => el._id !== blogData._id)
+      localStorage.setItem('HI-Likes',JSON.stringify(newArr));
+      setLiked(false);
+      console.log(newArr)
+    }
+
   } 
   
   //DATE TO STRING
@@ -41,7 +61,10 @@ const Blog = (props) => {
   return (
     <>
     <div className='blog-topnav'>
-      <NavLink exact to="/" target="__blank"><span>HEED India | Sports and Education</span></NavLink>
+      <NavLink exact to="/" target="__blank">
+        <span className='big-blog-label'>HEED India | Sports and Education</span>
+        <span className='small-blog-label'>HEED India</span>
+      </NavLink>
       <div className='row'>
         <NavLink exact to="/" target="__blank"><span>Home</span></NavLink>
         &emsp; &emsp;

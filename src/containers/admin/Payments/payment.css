@@ -16,3 +16,16 @@
     align-self:flex-end;
     cursor:pointer;
 }
+.excel-download{
+    padding:2vh 3vh;
+    background:rgb(61, 175, 61);
+    outline:none;
+    border:none;
+    color:white;
+    border-radius:3px;
+    cursor:pointer;
+}
+.excel-a{
+    color:white;
+    font-weight:400;
+}

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react'
 import BottomNav from '../../components/bottomNav/BottomNav'
 import './home.css'
@@ -43,7 +44,7 @@ const Home = ({state,...props}) => {
                 </span>
                  {` ${content.title.substring(content.title.indexOf(' ')+1)}`}   
             </h1>
-            <p className='sp-left'>{content.subtitle}</p>
+            <p className='sb-left'>{content.subtitle}</p>
             <h2 className="green-home">
                 <Typewriter 
                     options={{

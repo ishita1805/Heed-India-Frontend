@@ -76,7 +76,7 @@
     display:flex;
     flex-direction:column;
     width:100%;
-    background:white;
+    /* background:white; */
     margin-bottom:3vh;
     border-radius:5px;
 }
@@ -139,6 +139,12 @@
 .alert-admin{
     display:flex;
     flex-direction:column;
+}
+.alert-admin textarea{
+   background:white;
+   color:black !important;
+   font-weight:400;
+   font-family: 'Montserrat', sans-serif;
 }
 .alert-admin button{
    width:fit-content;

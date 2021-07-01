@@ -60,6 +60,7 @@ const Footer = () => {
                     <a target='__blank' href="/privacy-policy">Privacy Policy</a><br/>
                     <a target='__blank' href="/terms&conditions">Terms and Conditions</a><br/>
                     <a target='__blank' href="/refunds&cancellations">Cancellation/Refund Policy</a><br/>
+                    <a target='__blank' href="/donation-receipt">Generate donation reciept</a><br/>
                 </span>
                 <h4>Contact Us</h4>
                 <span>

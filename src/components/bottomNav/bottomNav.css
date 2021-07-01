@@ -2,6 +2,7 @@
     width:96vw;
     height:12vh;
     display:flex;
+    font-weight:400;
     align-items:center;
     z-index:1000;
     justify-content:flex-start;
