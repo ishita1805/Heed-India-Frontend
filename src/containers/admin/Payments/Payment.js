@@ -23,6 +23,8 @@ const Payment = () => {
         { label: "Receipt No.", key: "receipt" },
         { label: "Payment Status", key: "status" },
         { label: "Payment Date", key: "createdAt" },
+        { label: "Bank", key: "bank" },
+        { label: "Wallet", key: "wallet" },
         { label: "Card Name", key: "card.name" },
         { label: "Card ID", key: "card.id" },
         { label: "Card Network", key: "card.network" },
