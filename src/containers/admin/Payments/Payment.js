@@ -22,12 +22,20 @@ const Payment = () => {
         { label: "Remarks", key: "remarks" },
         { label: "Receipt No.", key: "receipt" },
         { label: "Payment Status", key: "status" },
-        { label: "Payment Date", key: "createdAt" }
+        { label: "Payment Date", key: "createdAt" },
+        { label: "Card Name", key: "card.name" },
+        { label: "Card ID", key: "card.id" },
+        { label: "Card Network", key: "card.network" },
+        { label: "Card Type", key: "card.type" },
+        { label: "Card Last 4 Digits", key: "card.last4" },
+        { label: "Card Issuer", key: "card.issuer" },
+        { label: "Card EMI", key: "card.emi" }
       ];
 
     useEffect(() => {
        axios.get(`${url}/payments/get-payments`)
        .then((resp) => {
+           console.log(resp.data)
          setPayments(resp.data);
          setLoading(false);
        })

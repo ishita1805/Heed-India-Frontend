@@ -15,7 +15,9 @@
     text-align:left !important;
     padding:0 2vh !important;
     margin:0 !important;
+    margin-left:-1vh !important;
     font-size:19px !important;
+    font-weight: 400 !important;
     width:65% !important;
     margin-top: 1.5vh  !important;
     margin-bottom:1vh !important;

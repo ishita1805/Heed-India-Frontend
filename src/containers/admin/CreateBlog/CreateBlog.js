@@ -4,7 +4,7 @@ import 'react-quill/dist/quill.snow.css';
 import './createBlog.css'
 import ReactHtmlParser from 'react-html-parser'
 import Button from "../../../components/button/Button"
-import ReactQuill from 'react-quill';
+import Editor from 'typeface-editor'
 import '../../../components/inputBox/InputBox'
 import { useForm } from 'react-hook-form';
 import axios from 'axios'
@@ -24,42 +24,12 @@ const Admin = () => {
     const [color,setColor] = useState('green-bar')
     const buttonRef = useRef();
 
+    const additionalOptions =[]
+
     const handleChange = (value)=>{
       if(value !== '' || value !== '<p><br></p>') setContentError(false);
         setAddData(value);
     }
-  
-    const modules = {
-      
-        toolbar: [
-          [{ 'header': [1, 2, 3,false, 4, 5, 6] }, { 'font': [] }],
-          [{size: ['small', false, 'large', 'huge' ]}],
-          ['bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block'],
-          [{'list': 'ordered'}, {'list': 'bullet'}, 
-            {'indent': '-1'}, {'indent': '+1'}],
-          [{ 'script': 'sub'}, { 'script': 'super' }],  
-          [{ 'color': [] }, { 'background': [] }],  
-          [{ 'align': [] }],
-          [{ 'direction': 'rtl' }],  
-          ['link'],
-          ['clean'],
-         
-        ],
-        clipboard: {
-          matchVisual: true,
-        }
-      }
-
-    const formats = [
-        'header', 'font', 'size', 
-        'bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block',
-        'list', 'bullet', 'indent',
-        'script',
-        'color','background',
-        'align',
-        'direction',
-        'link', 'image', 'video'
-      ]
 
       const onSubmit =(data)=>{
        const formdata = new FormData();
@@ -125,14 +95,15 @@ const Admin = () => {
                   <p>Banner: <input name="banner" type='file' ref={register({ required: true })}/></p>
                   <button style={{display:'none'}} ref={buttonRef}>Click</button>
                 </form>
-                <h3>Add content for your blog here</h3>
-                <ReactQuill 
-                theme="snow"
-                value={addData}
-                onChange={handleChange} 
-                modules={modules}
-                formats={formats}
+          
+                 <Editor 
+                options={additionalOptions}
+                label='Body of the blog goes here'
+                description={`use the preview button to see what the blog will look like. hit the create button when you are satisfied with your blog.`}
+                theme='#69ba52'
+                getdata={(value)=>handleChange(value)}
                 />
+                
                 <div className="row">
                   <Button 
                   onClick={()=>setShowData(!showData)}

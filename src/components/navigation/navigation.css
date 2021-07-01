@@ -78,7 +78,7 @@ a{
     font-size:16px;
     margin-right:5vw;
     color:rgb(167, 167, 167);
-    font-weight:100;
+    font-weight:400 !important;
 }
 .nav-item-white{
     font-size:16px;

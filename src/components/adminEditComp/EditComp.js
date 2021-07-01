@@ -3,7 +3,7 @@
 import React,{ useEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import 'react-quill/dist/quill.snow.css';
-import ReactQuill from 'react-quill';
+import Editor from 'typeface-editor'
 import axios from 'axios'
 import url from '../../url'
 
@@ -39,6 +39,7 @@ const EditComp = (props) => {
     const [logoArr, setLogoArr] = useState([]);
     const logoRef = useRef(null)
 
+    const additionalOptions =[]
 
     const handleChange = (value)=>{
         if(value !== '' || value !== '<p><br></p>') setContentError(false);
@@ -261,19 +262,7 @@ const EditComp = (props) => {
         .catch((e) => { console.log(e); })
     }
 
-    const modules = {
-        toolbar: [
-          ['bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block', 'link'],
-        ],
-        clipboard: {
-          matchVisual: true,
-        }
-      }
-
-    const formats = [
-        'bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block', 'link'
-      ]
-
+    
     return (
         <div className='content-div'>
         {
@@ -345,13 +334,11 @@ const EditComp = (props) => {
                 props.paras?
                 <>
                 <label>Paragraph/s:</label>
+                <br/>
                 <div className='para-admin-ce'>
-                <ReactQuill 
-                theme="snow"
-                value={addData}
-                onChange={handleChange} 
-                modules={modules}
-                formats={formats}
+                <Editor 
+                options={additionalOptions}
+                getdata={(value)=>handleChange(value)}
                 />
                 </div>
                 {contentError?<p className="error-text">Error: Paragraph cannot be empty</p>:null}
@@ -364,15 +351,14 @@ const EditComp = (props) => {
                 props.alert?
                 <div className='alert-admin'>
                     <label>Alert:</label>
+                    <br/>
                         {!alert?
                             <textarea value={alertData} disabled/>:
-                            <ReactQuill 
-                                theme="snow"
-                                value={alertData}
-                                onChange={handleAlertChange} 
-                                modules={modules}
-                                formats={formats}
+                            <Editor 
+                            options={additionalOptions}
+                            getdata={(value)=>handleAlertChange(value)}
                             />
+                            
                         }
                     <br/>
                 { alert?
@@ -471,12 +457,9 @@ const EditComp = (props) => {
                         <div className='card-admin-ce'>
                         {
                             props.editor?
-                            <ReactQuill 
-                            theme="snow"
-                            value={cardData}
-                            onChange={handleChangeCard} 
-                            modules={modules}
-                            formats={formats}
+                            <Editor 
+                            options={additionalOptions}
+                            getdata={(value)=>handleChangeCard(value)}
                             />:
                             <textarea value={cardData} onChange={(e)=>handleChangeCard(e.target.value)}/>
 

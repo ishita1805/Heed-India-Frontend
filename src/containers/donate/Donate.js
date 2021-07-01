@@ -116,31 +116,34 @@ const Donate = () => {
                     <div className='form-inputs'>
                         <input type='text' placeholder='Enter Name' name='name'  ref={register({ required: true })}/>
                         <input type='text' maxLength='10' placeholder='Enter PAN Number' name='pan'  ref={register({ required: true,maxLength:10 })}/>
-                        <input type='number' maxLength='10' placeholder='Enter Contact Number' name='contact'  ref={register({ required: true ,maxLength:10})}/>
+                        {/* <input type='number' maxLength='10' placeholder='Enter Contact Number' name='contact'  ref={register({ required: true ,maxLength:10})}/> */}
                         <input type='text' placeholder='Enter Address' name='address'  ref={register({ required: true })}/>
-                        <input type='text' placeholder='Email' name='email'  ref={register({ required: true })}/>
+                        {/* <input type='text' placeholder='Email' name='email'  ref={register({ required: true })}/> */}
                         
                         <input type='text' placeholder='Enter State' name='state'  ref={register({ required: true })}/>
                         <input type='text' placeholder='Enter City' name='city'  ref={register({ required: true })}/>
                         
                         
                         <input type='number' placeholder='Enter Pin Code' name='pincode'  ref={register({ required: true })}/>
-                        <input className='width-input'  type='number' placeholder='Enter Amount' name='amt'  ref={register({ required: true })}/>
+                        <input className='width-input'  type='number' placeholder='Enter Amount' name='amt'  ref={register({ required: true,  min: 100 })}/>
                         <input type='text' placeholder='Remarks' name='remarks'  ref={register({ required: true })}/>
                     </div> 
                     
                     {
                         errors.name ||
-                        errors.amt ||
                         errors.address||
                         errors.city||
                         errors.state||
+                        (errors.pan && errors.pan.type === 'required')||
+                        (errors.amt && errors.amt.type === 'required')||
+                        (errors.contact && errors.contact.type === 'required')||
                         errors.pincode||
                         errors.email
                         ?<p className='e-t-donate'>Please fill all fields</p>:null
                     }
                     {errors.contact && errors.contact.type === "maxLength" ?<p className='e-t-donate'>max length 10 digits</p>:null }
                     {errors.pan && errors.pan.type === "maxLength" ?<p className='e-t-donate'>max length 10 alphanumeric</p>:null }
+                    {errors.amt && errors.amt.type === "min" ?<p className='e-t-donate'>min donation amount is ₹ 100</p>:null }
         
                     <button>Donate Now</button>
                 </form>

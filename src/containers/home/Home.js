@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react'
 import BottomNav from '../../components/bottomNav/BottomNav'
 import './home.css'

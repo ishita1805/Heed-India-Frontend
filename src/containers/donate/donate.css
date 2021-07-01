@@ -154,7 +154,7 @@
         width:90% !important;
         padding:1.3vh 2%!important;
     }
-    .form-inputs input:nth-child(2), .form-inputs input:nth-child(3), .form-inputs input:nth-child(7), .form-inputs input:nth-child(6), .form-inputs input:nth-child(8), .form-inputs input:nth-child(9){
+    .form-inputs input:nth-child(7), .form-inputs input:nth-child(4), .form-inputs input:nth-child(5), .form-inputs input:nth-child(6){
         width:42% !important;
         padding:1.3vh 2%!important;
     }
