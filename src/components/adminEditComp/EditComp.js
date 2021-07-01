@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 import React,{ useEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form';
-import 'react-quill/dist/quill.snow.css';
 import Editor from 'typeface-editor'
 import axios from 'axios'
 import url from '../../url'

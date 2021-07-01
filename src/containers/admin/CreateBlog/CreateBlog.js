@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef } from 'react';
-import 'react-quill/dist/quill.snow.css';
 import './createBlog.css'
 import ReactHtmlParser from 'react-html-parser'
 import Button from "../../../components/button/Button"
