@@ -2,6 +2,8 @@
 import React,{ useState, useEffect } from 'react'
 import url from '../../../url'
 import axios from 'axios'
+import '../Contacts/contacts.css'
+import '../ViewBlogs/viewBlogs.css'
 
 const Support = () => {
     const [initiatives,setInitiatives] = useState([]);

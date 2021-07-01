@@ -9,18 +9,7 @@ const Reciept = () => {
   const [gensate, setGenState] = useState(0);
   const [inp,setInp] = useState(null);
 
-  const [doc,setDoc] = useState({
-    name: 'Ishita Kabra',
-    amt: '13',
-    date: '12th June 2021',
-    mode:'Online',
-    amt_word: converter.toWords(13).toLocaleUpperCase(),
-    remark:'For raising money for books',
-    address: 'B-608, Kenwood Towers, Charmwood Village. Faridabad, Surajkund Rd. 121009, Haryana.',
-    num: '9003783680',
-    email:'ishitakabra18@gmail.com',
-    pan:'AA34GDS22Q'
-  })
+  const [doc,setDoc] = useState({})
 
 
   const generateRec = () => {
@@ -29,6 +18,7 @@ const Reciept = () => {
     else {
       axios.get(`${url}/payments/get-payment`, { params: { receipt: inp } })
       .then((resp) => {
+        console.log(resp.data)
         setGenState(1);
         setDoc({
           name: resp.data.name,
@@ -37,6 +27,7 @@ const Reciept = () => {
           mode: 'Online',
           amt_word: converter.toWords(resp.data.amount).toLocaleUpperCase(),
           remark: resp.data.remarks,
+          receipt: resp.data.receipt,
           address: `${resp.data.address}, ${resp.data.city}, ${resp.data.state} `,
           num: resp.data.contact,
           email: resp.data.email,
@@ -74,6 +65,7 @@ const Reciept = () => {
         address={doc.address}
         num={doc.num}
         email={doc.email}
+        receipt={doc.receipt}
         pan={doc.pan}
         />
         <br/><br/>

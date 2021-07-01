@@ -20,9 +20,12 @@ const PaymentCard = (props) => {
             <p><b>Currency: </b>&ensp;{props.currency}</p>
             <p><b>PAN Number: </b>&ensp;{props.pan}</p>
             <p><b>Address: </b>&ensp;{props.address}</p>
+            <p><b>Email: </b>&ensp;{props.email}</p>
             <p><b>Contact Number: </b>&ensp;{props.contact}</p>
             <p><b>Payment Status: </b>&ensp;{props.status}</p>
-            <p><b>Date: </b>&ensp;{props.createdAt}</p>
+            <p><b>Payment Mode: </b>&ensp;{props.mode}</p>
+            <p><b>Receipt No.: </b>&ensp;{props.receipt}</p>
+            <p><b>Payment Date: </b>&ensp;{props.createdAt}</p>
             </>:null
         }
     </div>

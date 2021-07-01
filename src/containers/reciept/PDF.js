@@ -61,7 +61,7 @@ const PDF = (props) => {
     
 
     return (
-        <PDFViewer fileName='Receipt' className='pdf-viewer'>
+        <PDFViewer className='pdf-viewer'>
             <Document>
                 <Page size="A4" style={styles.page} wrap>
                     {/* header */}
@@ -84,6 +84,7 @@ const PDF = (props) => {
                             <View style={styles.textcont}><Text style={styles.bold}>Phone No.: </Text><Text style={styles.text}>{props.num}</Text></View>
                             <View style={styles.textcont}><Text style={styles.bold}>Email Id: </Text><Text style={styles.text}>{props.email}</Text></View>
                             <View style={styles.textcont}><Text style={styles.bold}>PAN No.: </Text><Text style={styles.text}>{props.pan}</Text></View>
+                            <View style={styles.textcont}><Text style={styles.bold}>Receipt No.: </Text><Text style={styles.text}>{props.receipt}</Text></View>
                         </View>
                     </View>
                     {/* footer */}
