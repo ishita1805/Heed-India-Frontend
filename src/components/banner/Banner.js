@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react'
 import axios from 'axios'
 import url from '../../url'
+import ReactHtmlParser from 'react-html-parser';
 import './banner.css'
 
 const Banner = () => {
@@ -26,7 +27,7 @@ const Banner = () => {
                 <div className='banner-text'>
                    <h1>HEED India <span className='green-home'>Updates</span></h1>
                    <p>
-                        {data}
+                        {ReactHtmlParser(data)}
                    </p>
                 </div>
                 <i className='fa fa-times' onClick={()=>setClose(true)}></i>

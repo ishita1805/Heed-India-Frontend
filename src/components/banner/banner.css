@@ -8,13 +8,6 @@
     justify-content:center;
     z-index:40000;
     background:rgba(0, 0, 0, 0.233);
-    /* width:96vw;
-    padding:1vh 2vw;
-    color:white;
-    background:orange;
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between; */
 }
 .banner-container{
   width:46vw;
@@ -35,7 +28,6 @@
   color:rgb(236, 236, 236);
   flex-grow:1;
 }
-
 .banner i{
     color:white;
     cursor:pointer;
@@ -48,8 +40,26 @@
 }
 .banner-text p{
   color:rgb(223, 223, 223);
+  margin:0.5vh 0;
   font-weight:300;
 }
+
+.banner-text h3{
+  color:rgb(223, 223, 223);
+  margin:0.5vh 0;
+}
+.banner-text h2{
+  color:rgb(223, 223, 223);
+  margin:0.5vh 0;
+}
+
+.banner-text a{
+  color:rgb(223, 223, 223);
+  font-weight:500;
+  margin:0.5vh 0;
+  text-decoration: underline;
+}
+
 @media screen and (max-width:700px){
   .banner-container{
     width:82vw;
